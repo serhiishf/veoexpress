@@ -1,8 +1,9 @@
+import '@mantine/core/styles.css';
+
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { Header } from '@/components/Header/Header';
-import '@mantine/core/styles.css';
 import './globals.css';
 
 const geistSans = Geist({
@@ -16,12 +17,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Veoexpress',
+  title: 'VeoExpress',
   description: 'Moving everything',
 };
 
 const theme = createTheme({
-  /** Put your mantine theme override here */
+  fontFamily: 'Karla, sans-serif',
+  components: {
+    Button: {
+      defaultProps: {
+        radius: 12,
+      },
+    },
+  },
 });
 
 export default function RootLayout({
@@ -30,13 +38,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-mantine-color-scheme="light">
       <head>
         <ColorSchemeScript />
       </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MantineProvider theme={theme}>
+        <MantineProvider theme={theme} forceColorScheme="light" defaultColorScheme="light">
           <Header />
           {children}
         </MantineProvider>
