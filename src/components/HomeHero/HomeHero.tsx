@@ -2,6 +2,7 @@ import { Group, Stack, Text, Title, Button, Image, SimpleGrid } from '@mantine/c
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
+import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
 
 import classes from './HomeHero.module.css';
 
@@ -16,7 +17,7 @@ export function HomeHero() {
           </SectionDescription>
           <Text className={classes.description}></Text>
           <Group>
-            <Button size="lg">Request free quote</Button>
+            <RequestQuoteButton size="lg"></RequestQuoteButton>
             <Button size="lg" variant="outline" bg="white">
               View services
             </Button>

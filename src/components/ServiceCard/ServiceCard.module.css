@@ -1,0 +1,7 @@
+.service_card {
+  background-color: var(--mantine-color-grey-0);
+  /* border: 1px solid var(--mantine-color-gray-3); */
+  /* box-shadow: var(--mantine-shadow-sm); */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}

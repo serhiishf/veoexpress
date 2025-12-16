@@ -7,6 +7,7 @@ import { useDisclosure } from '@mantine/hooks';
 
 import classes from './Header.module.css';
 import { VeoexpressLogo } from '../VeoexpressLogo/VeoexpressLogo';
+import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
 
 const main_links = [
   { link: '/', label: 'Home' },
@@ -50,9 +51,7 @@ export function Header() {
             </Group>
           </Box>
 
-          <Button size="md" visibleFrom="sm">
-            Request free quote
-          </Button>
+          <RequestQuoteButton visibleFrom="sm"></RequestQuoteButton>
 
           <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" hiddenFrom="sm" aria-label={opened ? 'Close menu' : 'Open menu'} />
         </Container>
@@ -97,9 +96,7 @@ export function Header() {
             </Group>
 
             <div className={classes.mobile_cta}>
-              <Button fullWidth size="md">
-                Request free quote
-              </Button>
+              <RequestQuoteButton fullWidth></RequestQuoteButton>
             </div>
           </Box>
         </ScrollArea>
