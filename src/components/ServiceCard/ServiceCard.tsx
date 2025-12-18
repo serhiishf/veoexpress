@@ -35,7 +35,11 @@ export function ServiceCard({
     <Paper component={href ? 'a' : 'div'} href={href} radius={12} shadow="sm" mih={300} p={0} className={clsx(classes.service_card, className)} {...paper_props}>
       <Box p={content_padding} className={classes.content}>
         <Title order={3}>{title}</Title>
-        {description && <Text>{description}</Text>}
+        {description && (
+          <Text size="lg" className={classes.description}>
+            {description}
+          </Text>
+        )}
         {image_src ? <Image className={classes.card_image} src={image_src} alt={image_alt ?? ''} radius="md" {...image_props} mah={250} fit="contain" /> : null}
       </Box>
     </Paper>

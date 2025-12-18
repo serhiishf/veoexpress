@@ -23,8 +23,8 @@ export function HomeHero() {
             </Button>
           </Group>
           <Stack className={classes.additional_info}>
-            <Title size="lg">Same-day options</Title>
-            <Text>Need it today? We often can handle jobs the same day in Tallinn & Harjumaa — and across Estonia when possible.</Text>
+            <Title order={3}>Same-day options</Title>
+            <Text size="lg">Need it today? We often can handle jobs the same day in Tallinn & Harjumaa — and across Estonia when possible.</Text>
           </Stack>
         </Stack>
         <Stack className={classes.right_side} justify="center">

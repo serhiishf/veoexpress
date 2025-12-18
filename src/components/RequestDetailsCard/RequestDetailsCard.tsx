@@ -9,7 +9,7 @@ export function RequestDetailsCard() {
     <Paper radius={28} p={28} className={classes.card}>
       <Flex gap={28} align="center" justify="space-between" wrap="wrap">
         <Stack gap={12} style={{ flex: '1 1 560px', minWidth: 0 }}>
-          <Title order={3}>Typical request details</Title>
+          <Title order={2}>Typical request details</Title>
           <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={12} verticalSpacing={12}>
             {items.map((item) => (
               <Group key={item} gap={12} align="center" wrap="nowrap">
@@ -21,7 +21,7 @@ export function RequestDetailsCard() {
                     background: '#9CA3AF',
                   }}
                 />
-                <Text size="sm">{item}</Text>
+                <Text size="lg">{item}</Text>
               </Group>
             ))}
           </SimpleGrid>
@@ -30,11 +30,11 @@ export function RequestDetailsCard() {
         <Divider orientation="vertical" visibleFrom="sm"></Divider>
 
         <Stack gap={10} style={{ flex: '0 0 auto', minWidth: 260 }} align="center">
-          <Button radius={18} size="lg" px={28}>
+          <Button radius={18} size="lg" px={28} w={{ base: '100%', sm: 'auto' }}>
             Get pricing
           </Button>
 
-          <Text size="xs" ta="center" className={classes.button_description} style={{}}>
+          <Text size="md" ta="center" className={classes.button_description} style={{}}>
             We confirm everything before start
           </Text>
         </Stack>

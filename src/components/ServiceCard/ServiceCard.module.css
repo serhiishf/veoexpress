@@ -17,3 +17,7 @@
 .service_card:hover .card_image {
   transform: scale(1.16);
 }
+
+.description {
+  color: var(--mantine-color-gray-7);
+}

@@ -8,7 +8,7 @@ type SectionDescriptionProps = TextProps & {
 
 export function SectionDescription({ children, ...text_props }: SectionDescriptionProps) {
   return (
-    <Text className={classes.description} maw={600} {...text_props}>
+    <Text size="lg" className={classes.description} maw={600} {...text_props}>
       {children}
     </Text>
   );

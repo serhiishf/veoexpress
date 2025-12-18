@@ -23,11 +23,11 @@ export function FeatureCard({ title, description, icon_component: Icon, icon_pro
           )}
 
           <div>
-            <Title order={4}>{title}</Title>
+            <Title order={3}>{title}</Title>
           </div>
         </Group>
         <Space h="lg"></Space>
-        <Text>{description}</Text>
+        <Text size="lg">{description}</Text>
       </CardSection>
     </Card>
   );
