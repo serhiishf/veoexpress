@@ -1,7 +1,19 @@
 .service_card {
-  background-color: var(--mantine-color-grey-0);
-  /* border: 1px solid var(--mantine-color-gray-3); */
-  /* box-shadow: var(--mantine-shadow-sm); */
+  background-color: var(--mantine-color-gray-0);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
   cursor: pointer;
+}
+
+.service_card:hover {
+  /* background-color: #f7b500; */
+  background-color: var(--mantine-color-yellow-4);
+}
+
+.card_image {
+  transition: transform 0.45s ease;
+  transform-origin: center;
+}
+
+.service_card:hover .card_image {
+  transform: scale(1.16);
 }

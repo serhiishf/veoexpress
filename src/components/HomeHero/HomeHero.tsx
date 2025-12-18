@@ -28,7 +28,7 @@ export function HomeHero() {
           </Stack>
         </Stack>
         <Stack className={classes.right_side} justify="center">
-          <Image src="/three_vehicles.webp"></Image>
+          <Image src="/illustrations/three_vehicles.webp" alt="Small van, middle van and truck with crane"></Image>
         </Stack>
       </SimpleGrid>
     </SectionWrapper>

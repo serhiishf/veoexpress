@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import classes from './SectionWrapper.module.css';
+import { Stack } from '@mantine/core';
 
 type SectionWrapperProps = React.ComponentPropsWithoutRef<'div'> & {
   children: React.ReactNode;
@@ -8,8 +9,8 @@ type SectionWrapperProps = React.ComponentPropsWithoutRef<'div'> & {
 
 export function SectionWrapper({ children, background = 'white', ...div_props }: SectionWrapperProps) {
   return (
-    <div className={clsx(classes.section_wrapper, background === 'grey' && classes.section_bg_grey)} {...div_props}>
+    <Stack gap="xl" className={clsx(classes.section_wrapper, background === 'grey' && classes.section_bg_grey)} {...div_props}>
       {children}
-    </div>
+    </Stack>
   );
 }

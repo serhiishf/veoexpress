@@ -9,7 +9,7 @@ type SectionHeaderProps = {
 export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
   return (
     <Stack>
-      {subtitle && <Subtitle>{subtitle}</Subtitle>}
+      {subtitle && <Subtitle tt="uppercase">{subtitle}</Subtitle>}
       <Title>{title}</Title>
     </Stack>
   );
