@@ -19,7 +19,7 @@ export function HomeHero() {
           <Group>
             <RequestQuoteButton size="lg"></RequestQuoteButton>
             <Button size="lg" variant="outline" bg="white">
-              View services
+              View Services
             </Button>
           </Group>
           <Stack className={classes.additional_info}>

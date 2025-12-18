@@ -8,7 +8,7 @@
 }
 
 .inner {
-  height: 84px;
+  min-height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,7 +16,7 @@
 
 .links {
   padding-top: var(--mantine-spacing-lg);
-  height: 84px;
+  min-height: 84px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -1,13 +1,20 @@
 import { Box, Button, Flex, Group, Paper, SimpleGrid, Stack, Text, Title, Divider } from '@mantine/core';
+import { CardWrapper } from '../CardWrapper/CardWrapper';
 
 import classes from './RequestDetailsCard.module.css';
 
-const items: readonly string[] = ['Pickup and drop-off addresses', 'What’s being moved/removed', 'Any stairs/elevator', 'Time preference', 'Photos'];
+const items: readonly string[] = [
+  'Pickup and drop-off addresses',
+  'What’s being moved/removed',
+  'Any stairs/elevator',
+  'Time preference',
+  'Photos',
+];
 
 export function RequestDetailsCard() {
   return (
-    <Paper radius={28} p={28} className={classes.card}>
-      <Flex gap={28} align="center" justify="space-between" wrap="wrap">
+    <CardWrapper >
+      <Flex gap={28} align="center" justify="space-between" wrap={{ base: 'wrap', md: 'nowrap' }}>
         <Stack gap={12} style={{ flex: '1 1 560px', minWidth: 0 }}>
           <Title order={2}>Typical request details</Title>
           <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={12} verticalSpacing={12}>
@@ -19,6 +26,7 @@ export function RequestDetailsCard() {
                     height: 6,
                     borderRadius: 999,
                     background: '#9CA3AF',
+                    flexShrink: 0,
                   }}
                 />
                 <Text size="lg">{item}</Text>
@@ -27,11 +35,18 @@ export function RequestDetailsCard() {
           </SimpleGrid>
         </Stack>
 
-        <Divider orientation="vertical" visibleFrom="sm"></Divider>
+        <Divider hiddenFrom="md" w="100%" />
 
-        <Stack gap={10} style={{ flex: '0 0 auto', minWidth: 260 }} align="center">
+        <Divider orientation="vertical" visibleFrom="md" />
+
+        <Stack
+          gap={10}
+          w={{ base: '100%', md: 'auto' }} 
+          align="center"
+          justify="center"
+        >
           <Button radius={18} size="lg" px={28} w={{ base: '100%', sm: 'auto' }}>
-            Get pricing
+            Get Pricing
           </Button>
 
           <Text size="md" ta="center" className={classes.button_description} style={{}}>
@@ -39,6 +54,6 @@ export function RequestDetailsCard() {
           </Text>
         </Stack>
       </Flex>
-    </Paper>
+    </CardWrapper>
   );
 }

@@ -1,8 +1,7 @@
-import { Card, CardSection, Title, Text, Group, ThemeIcon, type ThemeIconProps, Space } from '@mantine/core';
+import { Title, Text, Group, ThemeIcon, type ThemeIconProps, Space } from '@mantine/core';
 import type { ComponentType } from 'react';
 import type { IconBaseProps } from 'react-icons';
-
-import classes from './FeatureCard.module.css';
+import { CardWrapper } from '../CardWrapper/CardWrapper';
 
 type FeatureCardProps = {
   title: string;
@@ -13,8 +12,7 @@ type FeatureCardProps = {
 
 export function FeatureCard({ title, description, icon_component: Icon, icon_props }: FeatureCardProps) {
   return (
-    <Card className={classes.card}>
-      <CardSection p="xl">
+    <CardWrapper>
         <Group align="center" wrap="nowrap" gap="md">
           {Icon && (
             <ThemeIcon radius="xl" size={40} variant="light" {...icon_props}>
@@ -28,7 +26,6 @@ export function FeatureCard({ title, description, icon_component: Icon, icon_pro
         </Group>
         <Space h="lg"></Space>
         <Text size="lg">{description}</Text>
-      </CardSection>
-    </Card>
+    </CardWrapper>
   );
 }

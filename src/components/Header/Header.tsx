@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Anchor, Box, Burger, Button, Container, Drawer, Group, ScrollArea } from '@mantine/core';
+import { Anchor, Box, Burger, Container, Drawer, Group, ScrollArea, SimpleGrid } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 import classes from './Header.module.css';
@@ -45,15 +45,15 @@ export function Header() {
         <Container className={classes.inner}>
           <VeoexpressLogo />
 
-          <Box className={classes.links} visibleFrom="sm">
-            <Group gap={0} justify="flex-end" className={classes.main_links}>
+          <Box className={classes.links} visibleFrom="md">
+            <Group gap={0} justify="flex-end" className={classes.main_links} wrap="wrap">
               {mainItems}
             </Group>
           </Box>
 
-          <RequestQuoteButton visibleFrom="sm"></RequestQuoteButton>
+          <RequestQuoteButton visibleFrom="md"></RequestQuoteButton>
 
-          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" hiddenFrom="sm" aria-label={opened ? 'Close menu' : 'Open menu'} />
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" hiddenFrom="md" aria-label={opened ? 'Close menu' : 'Open menu'} />
         </Container>
       </header>
 
@@ -71,7 +71,7 @@ export function Header() {
         styles={{
           content: { borderRadius: 0 },
           header: {
-            height: HEADER_HEIGHT_PX,
+            minHeight: HEADER_HEIGHT_PX,
             paddingInline: 16, // gives space on both sides (incl. close button)
             borderBottom: '1px solid var(--mantine-color-gray-3)',
           },
@@ -85,11 +85,11 @@ export function Header() {
           },
           body: {
             padding: 0,
-            height: `calc(100dvh - ${HEADER_HEIGHT_PX}px)`,
+            minHeight: `calc(100dvh - ${HEADER_HEIGHT_PX}px)`,
           },
         }}
       >
-        <ScrollArea h={`calc(100dvh - ${HEADER_HEIGHT_PX}px)`}>
+        <ScrollArea mih={`calc(100dvh - ${HEADER_HEIGHT_PX}px)`}>
           <Box className={classes.mobile_menu}>
             <Group gap="xs" className={classes.mobile_links}>
               {mainItems}
