@@ -3,12 +3,13 @@ import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
+import { SectionProps } from '@/../types/shared';
 
 import classes from './HomeHero.module.css';
 
-export function HomeHero() {
+export function HomeHero({ background = 'white' }: SectionProps) {
   return (
-    <SectionWrapper background="grey">
+    <SectionWrapper background={background}>
       <SimpleGrid className={classes.home_hero} cols={{ base: 1, md: 2 }} spacing={{ base: 'xl', md: 48 }} verticalSpacing="sm">
         <Stack className={classes.left_side} gap="xl">
           <SectionHeader title="Moving and logistics with a strong crew." subtitle="FAST TRANSPORT"></SectionHeader>
@@ -18,7 +19,7 @@ export function HomeHero() {
           <Text className={classes.description}></Text>
           <Group>
             <RequestQuoteButton size="lg"></RequestQuoteButton>
-            <Button size="lg" variant="outline" bg="white">
+            <Button size="lg" variant="outline">
               View Services
             </Button>
           </Group>

@@ -4,14 +4,15 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Anchor, Box, Burger, Container, Drawer, Group, ScrollArea, SimpleGrid } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-
-import classes from './Header.module.css';
 import { VeoexpressLogo } from '../VeoexpressLogo/VeoexpressLogo';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
+
+import classes from './Header.module.css';
 
 const main_links = [
   { link: '/', label: 'Home' },
   { link: '#', label: 'Services' },
+  { link: '#', label: 'Vehicles' },
   { link: '#', label: 'Pricing' },
   { link: '#', label: 'About' },
   { link: '#', label: 'Contact' },

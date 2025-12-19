@@ -1,10 +1,27 @@
 import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Roboto, Open_Sans } from 'next/font/google';
 import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { Header } from '@/components/Header/Header';
+import { Footer } from '@/components/Footer/Footer';
 import './globals.css';
+
+const open_sans = Open_Sans({
+  variable: '--font-open-sans',
+  subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+const roboto = Roboto({
+  variable: '--font-roboto',
+  subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
+  weight: ['300', '400', '500', '700', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -22,31 +39,28 @@ export const metadata: Metadata = {
 };
 
 const theme = createTheme({
-  fontFamily: 'Karla, sans-serif',
+  fontFamily: 'var(--font-open-sans), sans-serif',
+  headings: {
+    fontFamily: 'var(--font-roboto), var(--font-karla), var(--font-open-sans), sans-serif',
+  },
+  fontFamilyMonospace:
+    'var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
   components: {
-    Button: {
-      defaultProps: {
-        radius: 12,
-      },
-    },
+    Button: { defaultProps: { radius: 12 } },
   },
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" data-mantine-color-scheme="light">
       <head>
         <ColorSchemeScript />
       </head>
-
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${open_sans.variable} ${roboto.variable} ${geistMono.variable}`}>
         <MantineProvider theme={theme} forceColorScheme="light" defaultColorScheme="light">
           <Header />
           {children}
+          <Footer/>
         </MantineProvider>
       </body>
     </html>

@@ -1,6 +1,7 @@
 import { Text, Flex, Stack, Button, Anchor } from '@mantine/core';
 import { CardWrapper } from '../CardWrapper/CardWrapper';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
+import { LiaPhoneSolid } from 'react-icons/lia';
 
 const PHONE_LABEL = '+372 53 06 9999';
 const PHONE_TEL = '+37253069999';
@@ -11,10 +12,10 @@ export function ContactCard() {
     <CardWrapper>
       <Flex gap={28} align="center" justify="space-between" wrap={{ base: 'wrap', md: 'nowrap' }}>
         <Stack>
-          <Anchor fw="bold" fz="xl" href={`tel:${PHONE_TEL}`} underline="never" style={{ fontWeight: 700, fontSize: 'var(--mantine-font-size-xl)' }}>
+          <Anchor fw="bold" fz="xl" href={`tel:${PHONE_TEL}`} underline="never" style={{ fontWeight: 700, fontSize: 'var(--mantine-font-size-xl)' }} c="inherit">
             {PHONE_LABEL}
           </Anchor>
-          <Anchor href={`mailto:${EMAIL}`} underline="never">
+          <Anchor href={`mailto:${EMAIL}`} underline="never" c="inherit">
             <Text fz="md" component="span" size="lg">
               {EMAIL}
             </Text>
@@ -23,7 +24,7 @@ export function ContactCard() {
         </Stack>
         <Stack>
           <RequestQuoteButton size="lg"></RequestQuoteButton>
-          <Button component="a" href={`tel:${PHONE_TEL}`} size="lg">
+          <Button component="a" href={`tel:${PHONE_TEL}`} size="lg" variant="outline" leftSection={<LiaPhoneSolid size="24" />}>
             Call Now
           </Button>
         </Stack>

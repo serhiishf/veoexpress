@@ -6,15 +6,17 @@ import { ServicesSection } from '@/components/ServicesSection/ServicesSection';
 import { WhyWeSection } from '@/components/WhyWeSection/WhyWeSection';
 import { PricingSection } from '@/components/PricingSection/PricingSection';
 import { ContactSection } from '@/components/ContactSection/ContactSection';
+import { TrustedBySection } from '@/components/TrustedBySection/TrustedBySection';
 
 export default function Home() {
   return (
     <main>
       <Container size="xl">
-        <HomeHero></HomeHero>
+        <HomeHero background="grey"></HomeHero>
         <ServicesSection></ServicesSection>
-        <WhyWeSection></WhyWeSection>
+        <WhyWeSection background="grey"></WhyWeSection>
         <PricingSection></PricingSection>
+        <TrustedBySection background="grey"></TrustedBySection>
         <ContactSection></ContactSection>
       </Container>
     </main>
