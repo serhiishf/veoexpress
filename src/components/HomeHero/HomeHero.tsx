@@ -1,35 +1,41 @@
-import { Group, Stack, Text, Title, Button, Image, SimpleGrid } from '@mantine/core';
-import { SectionHeader } from '../SectionHeader/SectionHeader';
-import { SectionDescription } from '../SectionDesctiption/SectionDescription';
-import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
-import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
+import { useTranslations } from 'next-intl';
+import { Button, Group, Image, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { SectionProps } from '@/../types/shared';
-
+import { CardWrapper } from '../CardWrapper/CardWrapper';
+import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
+import { SectionDescription } from '../SectionDesctiption/SectionDescription';
+import { SectionHeader } from '../SectionHeader/SectionHeader';
+import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
 import classes from './HomeHero.module.css';
 
 export function HomeHero({ background = 'white' }: SectionProps) {
+  const t = useTranslations('components.home_hero');
+
   return (
     <SectionWrapper background={background}>
-      <SimpleGrid className={classes.home_hero} cols={{ base: 1, md: 2 }} spacing={{ base: 'xl', md: 48 }} verticalSpacing="sm">
+      <SimpleGrid
+        className={classes.home_hero}
+        cols={{ base: 1, md: 2 }}
+        spacing={{ base: 'xl', md: 48 }}
+        verticalSpacing="sm"
+      >
         <Stack className={classes.left_side} gap="xl">
-          <SectionHeader title="Moving and logistics with a strong crew." subtitle="FAST TRANSPORT"></SectionHeader>
-          <SectionDescription>
-            We handle apartments, offices and sites: careful moving, waste removal, heavy cargo, ADR dangerous goods, and crane-assisted loading.
-          </SectionDescription>
+          <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
+          <SectionDescription>{t('section_description')}</SectionDescription>
           <Text className={classes.description}></Text>
           <Group>
             <RequestQuoteButton size="lg"></RequestQuoteButton>
             <Button size="lg" variant="outline">
-              View Services
+              {t('view_services')}
             </Button>
           </Group>
-          <Stack className={classes.additional_info}>
-            <Title order={3}>Same-day options</Title>
-            <Text size="lg">Need it today? We often can handle jobs the same day in Tallinn & Harjumaa — and across Estonia when possible.</Text>
-          </Stack>
+          <CardWrapper /* className={classes.additional_info} */>
+            <Title order={3}>{t('same_day_title')}</Title>
+            <Text size="lg">{t('same_day_description')}</Text>
+          </CardWrapper>
         </Stack>
         <Stack className={classes.right_side} justify="center">
-          <Image src="/illustrations/three_vehicles.webp" alt="Small van, middle van and truck with crane"></Image>
+          <Image src="/illustrations/three_vehicles.webp" alt={t('image_alt')}></Image>
         </Stack>
       </SimpleGrid>
     </SectionWrapper>

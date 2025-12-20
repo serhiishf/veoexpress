@@ -1,22 +1,37 @@
+import { useTranslations } from 'next-intl';
+import { FaEuroSign } from 'react-icons/fa';
+import { FiTool } from 'react-icons/fi';
+import { GoShieldCheck } from 'react-icons/go';
 import { SimpleGrid, Space } from '@mantine/core';
+import { SectionProps } from '@/../types/shared';
+import { FeatureCard } from '../FeatureCard/FeatureCard';
+import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
-import { SectionDescription } from '../SectionDesctiption/SectionDescription';
-import { FeatureCard } from '../FeatureCard/FeatureCard';
-import { FiTool } from 'react-icons/fi';
-import { FaEuroSign } from 'react-icons/fa';
-import { GoShieldCheck } from 'react-icons/go';
-import { SectionProps } from '@/../types/shared';
 
 export function WhyWeSection({ background = 'white' }: SectionProps) {
+  const t = useTranslations('components.why_we_section');
+
   return (
     <SectionWrapper background={background}>
-      <SectionHeader title="Clear process, no surprises" subtitle="WHY VEOEXPRESS"></SectionHeader>
-      <SectionDescription>We show up on time, protect your property, and keep communication simple. For special cargo we can provide ADR transport.</SectionDescription>
+      <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
+      <SectionDescription>{t('description')}</SectionDescription>
       <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg" p="lg">
-        <FeatureCard title="Fixed quote" description="Send photos or a list — get a clear price and time window." icon_component={FaEuroSign}></FeatureCard>
-        <FeatureCard title="Careful handling" description="Straps, blankets, and smart loading so items arrive safe" icon_component={GoShieldCheck}></FeatureCard>
-        <FeatureCard title="Right equipment" description="From dollies to a small crane — we match the job to tools." icon_component={FiTool}></FeatureCard>
+        <FeatureCard
+          title={t('cards.fixed_quote.title')}
+          description={t('cards.fixed_quote.description')}
+          icon_component={FaEuroSign}
+        ></FeatureCard>
+        <FeatureCard
+          title={t('cards.careful_handling.title')}
+          description={t('cards.careful_handling.description')}
+          icon_component={GoShieldCheck}
+        ></FeatureCard>
+        <FeatureCard
+          title={t('cards.right_equipment.title')}
+          description={t('cards.right_equipment.description')}
+          icon_component={FiTool}
+        ></FeatureCard>
       </SimpleGrid>
     </SectionWrapper>
   );

@@ -1,5 +1,4 @@
 import { Text, type TextProps } from '@mantine/core';
-
 import classes from './Subtitle.module.css';
 
 type SubtitleProps = TextProps & {

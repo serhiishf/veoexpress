@@ -1,5 +1,5 @@
+import { Stack, Title } from '@mantine/core';
 import { Subtitle } from '../Subtitle/Subtitle';
-import { Title, Stack } from '@mantine/core';
 
 type SectionHeaderProps = {
   title: string;

@@ -1,11 +1,16 @@
 import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Roboto, Open_Sans } from 'next/font/google';
-import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { NextIntlClientProvider } from 'next-intl';
-import { Header } from '@/components/Header/Header';
+import { Geist, Geist_Mono, Open_Sans, Roboto } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
+import { ColorSchemeScript, createTheme, MantineProvider } from '@mantine/core';
+import { Alert } from '@/components/Alert/Alert';
 import { Footer } from '@/components/Footer/Footer';
+import { Header } from '@/components/Header/Header';
+import { routing } from '@/i18n/routing';
+
 import './globals.css';
 
 const open_sans = Open_Sans({
@@ -44,13 +49,29 @@ const theme = createTheme({
   headings: {
     fontFamily: 'var(--font-roboto), var(--font-karla), var(--font-open-sans), sans-serif',
   },
-  fontFamilyMonospace: 'var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+  fontFamilyMonospace:
+    'var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
   components: {
     Button: { defaultProps: { radius: 12 } },
   },
 });
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({
+  children,
+  params,
+}: Readonly<{ children: React.ReactNode; params: Promise<{ locale: string }> }>) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
     <html lang="en" data-mantine-color-scheme="light">
       <head>
@@ -59,6 +80,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${open_sans.variable} ${roboto.variable} ${geistMono.variable}`}>
         <MantineProvider theme={theme} forceColorScheme="light" defaultColorScheme="light">
           <NextIntlClientProvider>
+            <Alert style={{ position: 'static', top: 0, zIndex: 2500 }}></Alert>
             <Header />
             {children}
             <Footer />

@@ -1,14 +1,16 @@
+import { useTranslations } from 'next-intl';
+import { SectionProps } from '@/../types/shared';
+import { RequestDetailsCard } from '../RequestDetailsCard/RequestDetailsCard';
+import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
-import { SectionDescription } from '../SectionDesctiption/SectionDescription';
-import { RequestDetailsCard } from '../RequestDetailsCard/RequestDetailsCard';
-import { SectionProps } from '@/../types/shared';
 
 export function PricingSection({ background = 'white' }: SectionProps) {
+  const t = useTranslations('components.pricing_section');
   return (
     <SectionWrapper background={background}>
-      <SectionHeader title="Simple and transparent" subtitle="PRICING"></SectionHeader>
-      <SectionDescription>Price depends on route, volume/weight, floors, and special conditions (ADR, crane work). We confirm everything before we start.</SectionDescription>
+      <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
+      <SectionDescription>{t('description')}</SectionDescription>
       <RequestDetailsCard></RequestDetailsCard>
     </SectionWrapper>
   );

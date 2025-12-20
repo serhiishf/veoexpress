@@ -1,3 +1,135 @@
 {
-  
+  "components": {
+    "contact_card": {
+      "call_now": "Call Now"
+    },
+    "header": {
+      "home": "Home",
+      "services": "Services",
+      "vehicles": "Vehicles",
+      "pricing": "Pricing",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "request_quote_button": {
+      "request_free_quote": "Request Free Quote"
+    },
+    "home_hero": {
+      "title": "Moving and logistics with a strong crew.",
+      "subtitle": "FAST TRANSPORT",
+      "section_description": "We handle apartments, offices and sites: careful moving, waste removal, heavy cargo, ADR dangerous goods, and crane-assisted loading.",
+      "view_services": "View Services",
+      "same_day_title": "Same-day options",
+      "same_day_description": "Need it today? We often can handle jobs the same day in Tallinn & Harjumaa — and across Estonia when possible.",
+      "image_alt": "Small van, middle van and truck with crane"
+    },
+    "pricing_section": {
+      "title": "Simple and transparent",
+      "subtitle": "PRICING",
+      "description": "Price depends on route, volume/weight, floors, and special conditions (ADR, crane work). We confirm everything before we start."
+    },
+    "footer": {
+      "account_number": "Account number / IBAN",
+      "reg_code": "Reg.code",
+      "vat": "VAT"
+    },
+    "request_details_card": {
+      "title": "Typical request details",
+      "get_pricing_button": "Get Pricing",
+      "description": "We confirm everything before start",
+      "items": {
+        "pickup_dropoff_addresses": "Pickup and drop-off addresses",
+        "moved_removed": "What’s being moved/removed",
+        "stairs_elevator": "Any stairs/elevator",
+        "time_preference": "Time preference",
+        "photos": "Photos"
+      }
+    },
+    "services_section": {
+      "title": "What we do",
+      "subtitle": "SERVICES",
+      "description": "Choose a service — each page includes what’s included, how it works, and what to prepare.",
+      "cards": {
+        "moving": {
+          "title": "Moving",
+          "description": "Apartment • Office • Storage",
+          "image_alt": "load sofa to van"
+        },
+        "waste_removal": {
+          "title": "Waste Removal",
+          "description": "Household • Construction • Site",
+          "image_alt": "load waste to van"
+        },
+        "heavy_transport": {
+          "title": "Heavy Transport",
+          "description": "Equipment • Pallets • Cargo",
+          "image_alt": "Truck with two tractors and trailer"
+        },
+        "adr_dangerous_goods": {
+          "title": "ADR Dangerous Goods",
+          "description": "Licensed for ADR transportation",
+          "image_alt": "truck with ADR dangerous goods"
+        },
+        "crane_loading_work": {
+          "title": "Crane & Loading Work",
+          "description": "Loading/unloading • Installation work",
+          "image_alt": "Unloading goods with crane"
+        },
+        "towing": {
+          "title": "Towing",
+          "description": "Breakdowns • Accidents • Hard-to-access locations",
+          "image_alt": "Towing van on truck"
+        }
+      }
+    },
+    "trusted_by_section": {
+      "title": "Trusted By",
+      "subtitle": "CUSTOMERS & PARTNERS",
+      "description": "Companies and private clients choose us for careful handling, clear communication, and reliable delivery across Tallinn, Harjumaa, and all Estonia.",
+      "cards": {
+        "mirelle_liivago": {
+          "title": "Mirelle Liivago",
+          "text": "I wanted to thank your team for transporting the sofa! The guys were very capable and polite!"
+        },
+        "inga_avaring": {
+          "title": "Inga, Avaring OÜ",
+          "text": "Pleasant customer service. They help find fast solutions at a good price based on clients’ needs. Helpful staff assist with moving, transport, disposal, and furniture assembly. Quick and affordable!"
+        },
+        "viive_kuttner": {
+          "title": "Viive Küttner, Öökülm OÜ",
+          "text": "We regularly transport various oversized goods to different destinations across Estonia — very flexible, fast, and friendly service with well-thought-out solutions."
+        }
+      }
+    },
+    "contact_section": {
+      "title": "Need transport today?",
+      "subtitle": "CONTACT",
+      "description": "Call or send a request — we reply fast with a clear price and pickup time."
+    },
+    "why_we_section": {
+      "title": "Clear process, no surprises",
+      "subtitle": "WHY VEOEXPRESS",
+      "description": "We show up on time, protect your property, and keep communication simple. For special cargo we can provide ADR transport.",
+      "cards": {
+        "fixed_quote": {
+          "title": "Fixed quote",
+          "description": "Send photos or a list — get a clear price and time window."
+        },
+        "careful_handling": {
+          "title": "Careful handling",
+          "description": "Straps, blankets, and smart loading so items arrive safe"
+        },
+        "right_equipment": {
+          "title": "Right equipment",
+          "description": "From dollies to a small crane — we match the job to tools."
+        }
+      }
+    },
+    "alert": {
+      "aria_label": "Website update notice",
+      "title": "Website is being updated",
+      "description": "Some functions may not work right now. Please contact us by phone or email.",
+      "call_now": "Call Now"
+    }
+  }
 }

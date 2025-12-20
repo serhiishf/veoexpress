@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import classes from './VeoexpressLogo.module.css';
 
 type LogoSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -22,7 +22,15 @@ export function VeoexpressLogo({ size = 'xl', href = '/' }: VeoexpressLogoProps)
 
   return (
     <Link href={href} aria-label="Go to homepage" className={classes.logo_link}>
-      <Image className={classes.logo} src="/logos/veoteenused_logo.svg" alt="veoteenused logo" width={width} height={height} priority style={{ height: 'auto' }} />
+      <Image
+        className={classes.logo}
+        src="/logos/veoteenused_logo.svg"
+        alt="veoteenused logo"
+        width={width}
+        height={height}
+        priority
+        style={{ height: 'auto' }}
+      />
     </Link>
   );
 }

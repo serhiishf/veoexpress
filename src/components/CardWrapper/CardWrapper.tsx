@@ -1,5 +1,4 @@
 import { Paper, type PaperProps } from '@mantine/core';
-
 import classes from './CardWrapper.module.css';
 
 type CardWrapperProps = PaperProps & {

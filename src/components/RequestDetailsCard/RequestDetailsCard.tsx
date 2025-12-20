@@ -1,22 +1,24 @@
-import { Box, Button, Flex, Group, Paper, SimpleGrid, Stack, Text, Title, Divider } from '@mantine/core';
+import { useTranslations } from 'next-intl';
+import { Box, Button, Divider, Flex, Group, SimpleGrid, Stack, Text, Title } from '@mantine/core';
 import { CardWrapper } from '../CardWrapper/CardWrapper';
-
 import classes from './RequestDetailsCard.module.css';
 
-const items: readonly string[] = [
-  'Pickup and drop-off addresses',
-  'What’s being moved/removed',
-  'Any stairs/elevator',
-  'Time preference',
-  'Photos',
-];
-
 export function RequestDetailsCard() {
+  const t = useTranslations('components.request_details_card');
+
+  const items: readonly string[] = [
+    t('items.pickup_dropoff_addresses'),
+    t('items.moved_removed'),
+    t('items.stairs_elevator'),
+    t('items.time_preference'),
+    t('items.photos'),
+  ];
+
   return (
-    <CardWrapper >
+    <CardWrapper>
       <Flex gap={28} align="center" justify="space-between" wrap={{ base: 'wrap', md: 'nowrap' }}>
         <Stack gap={12} style={{ flex: '1 1 560px', minWidth: 0 }}>
-          <Title order={2}>Typical request details</Title>
+          <Title order={2}>{t('title')}</Title>
           <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={12} verticalSpacing={12}>
             {items.map((item) => (
               <Group key={item} gap={12} align="center" wrap="nowrap">
@@ -39,18 +41,13 @@ export function RequestDetailsCard() {
 
         <Divider orientation="vertical" visibleFrom="md" />
 
-        <Stack
-          gap={10}
-          w={{ base: '100%', md: 'auto' }} 
-          align="center"
-          justify="center"
-        >
+        <Stack gap={10} w={{ base: '100%', md: 'auto' }} align="center" justify="center">
           <Button radius={18} size="lg" px={28} w={{ base: '100%', sm: 'auto' }}>
-            Get Pricing
+            {t('get_pricing_button')}
           </Button>
 
           <Text size="md" ta="center" className={classes.button_description} style={{}}>
-            We confirm everything before start
+            {t('description')}
           </Text>
         </Stack>
       </Flex>

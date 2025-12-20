@@ -1,6 +1,5 @@
-import { Box, Image, Paper, Text, Title, type ImageProps, type PaperProps } from '@mantine/core';
 import clsx from 'clsx';
-
+import { Box, Image, Paper, Text, Title, type ImageProps, type PaperProps } from '@mantine/core';
 import classes from './ServiceCard.module.css';
 
 type ServiceCardProps = {
@@ -32,7 +31,16 @@ export function ServiceCard({
   ...paper_props
 }: ServiceCardProps) {
   return (
-    <Paper component={href ? 'a' : 'div'} href={href} radius={12} shadow="sm" mih={300} p={0} className={clsx(classes.service_card, className)} {...paper_props}>
+    <Paper
+      component={href ? 'a' : 'div'}
+      href={href}
+      radius={12}
+      shadow="sm"
+      mih={300}
+      p={0}
+      className={clsx(classes.service_card, className)}
+      {...paper_props}
+    >
       <Box p={content_padding} className={classes.content}>
         <Title order={3}>{title}</Title>
         {description && (
@@ -40,7 +48,17 @@ export function ServiceCard({
             {description}
           </Text>
         )}
-        {image_src ? <Image className={classes.card_image} src={image_src} alt={image_alt ?? ''} radius="md" {...image_props} mah={250} fit="contain" /> : null}
+        {image_src ? (
+          <Image
+            className={classes.card_image}
+            src={image_src}
+            alt={image_alt ?? ''}
+            radius="md"
+            {...image_props}
+            mah={250}
+            fit="contain"
+          />
+        ) : null}
       </Box>
     </Paper>
   );

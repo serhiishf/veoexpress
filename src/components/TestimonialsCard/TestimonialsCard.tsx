@@ -1,7 +1,6 @@
-import { Title, Text, Stack, Space } from '@mantine/core';
-import { CardWrapper } from '../CardWrapper/CardWrapper';
 import { BsChatQuote } from 'react-icons/bs';
-
+import { Stack, Text, Title } from '@mantine/core';
+import { CardWrapper } from '../CardWrapper/CardWrapper';
 import classes from './TestimonialsCard.module.css';
 
 type TestimonialsCardProps = {
@@ -11,7 +10,7 @@ type TestimonialsCardProps = {
 
 export function TestimonialsCard({ title, children }: TestimonialsCardProps) {
   return (
-    <CardWrapper /* maw={400} */>
+    <CardWrapper>
       <Stack justify="center" align="center">
         <Title order={3}>{title}</Title>
         <BsChatQuote size={48} opacity={0.8} />

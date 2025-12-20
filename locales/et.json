@@ -1,1 +1,135 @@
-{}
+{
+  "components": {
+    "contact_card": {
+      "call_now": "Helista Kohe"
+    },
+    "header": {
+      "home": "Avaleht",
+      "services": "Teenused",
+      "vehicles": "Sõidukid",
+      "pricing": "Hinnakiri",
+      "about": "Meist",
+      "contact": "Kontakt"
+    },
+    "request_quote_button": {
+      "request_free_quote": "Küsi Tasuta Hinnapakkumist"
+    },
+    "home_hero": {
+      "title": "Kolimine ja logistika tugeva meeskonnaga.",
+      "subtitle": "KIIRE TRANSPORT",
+      "section_description": "Teostame korterite, kontorite ja objektide teenindust: hoolikas kolimine, jäätmete äravedu, raskeveod, ADR ohtlikud kaubad ning kraanaga laadimistööd.",
+      "view_services": "Vaata teenuseid",
+      "same_day_title": "Sama päeva võimalused",
+      "same_day_description": "Vaja juba täna? Sageli saame tööd teostada samal päeval Tallinnas ja Harjumaal — ning võimaluse korral üle kogu Eesti.",
+      "image_alt": "Väike kaubik, keskmine kaubik ja kraanaga veok"
+    },
+    "pricing_section": {
+      "title": "Lihtne ja läbipaistev",
+      "subtitle": "HINNAKIRI",
+      "description": "Hind sõltub marsruudist, mahust ja kaalust, korrustest ning eritingimustest (ADR, kraanatööd). Kinnitame kõik tingimused enne töö alustamist."
+    },
+    "footer": {
+      "account_number": "Arveldusarve number / IBAN",
+      "reg_code": "Registrikood",
+      "vat": "KMKR"
+    },
+    "request_details_card": {
+      "title": "Tüüpilised päringu andmed",
+      "get_pricing_button": "Küsi hinda",
+      "description": "Kinnitame kõik enne töö alustamist",
+      "items": {
+        "pickup_dropoff_addresses": "Pealevõtu ja sihtkoha aadressid",
+        "moved_removed": "Mida tuleb kolida või ära viia",
+        "stairs_elevator": "Kas on treppe või lift",
+        "time_preference": "Soovitud aeg",
+        "photos": "Fotod"
+      }
+    },
+    "services_section": {
+      "title": "Mida me teeme",
+      "subtitle": "TEENUSED",
+      "description": "Vali teenus — igal lehel on kirjas, mis on hinna sees, kuidas see käib ja mida ette valmistada.",
+      "cards": {
+        "moving": {
+          "title": "Kolimine",
+          "description": "Korter • Kontor • Ladu",
+          "image_alt": "diivani laadimine kaubikusse"
+        },
+        "waste_removal": {
+          "title": "Jäätmete äravedu",
+          "description": "Majapidamine • Ehitus • Objekt",
+          "image_alt": "jäätmete laadimine kaubikusse"
+        },
+        "heavy_transport": {
+          "title": "Raskeveod",
+          "description": "Seadmed • Alused • Veos",
+          "image_alt": "veok kahe traktoriga ja haagisega"
+        },
+        "adr_dangerous_goods": {
+          "title": "ADR ohtlikud veosed",
+          "description": "ADR-veoks litsentseeritud",
+          "image_alt": "veok ADR ohtliku veosega"
+        },
+        "crane_loading_work": {
+          "title": "Kraana- ja laadimistööd",
+          "description": "Laadimine/mahalaadimine • Paigaldustööd",
+          "image_alt": "kauba mahalaadimine kraanaga"
+        },
+        "towing": {
+          "title": "Puksiir",
+          "description": "Rikked • Avariid • Raskesti ligipääsetavad kohad",
+          "image_alt": "kaubiku pukseerimine puksiirautol"
+        }
+      }
+    },
+    "trusted_by_section": {
+      "title": "Usaldavad meid",
+      "subtitle": "KLIENDID JA PARTNERID",
+      "description": "Ettevõtted ja erakliendid valivad meid hoolika töö, selge suhtluse ja usaldusväärse tarne tõttu Tallinnas, Harjumaal ja üle Eesti.",
+      "cards": {
+        "mirelle_liivago": {
+          "title": "Mirelle Liivago",
+          "text": "Tahtsin tänada Teie töötajaid diivani äraveo eest! Poisid olid väga tublid ja viisakad!"
+        },
+        "inga_avaring": {
+          "title": "Inga, Avaring OÜ",
+          "text": "Meeldiv klienditeenindus. Aitavad leida soodsa hinnaga operatiivsed lahendused vastavalt klientide vajadustele Abivalmid töötajad aitavad kolimise, transpordi, utiliseerimise ja mööbli montaaziga Kiire ja soodne!"
+        },
+        "viive_kuttner": {
+          "title": "Viive Küttner, Öökülm OÜ",
+          "text": "Veame pidevalt erinevat suuremõõtmelist kaupa erinevatesse sihtpunktidesse üle Eesti - väga paindlik,kiire ja sõbralik teenindus, läbimõeldud lahendused."
+        }
+      }
+    },
+    "contact_section": {
+      "title": "Vajad transporti täna?",
+      "subtitle": "KONTAKT",
+      "description": "Helista või saada päring — vastame kiiresti selge hinna ja pealevõtu ajaga."
+    },
+    "why_we_section": {
+      "title": "Selge protsess, ilma üllatusteta",
+      "subtitle": "MIKS VEOEXPRESS",
+      "description": "Oleme kohal õigel ajal, kaitseme sinu vara ja hoiame suhtluse lihtsa. Erikaupade jaoks saame pakkuda ADR-transporti.",
+      "cards": {
+        "fixed_quote": {
+          "title": "Fikseeritud pakkumine",
+          "description": "Saada fotod või nimekiri — saad selge hinna ja ajavahemiku."
+        },
+        "careful_handling": {
+          "title": "Hoolikas käsitlus",
+          "description": "Rihmad, tekid ja nutikas laadimine, et asjad jõuaksid tervelt kohale."
+        },
+        "right_equipment": {
+          "title": "Õige varustus",
+          "description": "Alates kärudest kuni väikese kraanani — valime tööks sobivad vahendid."
+        }
+      }
+    },
+    "alert": {
+      "aria_label": "Veebilehe uuenduse teade",
+      "title": "Veebilehte uuendatakse",
+      "description": "Mõned funktsioonid ei pruugi praegu töötada. Palun võtke meiega ühendust telefoni või e-posti teel.",
+      "call_now": "Helista Nüüd"
+    }
+  }
+}

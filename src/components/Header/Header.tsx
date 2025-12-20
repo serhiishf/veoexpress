@@ -2,25 +2,28 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Anchor, Box, Burger, Container, Drawer, Group, ScrollArea, SimpleGrid } from '@mantine/core';
+import { useTranslations } from 'next-intl';
+import { Anchor, Box, Burger, Center, Container, Drawer, Group, ScrollArea } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { VeoexpressLogo } from '../VeoexpressLogo/VeoexpressLogo';
+import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
-
+import { VeoexpressLogo } from '../VeoexpressLogo/VeoexpressLogo';
 import classes from './Header.module.css';
-
-const main_links = [
-  { link: '/', label: 'Home' },
-  { link: '#', label: 'Services' },
-  { link: '#', label: 'Vehicles' },
-  { link: '#', label: 'Pricing' },
-  { link: '#', label: 'About' },
-  { link: '#', label: 'Contact' },
-];
 
 const HEADER_HEIGHT_PX = 84;
 
 export function Header() {
+  const t = useTranslations('components.header');
+
+  const main_links = [
+    { link: '/', label: t('home') },
+    { link: '#', label: t('services') },
+    { link: '#', label: t('vehicles') },
+    { link: '#', label: t('pricing') },
+    { link: '#', label: t('about') },
+    { link: '#', label: t('contact') },
+  ];
+
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(0);
 
@@ -40,10 +43,12 @@ export function Header() {
     </Anchor>
   ));
 
+  //TODO: fix response to page size
+
   return (
     <>
       <header className={classes.header}>
-        <Container className={classes.inner}>
+        <Container className={classes.inner} size="xl">
           <VeoexpressLogo />
 
           <Box className={classes.links} visibleFrom="md">
@@ -52,9 +57,19 @@ export function Header() {
             </Group>
           </Box>
 
-          <RequestQuoteButton visibleFrom="md"></RequestQuoteButton>
+          <Group visibleFrom="md">
+            <RequestQuoteButton size="md"></RequestQuoteButton>
+            <LanguageSelector></LanguageSelector>
+          </Group>
 
-          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" hiddenFrom="md" aria-label={opened ? 'Close menu' : 'Open menu'} />
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            className={classes.burger}
+            size="sm"
+            hiddenFrom="md"
+            aria-label={opened ? 'Close menu' : 'Open menu'}
+          />
         </Container>
       </header>
 
@@ -65,7 +80,6 @@ export function Header() {
         size="100%" // full-screen width (NOT 100dvh)
         withinPortal
         lockScroll
-        zIndex={2000}
         overlayProps={{ opacity: 0.55, blur: 2 }}
         withCloseButton
         title={<VeoexpressLogo size="xl" />}
@@ -99,6 +113,10 @@ export function Header() {
             <div className={classes.mobile_cta}>
               <RequestQuoteButton fullWidth></RequestQuoteButton>
             </div>
+
+            <Center>
+              <LanguageSelector></LanguageSelector>
+            </Center>
           </Box>
         </ScrollArea>
       </Drawer>
