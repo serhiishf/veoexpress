@@ -1,6 +1,6 @@
 {
   "components": {
-    "contact_card": {
+    "call_now_button": {
       "call_now": "Helista Kohe"
     },
     "header": {
@@ -15,7 +15,7 @@
       "request_free_quote": "Küsi Tasuta Hinnapakkumist"
     },
     "home_hero": {
-      "title": "Kolimine ja logistika tugeva meeskonnaga.",
+      "title": "Kolimine ja logistika tugeva meeskonnaga",
       "subtitle": "KIIRE TRANSPORT",
       "section_description": "Teostame korterite, kontorite ja objektide teenindust: hoolikas kolimine, jäätmete äravedu, raskeveod, ADR ohtlikud kaubad ning kraanaga laadimistööd.",
       "view_services": "Vaata teenuseid",

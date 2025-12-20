@@ -90,7 +90,7 @@ export default async function RootLayout({
           <NextIntlClientProvider>
             <Alert style={{ position: 'static', top: 0, zIndex: 2500 }}></Alert>
             <Header />
-            {children}
+            <main>{children}</main>
             <Footer />
           </NextIntlClientProvider>
         </MantineProvider>

@@ -1,12 +1,9 @@
 import { useTranslations } from 'next-intl';
 import { Anchor, Box, Container, Divider, Flex, Space, Stack, Text } from '@mantine/core';
+import { company } from '@/constants/company';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
 import { VeoexpressLogo } from '../VeoexpressLogo/VeoexpressLogo';
 import classes from './Footer.module.css';
-
-const PHONE_LABEL = '+372 53 06 9999';
-const PHONE_TEL = '+37253069999';
-const EMAIL = 'info@veoexpress.ee';
 
 export function Footer() {
   const t = useTranslations('components.footer');
@@ -23,34 +20,38 @@ export function Footer() {
         >
           <Stack align="center">
             <VeoexpressLogo />
-            <Text>Tallinn • Harjumaa • Estonia</Text>
+            <Text>{company.workArea}</Text>
           </Stack>
           <Stack gap="xs">
             <Anchor
               fw="bold"
               fz="xl"
-              href={`tel:${PHONE_TEL}`}
+              href={`tel:${company.contact.phoneTel}`}
               underline="never"
               style={{ fontWeight: 700, fontSize: 'var(--mantine-font-size-xl)' }}
               c="inherit"
             >
-              {PHONE_LABEL}
+              {company.contact.phoneLabel}
             </Anchor>
-            <Anchor href={`mailto:${EMAIL}`} underline="never" c="inherit">
+            <Anchor href={`mailto:${company.contact.email}`} underline="never" c="inherit">
               <Text fz="md" component="span" size="lg">
-                {EMAIL}
+                {company.contact.email}
               </Text>
             </Anchor>
           </Stack>
           <Box>
             <Text>{t('account_number')}</Text>
-            <Text>Swedbank: EE492200221062467460</Text>
-            <Text>Sitsi 7, 10314 Tallinn</Text>
+            <Text>{company.bankAccount}</Text>
+            <Text>{company.address.full}</Text>
           </Box>
           <Box>
-            <Text>GlobalPro Trans OÜ</Text>
-            <Text>{t('reg_code')}: 12841029</Text>
-            <Text>{t('vat')}: EE102039296</Text>
+            <Text>{company.legalName}</Text>
+            <Text>
+              {t('reg_code')}: {company.registryCode}
+            </Text>
+            <Text>
+              {t('vat')}: {company.vatNumber}
+            </Text>
           </Box>
           <LanguageSelector></LanguageSelector>
         </Flex>

@@ -13,6 +13,7 @@ import {
   Text,
   type BoxProps,
 } from '@mantine/core';
+import { company } from '@/constants/company';
 
 type AlertProps = BoxProps & {
   phone_label?: string;
@@ -20,14 +21,10 @@ type AlertProps = BoxProps & {
   email?: string;
 };
 
-const DEFAULT_PHONE_LABEL = '+372 53 06 9999';
-const DEFAULT_PHONE_TEL = '+37253069999';
-const DEFAULT_EMAIL = 'info@veoexpress.ee';
-
 export function Alert({
-  phone_label = DEFAULT_PHONE_LABEL,
-  phone_tel = DEFAULT_PHONE_TEL,
-  email = DEFAULT_EMAIL,
+  phone_label = company.contact.phoneLabel,
+  phone_tel = company.contact.phoneTel,
+  email = company.contact.email,
   ...boxProps
 }: AlertProps) {
   const t = useTranslations('components.alert');

@@ -20,7 +20,7 @@ export function Header() {
     { link: '#', label: t('services') },
     { link: '#', label: t('vehicles') },
     { link: '#', label: t('about') },
-    { link: '#', label: t('contact') },
+    { link: '/contact', label: t('contact') },
   ];
 
   const [opened, { toggle, close }] = useDisclosure(false);

@@ -1,12 +1,10 @@
 import { useTranslations } from 'next-intl';
 import { LiaPhoneSolid } from 'react-icons/lia';
 import { Anchor, Button, Flex, Stack, Text } from '@mantine/core';
+import { company } from '@/constants/company';
+import { CallNowButton } from '../CallNowButton/CallNowButton';
 import { CardWrapper } from '../CardWrapper/CardWrapper';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
-
-const PHONE_LABEL = '+372 53 06 9999';
-const PHONE_TEL = '+37253069999';
-const EMAIL = 'info@veoexpress.ee';
 
 export function ContactCard() {
   const t = useTranslations('components.contact_card');
@@ -23,31 +21,23 @@ export function ContactCard() {
           <Anchor
             fw="bold"
             fz="xl"
-            href={`tel:${PHONE_TEL}`}
+            href={`tel:${company.contact.phoneTel}`}
             underline="never"
             style={{ fontWeight: 700, fontSize: 'var(--mantine-font-size-xl)' }}
             c="inherit"
           >
-            {PHONE_LABEL}
+            {company.contact.phoneLabel}
           </Anchor>
-          <Anchor href={`mailto:${EMAIL}`} underline="never" c="inherit">
+          <Anchor href={`mailto:${company.contact.email}`} underline="never" c="inherit">
             <Text fz="md" component="span" size="lg">
-              {EMAIL}
+              {company.contact.email}
             </Text>
           </Anchor>
-          <Text>Tallinn • Harjumaa • Estonia</Text>
+          <Text>{company.workArea}</Text>
         </Stack>
         <Stack>
           <RequestQuoteButton size="lg"></RequestQuoteButton>
-          <Button
-            component="a"
-            href={`tel:${PHONE_TEL}`}
-            size="lg"
-            variant="outline"
-            leftSection={<LiaPhoneSolid size="24" />}
-          >
-            {t('call_now')}
-          </Button>
+          <CallNowButton />
         </Stack>
       </Flex>
     </CardWrapper>
