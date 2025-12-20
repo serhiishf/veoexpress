@@ -10,7 +10,7 @@ const EMAIL = 'info@veoexpress.ee';
 export function ContactCard() {
   return (
     <CardWrapper>
-      <Flex gap={28} align="center" justify="space-between" wrap={{ base: 'wrap', md: 'nowrap' }}>
+      <Flex gap={28} align="center" justify={{ base: 'center', sm: 'space-between' }} direction={{ base: 'column', sm: 'row' }}>
         <Stack>
           <Anchor fw="bold" fz="xl" href={`tel:${PHONE_TEL}`} underline="never" style={{ fontWeight: 700, fontSize: 'var(--mantine-font-size-xl)' }} c="inherit">
             {PHONE_LABEL}

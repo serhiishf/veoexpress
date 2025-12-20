@@ -13,7 +13,7 @@ export function Footer() {
       <Container size="xl" p="xl">
         <Divider></Divider>
         <Space h="xl"></Space>
-        <Flex justify="space-between">
+        <Flex justify="space-between" direction={{ base: 'column', md: 'row' }} gap={28} align={{ base: 'stretch', md: 'center' }}>
           <Stack align="center">
             <VeoexpressLogo />
             <Text>Tallinn • Harjumaa • Estonia</Text>

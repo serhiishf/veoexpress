@@ -3,6 +3,7 @@ import '@mantine/core/styles.css';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Roboto, Open_Sans } from 'next/font/google';
 import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
+import { NextIntlClientProvider } from 'next-intl';
 import { Header } from '@/components/Header/Header';
 import { Footer } from '@/components/Footer/Footer';
 import './globals.css';
@@ -43,8 +44,7 @@ const theme = createTheme({
   headings: {
     fontFamily: 'var(--font-roboto), var(--font-karla), var(--font-open-sans), sans-serif',
   },
-  fontFamilyMonospace:
-    'var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+  fontFamilyMonospace: 'var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
   components: {
     Button: { defaultProps: { radius: 12 } },
   },
@@ -58,9 +58,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body className={`${open_sans.variable} ${roboto.variable} ${geistMono.variable}`}>
         <MantineProvider theme={theme} forceColorScheme="light" defaultColorScheme="light">
-          <Header />
-          {children}
-          <Footer/>
+          <NextIntlClientProvider>
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
         </MantineProvider>
       </body>
     </html>
