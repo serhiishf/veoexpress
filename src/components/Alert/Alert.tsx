@@ -2,7 +2,17 @@
 
 import { useTranslations } from 'next-intl';
 import { RiAlertFill } from 'react-icons/ri';
-import { Anchor, Box, Button, Container, Flex, Group, Text, type BoxProps } from '@mantine/core';
+import {
+  Anchor,
+  Box,
+  Button,
+  Container,
+  Flex,
+  Group,
+  Space,
+  Text,
+  type BoxProps,
+} from '@mantine/core';
 
 type AlertProps = BoxProps & {
   phone_label?: string;
@@ -36,26 +46,27 @@ export function Alert({
           borderBottom: '1px solid var(--mantine-color-yellow-4)',
         }}
       >
+        <Space h="md"></Space>
         <Container size="xl" py={10}>
           <Flex align="center" justify="space-between" gap={16} wrap="wrap">
             <Group gap={10} wrap="nowrap" style={{ flex: '1 1 420px', minWidth: 0 }}>
-              <RiAlertFill size={18} />
+              <RiAlertFill size={48} />
               <Box style={{ minWidth: 0 }}>
-                <Text fw={800} size="sm" style={{ lineHeight: 1.2 }}>
+                <Text fw={800} size="md" style={{ lineHeight: 1.2 }}>
                   {t('title')}
                 </Text>
-                <Text size="sm" style={{ lineHeight: 1.2 }}>
+                <Text size="md" style={{ lineHeight: 1.2 }}>
                   {t('description')}
                 </Text>
               </Box>
             </Group>
 
             <Group gap="md" wrap="wrap" justify="flex-end">
-              <Anchor href={`tel:${phone_tel}`} fw={800} underline="hover">
+              <Anchor href={`tel:${phone_tel}`} fw={800} underline="hover" c="inherit" size="lg">
                 {phone_label}
               </Anchor>
 
-              <Anchor href={`mailto:${email}`} underline="hover">
+              <Anchor href={`mailto:${email}`} underline="hover" c="inherit" size="lg">
                 {email}
               </Anchor>
 
@@ -65,6 +76,7 @@ export function Alert({
             </Group>
           </Flex>
         </Container>
+        <Space h="md"></Space>
       </Box>
     </Box>
   );

@@ -52,7 +52,15 @@ const theme = createTheme({
   fontFamilyMonospace:
     'var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
   components: {
-    Button: { defaultProps: { radius: 12 } },
+    Button: {
+      defaultProps: { radius: 12 },
+      styles: {
+        label: {
+          whiteSpace: 'normal',
+          textAlign: 'center',
+        },
+      },
+    },
   },
 });
 

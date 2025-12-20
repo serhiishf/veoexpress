@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { FaEuroSign } from 'react-icons/fa';
-import { FiTool } from 'react-icons/fi';
+import { FiMapPin, FiTool } from 'react-icons/fi';
 import { GoShieldCheck } from 'react-icons/go';
 import { SimpleGrid, Space } from '@mantine/core';
 import { SectionProps } from '@/../types/shared';
@@ -13,10 +13,15 @@ export function WhyWeSection({ background = 'white' }: SectionProps) {
   const t = useTranslations('components.why_we_section');
 
   return (
-    <SectionWrapper background={background}>
+    <SectionWrapper background={background} >
       <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
       <SectionDescription>{t('description')}</SectionDescription>
-      <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg" p="lg">
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
+        <FeatureCard
+          title={t('cards.free_site_estimate.title')}
+          description={t('cards.free_site_estimate.description')}
+          icon_component={FiMapPin}
+        ></FeatureCard>
         <FeatureCard
           title={t('cards.fixed_quote.title')}
           description={t('cards.fixed_quote.description')}

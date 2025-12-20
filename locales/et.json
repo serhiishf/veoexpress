@@ -109,8 +109,12 @@
     "why_we_section": {
       "title": "Selge protsess, ilma üllatusteta",
       "subtitle": "MIKS VEOEXPRESS",
-      "description": "Oleme kohal õigel ajal, kaitseme sinu vara ja hoiame suhtluse lihtsa. Erikaupade jaoks saame pakkuda ADR-transporti.",
+      "description": "Oleme kohal õigel ajal, kaitseme sinu vara ja hoiame suhtluse lihtsa. Ohtliku jäätmed saame pakkuda ADR-transporti.",
       "cards": {
+        "free_site_estimate": {
+          "title": "Tasuta hinnang kohapeal",
+          "description": "Tuleme kohale, hindame töö mahtu ja anname selge hinnapakkumise."
+        },
         "fixed_quote": {
           "title": "Fikseeritud pakkumine",
           "description": "Saada fotod või nimekiri — saad selge hinna ja ajavahemiku."

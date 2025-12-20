@@ -109,8 +109,12 @@
     "why_we_section": {
       "title": "Clear process, no surprises",
       "subtitle": "WHY VEOEXPRESS",
-      "description": "We show up on time, protect your property, and keep communication simple. For special cargo we can provide ADR transport.",
+      "description": "We show up on time, protect your property, and keep communication simple. For dangerous cargo we can provide ADR transport.",
       "cards": {
+        "free_site_estimate": {
+          "title": "Free on-site estimate",
+          "description": "We can visit the location, assess the job, and give you a clear quote."
+        },
         "fixed_quote": {
           "title": "Fixed quote",
           "description": "Send photos or a list — get a clear price and time window."

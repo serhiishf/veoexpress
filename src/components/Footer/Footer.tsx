@@ -55,6 +55,7 @@ export function Footer() {
           <LanguageSelector></LanguageSelector>
         </Flex>
       </Container>
+      <Space h="xl"></Space>
     </footer>
   );
 }
