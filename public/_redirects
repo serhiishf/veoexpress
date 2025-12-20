@@ -1,3 +1,11 @@
-https://en.veoexpress.ee/* https://veoexpress.ee/en/:splat 301!
-https://ru.veoexpress.ee/* https://veoexpress.ee/ru/:splat 301!
-https://et.veoexpress.ee/* https://veoexpress.ee/et/:splat 301!
+# Domain-level redirects (subdomain -> main domain)
+# http and https need separate rules if you don’t force_ssl
+http://en.veoexpress.ee/*  https://veoexpress.ee/en/:splat  301!
+https://en.veoexpress.ee/* https://veoexpress.ee/en/:splat  301!
+
+http://ru.veoexpress.ee/*  https://veoexpress.ee/ru/:splat  301!
+https://ru.veoexpress.ee/* https://veoexpress.ee/ru/:splat  301!
+
+# If ET is your default locale (localePrefix: 'as-needed'), usually redirect to root (no /et)
+http://et.veoexpress.ee/*  https://veoexpress.ee/:splat     301!
+https://et.veoexpress.ee/* https://veoexpress.ee/:splat     301!

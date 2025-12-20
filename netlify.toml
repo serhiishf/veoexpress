@@ -1,0 +1,35 @@
+[[redirects]]
+  from = "http://en.veoexpress.ee/*"
+  to = "https://veoexpress.ee/en/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://en.veoexpress.ee/*"
+  to = "https://veoexpress.ee/en/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://ru.veoexpress.ee/*"
+  to = "https://veoexpress.ee/ru/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://ru.veoexpress.ee/*"
+  to = "https://veoexpress.ee/ru/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://et.veoexpress.ee/*"
+  to = "https://veoexpress.ee/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://et.veoexpress.ee/*"
+  to = "https://veoexpress.ee/:splat"
+  status = 301
+  force = true
