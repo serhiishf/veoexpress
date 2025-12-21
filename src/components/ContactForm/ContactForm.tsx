@@ -1,14 +1,38 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 import { Button, Checkbox, Group, Stack, Textarea, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { routing } from '@/i18n/routing';
 import { CardWrapper } from '../CardWrapper/CardWrapper';
 
 const NETLIFY_FORM_NAME = 'contact';
+const NETLIFY_POST_ENDPOINT = '/netlify-forms.html';
+
+function build_success_path(locale: string): string {
+  return locale === routing.defaultLocale ? '/success' : `/${locale}/success`;
+}
+
+function form_data_to_url_encoded(form_data: FormData): string {
+  const params = new URLSearchParams();
+
+  for (const [key, value] of form_data.entries()) {
+    if (typeof value === 'string') {
+      params.append(key, value);
+    }
+  }
+
+  return params.toString();
+}
 
 export function ContactForm() {
   const t = useTranslations('components.contact_form');
+  const locale = useLocale();
+  const router = useRouter();
+
+  const [is_submitting, set_is_submitting] = useState(false);
 
   const form = useForm({
     mode: 'uncontrolled',
@@ -24,30 +48,48 @@ export function ContactForm() {
     },
   });
 
+  const handle_submit = form.onSubmit(async (_values, event) => {
+    if (!event) return;
+
+    event.preventDefault();
+
+    try {
+      set_is_submitting(true);
+
+      const html_form = event.currentTarget;
+      const form_data = new FormData(html_form);
+
+      // POST to a static asset (public/) so Netlify Forms can capture it
+      const response = await fetch(NETLIFY_POST_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: form_data_to_url_encoded(form_data),
+      });
+
+      if (!response.ok) {
+        // If you want: show Mantine notification here
+        set_is_submitting(false);
+        return;
+      }
+
+      router.push(build_success_path(locale));
+    } finally {
+      set_is_submitting(false);
+    }
+  });
+
   return (
     <CardWrapper>
       <form
         name={NETLIFY_FORM_NAME}
         method="POST"
-        action="success"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        encType="application/x-www-form-urlencoded"
-        noValidate
-        onSubmit={form.onSubmit((_values, event) => {
-          if (!event) return;
-          event.currentTarget.submit(); // native submit -> Netlify handles it
-        })}
+        onSubmit={handle_submit}
       >
-        {/* Required for Netlify Forms */}
+        {/* Required for Netlify JS forms */}
         <input type="hidden" name="form-name" value={NETLIFY_FORM_NAME} />
-        <input
-          type="text"
-          name="bot-field"
-          tabIndex={-1}
-          autoComplete="off"
-          style={{ display: 'none' }}
-        />
+        <input type="text" name="bot-field" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
 
         <Stack>
           <TextInput
@@ -89,6 +131,9 @@ export function ContactForm() {
             name="message"
           />
 
+          {/* Ensure the field is always present in submission */}
+          <input type="hidden" name="on_site_estimate" value="false" />
+
           <Group justify="space-between" mt="md">
             <Checkbox
               label={t('on_site_estimate_checkbox.label')}
@@ -97,9 +142,10 @@ export function ContactForm() {
               size="md"
               {...form.getInputProps('on_site_estimate', { type: 'checkbox' })}
               name="on_site_estimate"
+              value="true"
             />
 
-            <Button type="submit" size="lg">
+            <Button type="submit" size="lg" loading={is_submitting}>
               {t('confirmation_button.label')}
             </Button>
           </Group>
