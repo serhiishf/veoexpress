@@ -16,10 +16,10 @@ export function SectionWrapper({
     <Stack
       gap="xl"
       className={clsx(classes.section_wrapper, background === 'grey' && classes.section_bg_grey)}
-      pl={{ base: 'sm', md: 'lg', lg: 'lg' }}
-      pr={{ base: 'sm', md: 'lg', lg: 'lg' }}
-      pt="lg"
-      pb="lg"
+      pl={{ base: 'sm', md: 'lg', lg: 'xl' }}
+      pr={{ base: 'sm', md: 'lg', lg: 'xl' }}
+      pt="xl"
+      pb="xl"
       {...stackProps}
     >
       {children}

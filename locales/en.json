@@ -134,13 +134,49 @@
       "title": "Website is being updated",
       "description": "Some functions may not work right now. Please contact us by phone or email.",
       "call_now": "Call Now"
+    },
+    "contact_form": {
+      "email_input": {
+        "label": "Email",
+        "placeholder": "name@email.com",
+        "description": "We’ll reply to this email with a quote or follow-up questions.",
+        "validate_error": "Enter a valid email"
+      },
+      "phone_input": {
+        "label": "Phone",
+        "placeholder": "+372 5xxxxxxx",
+        "description": "Add a number if you want a faster callback."
+      },
+      "message_input": {
+        "label": "Message",
+        "placeholder": "Describe your request…",
+        "description": "What needs moving/removal? Addresses (or area), floor/elevator, preferred time, and any special notes.",
+        "validate_error": "Please add a short description (min 10 characters)"
+      },
+      "on_site_estimate_checkbox": {
+        "label": "Request free on-site estimate",
+        "description": "We can come to the pickup location, assess the job, and confirm the final price."
+      },
+      "confirmation_button": {
+        "label": "Send request"
+      }
     }
   },
   "pages": {
     "contact": {
       "title": "Tell us what you need",
       "subtitle": "CONTACT",
-      "description": "Send a request — we reply fast with a clear price and pickup time. Same-day options when possible."
+      "description": "Send a request — we reply fast with a clear price and pickup time."
+    },
+    "not_found": {
+      "title": "Page not found",
+      "description": "The page you’re looking for doesn’t exist or was moved.",
+      "button": "Back to home"
+    },
+    "success": {
+      "title": "Request sent",
+      "description": "Thanks! We’ll reply soon with a clear price and pickup time.",
+      "button": "Back to home"
     }
   }
 }

@@ -134,6 +134,49 @@
       "title": "Veebilehte uuendatakse",
       "description": "Mõned funktsioonid ei pruugi praegu töötada. Palun võtke meiega ühendust telefoni või e-posti teel.",
       "call_now": "Helista Nüüd"
+    },
+    "contact_form": {
+      "email_input": {
+        "label": "E-post",
+        "placeholder": "nimi@email.com",
+        "description": "Vastame sellele e-posti aadressile hinnapakkumise või täpsustavate küsimustega.",
+        "validate_error": "Sisesta kehtiv e-posti aadress"
+      },
+      "phone_input": {
+        "label": "Telefon",
+        "placeholder": "+372 5xxxxxxx",
+        "description": "Lisa number, kui soovid kiiremat tagasikõnet."
+      },
+      "message_input": {
+        "label": "Sõnum",
+        "placeholder": "Kirjelda oma päringut…",
+        "description": "Mida on vaja kolida või ära viia? Aadressid (või piirkond), korrus/lift, eelistatud aeg ja lisainfo.",
+        "validate_error": "Palun lisage lühike kirjeldus (minimaalselt 10 tähemärki)"
+      },
+      "on_site_estimate_checkbox": {
+        "label": "Soovin tasuta kohapealset hinnapakkumist",
+        "description": "Saame tulla pealevõtmise asukohta, hinnata töö mahtu ja kinnitada lõpliku hinna."
+      },
+      "confirmation_button": {
+        "label": "Saada päring"
+      }
+    }
+  },
+  "pages": {
+    "contact": {
+      "title": "Räägi meile oma vajadusest",
+      "subtitle": "KONTAKT",
+      "description": "Saada päring — vastame kiiresti selge hinna ja pealevõtmise ajaga."
+    },
+    "not_found": {
+      "title": "Lehte ei leitud",
+      "description": "Otsitud lehte ei ole olemas või see on teise kohta liigutatud.",
+      "button": "Tagasi avalehele"
+    },
+    "success": {
+      "title": "Päring saadetud",
+      "description": "Aitäh! Vastame peagi selge hinna ja sobiva ajaga.",
+      "button": "Tagasi avalehele"
     }
   }
 }
