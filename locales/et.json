@@ -19,8 +19,6 @@
       "subtitle": "KIIRE TRANSPORT",
       "section_description": "Teostame korterite, kontorite ja objektide teenindust: hoolikas kolimine, jäätmete äravedu, raskeveod, ADR ohtlikud kaubad ning kraanaga laadimistööd.",
       "view_services": "Vaata teenuseid",
-      "same_day_title": "Sama päeva võimalused",
-      "same_day_description": "Vaja juba täna? Sageli saame tööd teostada samal päeval Tallinnas ja Harjumaal — ning võimaluse korral üle kogu Eesti.",
       "image_alt": "Väike kaubik, keskmine kaubik ja kraanaga veok"
     },
     "pricing_section": {
@@ -44,6 +42,10 @@
         "time_preference": "Soovitud aeg",
         "photos": "Fotod"
       }
+    },
+    "same_day_options": {
+      "title": "Sama päeva võimalused",
+      "description": "Vaja juba täna? Sageli saame tööd teostada samal päeval Tallinnas ja Harjumaal — ning võimaluse korral üle kogu Eesti."
     },
     "services_section": {
       "title": "Mida me teeme",

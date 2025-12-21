@@ -1,12 +1,16 @@
 import { useTranslations } from 'next-intl';
-import { Container, Group, Stack, Text, TextInput, Title } from '@mantine/core';
-import { ContactCard } from '@/components/ContactCard/ContactCard';
+import { Box, Grid, GridCol, Group, SimpleGrid, Stack } from '@mantine/core';
+import { CallNowButton } from '@/components/CallNowButton/CallNowButton';
+import { CardWrapper } from '@/components/CardWrapper/CardWrapper';
+import { CompanyEmail } from '@/components/CompanyEmail/CompanyEmail';
+import { CompanyPhone } from '@/components/CompanyPhone/CompanyPhone';
+import { CompanyWorkArea } from '@/components/CompanyWorkArea/CompanyWorkArea';
 import { ContactForm } from '@/components/ContactForm/ContactForm';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
+import { SameDayOptions } from '@/components/SameDayOptions/SameDayOptions';
 import { SectionDescription } from '@/components/SectionDesctiption/SectionDescription';
 import { SectionHeader } from '@/components/SectionHeader/SectionHeader';
 import { SectionWrapper } from '@/components/SectionWrapper/SectionWrapper';
-import { company } from '@/constants/company';
 
 export default function ContactPage() {
   const t = useTranslations('pages.contact');
@@ -19,10 +23,34 @@ export default function ContactPage() {
             <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
             <SectionDescription>{t('description')}</SectionDescription>
           </Stack>
-          <Group>
-            <ContactForm></ContactForm>
-            <ContactCard></ContactCard>
-          </Group>
+          <Grid gutter="lg">
+            <GridCol span={{ base: 12, md: 8 }}>
+              <ContactForm />
+            </GridCol>
+
+            <GridCol span={{ base: 12, md: 4 }}>
+              <Box w={{ base: '100%', md: 'fit-content' }} maw="100%">
+                {/* Stretch children to wrapper width */}
+                <Stack justify="center" w="100%">
+                  <Box w="100%">
+                    <CardWrapper>
+                      <Stack>
+                        <CompanyPhone />
+                        <CompanyEmail />
+                        <CompanyWorkArea />
+                        <CallNowButton />
+                      </Stack>
+                    </CardWrapper>
+                  </Box>
+
+                  {/* This will now match the CardWrapper width */}
+                  <Box w="100%" maw="100%">
+                    <SameDayOptions />
+                  </Box>
+                </Stack>
+              </Box>
+            </GridCol>
+          </Grid>
         </Stack>
       </SectionWrapper>
     </PageContainer>

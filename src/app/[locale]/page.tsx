@@ -1,4 +1,3 @@
-import { Container } from '@mantine/core';
 import { ContactSection } from '@/components/ContactSection/ContactSection';
 import { HomeHero } from '@/components/HomeHero/HomeHero';
 import { PageContainer } from '@/components/PageContainer/PageContainer';

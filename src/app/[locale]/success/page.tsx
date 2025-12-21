@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { FaRegCheckCircle } from 'react-icons/fa';
-import { Anchor, Button, Container, Group, Paper, Stack, Text, Title } from '@mantine/core';
+import { Button, Container, Group, Paper, Stack, Text, Title } from '@mantine/core';
 
 export default function SuccessPage() {
   const t = useTranslations('pages.success');

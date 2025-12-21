@@ -19,8 +19,6 @@
       "subtitle": "FAST TRANSPORT",
       "section_description": "We handle apartments, offices and sites: careful moving, waste removal, heavy cargo, ADR dangerous goods, and crane-assisted loading.",
       "view_services": "View Services",
-      "same_day_title": "Same-day options",
-      "same_day_description": "Need it today? We often can handle jobs the same day in Tallinn & Harjumaa — and across Estonia when possible.",
       "image_alt": "Small van, middle van and truck with crane"
     },
     "pricing_section": {
@@ -44,6 +42,10 @@
         "time_preference": "Time preference",
         "photos": "Photos"
       }
+    },
+    "same_day_options": {
+      "title": "Same-day options",
+      "description": "Need it today? We often can handle jobs the same day in Tallinn & Harjumaa — and across Estonia when possible."
     },
     "services_section": {
       "title": "What we do",
