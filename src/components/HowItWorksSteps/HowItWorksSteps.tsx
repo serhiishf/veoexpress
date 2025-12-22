@@ -29,11 +29,11 @@ export function HowItWorksSteps({ size = 'md' }: HowItWorksStepsProps) {
     <CardWrapper>
       <Stack>
         <Box>
-          <Title order={3} size={size}>
-            How it works
+          <Title order={2} size={size}>
+            {t('title')}
           </Title>
           <Text size={size} c="gray">
-            Clear steps, no surprises.
+            {t('subtitle')}
           </Text>
         </Box>
         {steps.map((step, index) => (
@@ -42,7 +42,7 @@ export function HowItWorksSteps({ size = 'md' }: HowItWorksStepsProps) {
             number={index + 1}
             title={step.title}
             description={step.description}
-            size={'sm'}
+            size={size}
           />
         ))}
       </Stack>

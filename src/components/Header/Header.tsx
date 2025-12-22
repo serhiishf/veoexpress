@@ -62,7 +62,7 @@ export function Header() {
     { link: '/', label: t('home') },
     { link: '#', label: t('services') },
     { link: '#', label: t('vehicles') },
-    { link: '#', label: t('about') },
+    { link: '/about', label: t('about') },
     { link: '/contact', label: t('contact') },
   ];
 

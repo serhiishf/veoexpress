@@ -164,6 +164,8 @@
       }
     },
     "how_it_works_steps": {
+      "title": "Kuidas see töötab",
+      "subtitle": "Selged sammud, ilma üllatusteta.",
       "step_1": {
         "title": "Saada info",
         "description": "Aadressid, esemed, sobiv aeg ja lisainfo. Soovi korral saad tellida ka tasuta kohapealse hinnangu."

@@ -164,6 +164,8 @@
       }
     },
     "how_it_works_steps": {
+      "title": "How it works",
+      "subtitle": "Clear steps, no surprises.",
       "step_1": {
         "title": "Send details",
         "description": "Addresses, items, preferred time, and any extra notes. You can also request a free on-site estimate."
