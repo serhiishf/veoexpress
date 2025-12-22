@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl';
-import { Stack, Text, Title } from '@mantine/core';
+import { Stack, Text, Title, type MantineSize } from '@mantine/core';
 import { CardWrapper } from '../CardWrapper/CardWrapper';
 
 type SameDayOptionsProps = {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: MantineSize;
 };
 
 export function SameDayOptions({ size = 'lg' }: SameDayOptionsProps) {

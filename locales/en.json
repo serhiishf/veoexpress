@@ -162,6 +162,20 @@
       "confirmation_button": {
         "label": "Send request"
       }
+    },
+    "how_it_works_steps": {
+      "step_1": {
+        "title": "Send details",
+        "description": "Addresses, items, preferred time, and any extra notes. You can also request a free on-site estimate."
+      },
+      "step_2": {
+        "title": "We confirm details & price",
+        "description": "We reply fast with a clear quote and a pickup time window."
+      },
+      "step_3": {
+        "title": "Job done",
+        "description": "Careful handling, clean loading, simple communication."
+      }
     }
   },
   "pages": {

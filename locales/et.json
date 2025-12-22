@@ -162,6 +162,20 @@
       "confirmation_button": {
         "label": "Saada päring"
       }
+    },
+    "how_it_works_steps": {
+      "step_1": {
+        "title": "Saada info",
+        "description": "Aadressid, esemed, sobiv aeg ja lisainfo. Soovi korral saad tellida ka tasuta kohapealse hinnangu."
+      },
+      "step_2": {
+        "title": "Kinnitame info ja hinna",
+        "description": "Vastame kiiresti selge hinnapakkumise ja ajavahemikuga, millal tuleme järele."
+      },
+      "step_3": {
+        "title": "Töö tehtud",
+        "description": "Hoolikas käsitsemine, puhas laadimine ja lihtne suhtlus."
+      }
     }
   },
   "pages": {

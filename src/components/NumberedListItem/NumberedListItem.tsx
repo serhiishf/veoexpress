@@ -1,20 +1,51 @@
-import { Group, Text } from '@mantine/core';
+import { Flex, Stack, Text, ThemeIcon, type MantineSize } from '@mantine/core';
 
 type NumberedListItemProps = {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   number: number;
+  size?: MantineSize;
 };
 
-export function NumberedListItem({ title, description, number }: NumberedListItemProps) {
+const number_icon_size_by_size: Record<MantineSize, number> = {
+  xs: 24,
+  sm: 28,
+  md: 32,
+  lg: 38,
+  xl: 44,
+};
+
+export function NumberedListItem({
+  title,
+  description,
+  number,
+  size = 'md',
+}: NumberedListItemProps) {
   return (
-    <Group>
-      <Text size="xl" fw={700}>
-        {number}
-      </Text>
-      <Text size="lg">
-        <Text fw={700}>{title}</Text> {description}
-      </Text>
-    </Group>
+    <Flex align="flex-start" gap="md" wrap="nowrap">
+      <ThemeIcon
+        radius="xl"
+        variant="light"
+        color="blue"
+        size={number_icon_size_by_size[size]}
+        style={{ flex: '0 0 auto' }}
+      >
+        <Text fw={700} style={{ lineHeight: 1 }}>
+          {number}
+        </Text>
+      </ThemeIcon>
+      <Stack gap="xs">
+        {title && (
+          <Text fw={700} size={size}>
+            {title}
+          </Text>
+        )}
+        {description && (
+          <Text size={size} c="gray">
+            {description}
+          </Text>
+        )}
+      </Stack>
+    </Flex>
   );
 }

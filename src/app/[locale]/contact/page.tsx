@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { Box, Grid, GridCol, Group, SimpleGrid, Stack } from '@mantine/core';
+import { Box, Grid, GridCol, Stack } from '@mantine/core';
 import { CallNowButton } from '@/components/CallNowButton/CallNowButton';
 import { CardWrapper } from '@/components/CardWrapper/CardWrapper';
 import { CompanyEmail } from '@/components/CompanyEmail/CompanyEmail';
@@ -31,7 +31,6 @@ export default function ContactPage() {
 
             <GridCol span={{ base: 12, md: 4 }}>
               <Box w={{ base: '100%', md: 'fit-content' }} maw="100%">
-                {/* Stretch children to wrapper width */}
                 <Stack justify="center" w="100%">
                   <Box w="100%">
                     <CardWrapper>
@@ -44,7 +43,6 @@ export default function ContactPage() {
                     </CardWrapper>
                   </Box>
 
-                  {/* This will now match the CardWrapper width */}
                   <Box w="100%" maw="100%">
                     <HowItWorksSteps />
                   </Box>
