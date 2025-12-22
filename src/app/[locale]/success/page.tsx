@@ -13,7 +13,7 @@ export default function SuccessPage() {
       <Paper radius={28} p={{ base: 24, sm: 36 }} withBorder>
         <Stack align="center" gap="md">
           <Image
-            src="/illustrations/truck_with_envelope.png"
+            src="/illustrations/truck_with_envelope.webp"
             alt="envelope on truck"
             width={440}
             height={320}
