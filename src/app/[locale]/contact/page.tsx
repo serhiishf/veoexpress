@@ -6,6 +6,7 @@ import { CompanyEmail } from '@/components/CompanyEmail/CompanyEmail';
 import { CompanyPhone } from '@/components/CompanyPhone/CompanyPhone';
 import { CompanyWorkArea } from '@/components/CompanyWorkArea/CompanyWorkArea';
 import { ContactForm } from '@/components/ContactForm/ContactForm';
+import { HowItWorksSteps } from '@/components/HowItWorksSteps/HowItWorksSteps';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
 import { SameDayOptions } from '@/components/SameDayOptions/SameDayOptions';
 import { SectionDescription } from '@/components/SectionDesctiption/SectionDescription';
@@ -45,7 +46,10 @@ export default function ContactPage() {
 
                   {/* This will now match the CardWrapper width */}
                   <Box w="100%" maw="100%">
-                    <SameDayOptions />
+                    <HowItWorksSteps />
+                  </Box>
+                  <Box w="100%" maw="100%">
+                    <SameDayOptions size="md" />
                   </Box>
                 </Stack>
               </Box>

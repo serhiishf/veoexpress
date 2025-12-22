@@ -1,6 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Anchor, Box, Container, Divider, Flex, Space, Stack, Text } from '@mantine/core';
 import { company } from '@/constants/company';
+import { CompanyEmail } from '../CompanyEmail/CompanyEmail';
+import { CompanyPhone } from '../CompanyPhone/CompanyPhone';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
 import { VeoexpressLogo } from '../VeoexpressLogo/VeoexpressLogo';
 import classes from './Footer.module.css';
@@ -23,21 +25,8 @@ export function Footer() {
             <Text>{company.workArea}</Text>
           </Stack>
           <Stack gap="xs">
-            <Anchor
-              fw="bold"
-              fz="xl"
-              href={`tel:${company.contact.phoneTel}`}
-              underline="never"
-              style={{ fontWeight: 700, fontSize: 'var(--mantine-font-size-xl)' }}
-              c="inherit"
-            >
-              {company.contact.phoneLabel}
-            </Anchor>
-            <Anchor href={`mailto:${company.contact.email}`} underline="never" c="inherit">
-              <Text fz="md" component="span" size="lg">
-                {company.contact.email}
-              </Text>
-            </Anchor>
+            <CompanyPhone />
+            <CompanyEmail />
           </Stack>
           <Box>
             <Text>{t('account_number')}</Text>

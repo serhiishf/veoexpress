@@ -3,7 +3,17 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { Anchor, Box, Burger, Center, Container, Drawer, Group, ScrollArea } from '@mantine/core';
+import {
+  Anchor,
+  Box,
+  Burger,
+  Center,
+  Container,
+  Drawer,
+  Flex,
+  Group,
+  ScrollArea,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
@@ -77,33 +87,42 @@ export function Header() {
     );
   });
 
-  //TODO: fix response to page size
-
   return (
     <>
       <header className={classes.header}>
-        <Container className={classes.inner} size="xl">
-          <VeoexpressLogo />
+        <Container size="xl">
+          <Flex align="center" justify="space-between">
+            <Box>
+              <VeoexpressLogo />
+            </Box>
+            <Flex
+              wrap="wrap"
+              justify="space-around"
+              align="center"
+              gap="md"
+              style={{ flex: 1, minWidth: 0 }}
+            >
+              <Box className={classes.links} visibleFrom="md">
+                <Group gap={0} className={classes.main_links} wrap="wrap">
+                  {main_items}
+                </Group>
+              </Box>
 
-          <Box className={classes.links} visibleFrom="md">
-            <Group gap={0} justify="flex-end" className={classes.main_links} wrap="wrap">
-              {main_items}
-            </Group>
-          </Box>
+              <Group visibleFrom="md">
+                <RequestQuoteButton size="md" />
+                <LanguageSelector />
+              </Group>
+            </Flex>
 
-          <Group visibleFrom="md">
-            <RequestQuoteButton size="md" />
-            <LanguageSelector />
-          </Group>
-
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-            hiddenFrom="md"
-            aria-label={opened ? 'Close menu' : 'Open menu'}
-          />
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              className={classes.burger}
+              size="sm"
+              hiddenFrom="md"
+              aria-label={opened ? 'Close menu' : 'Open menu'}
+            />
+          </Flex>
         </Container>
       </header>
 

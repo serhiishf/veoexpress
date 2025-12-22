@@ -8,7 +8,12 @@ export function CompanyPhone({ ...anchorProps }: AnchorProps) {
       fz="xl"
       href={`tel:${company.contact.phoneTel}`}
       underline="never"
-      style={{ fontWeight: 700, fontSize: 'var(--mantine-font-size-xl)' }}
+      style={{
+        fontWeight: 700,
+        fontSize: 'var(--mantine-font-size-xl)',
+        display: 'inline-flex',
+        width: 'fit-content',
+      }}
       c="inherit"
       {...anchorProps}
     >
