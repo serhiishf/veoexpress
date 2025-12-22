@@ -2,8 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { FaRegCheckCircle } from 'react-icons/fa';
-import { Button, Container, Group, Paper, Stack, Text, Title } from '@mantine/core';
+import { Button, Container, Group, Image, Paper, Stack, Text, Title } from '@mantine/core';
 
 export default function SuccessPage() {
   const t = useTranslations('pages.success');
@@ -13,7 +12,13 @@ export default function SuccessPage() {
     <Container size="sm" py={{ base: 48, sm: 80 }}>
       <Paper radius={28} p={{ base: 24, sm: 36 }} withBorder>
         <Stack align="center" gap="md">
-          <FaRegCheckCircle size={64} color="green" />
+          <Image
+            src="/illustrations/truck_with_envelope.png"
+            alt="envelope on truck"
+            width={440}
+            height={320}
+            style={{ objectFit: 'contain' }}
+          />
 
           <Title order={1} ta="center">
             {t('title')}
