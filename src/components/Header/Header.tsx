@@ -60,8 +60,8 @@ export function Header() {
 
   const main_links = [
     { link: '/', label: t('home') },
-    { link: '#', label: t('services') },
-    { link: '#', label: t('vehicles') },
+    { link: '/services', label: t('services') },
+    { link: '/vehicles', label: t('vehicles') },
     { link: '/about', label: t('about') },
     { link: '/contact', label: t('contact') },
   ];

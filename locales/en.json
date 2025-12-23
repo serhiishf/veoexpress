@@ -234,6 +234,11 @@
           "image_alt": "truck with tracked vehicle on board"
         }
       }
+    },
+    "in_developing_section": {
+      "title": "This page is still under development",
+      "description": "We’re working on it right now. Some content or features may be missing — please check back soon.",
+      "home_button": "Go Home"
     }
   },
   "pages": {

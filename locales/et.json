@@ -234,6 +234,11 @@
           "image_alt": "kraanaveok pardal roomiksõidukiga"
         }
       }
+    },
+    "in_developing_section": {
+      "title": "See leht on veel arenduses",
+      "description": "Töötame selle kallal. Osa sisust või funktsioone võib veel puududa — palun vaata varsti uuesti.",
+      "home_button": "Avalehele"
     }
   },
   "pages": {

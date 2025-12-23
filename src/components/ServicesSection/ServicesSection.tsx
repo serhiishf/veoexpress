@@ -9,6 +9,8 @@ import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
 export function ServicesSection({ background = 'white' }: SectionProps) {
   const t = useTranslations('components.services_section');
 
+  //TODO: improve links to actual goal pages
+
   return (
     <SectionWrapper background={background}>
       <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
@@ -18,39 +20,44 @@ export function ServicesSection({ background = 'white' }: SectionProps) {
         <ActionCard
           title={t('cards.moving.title')}
           description={t('cards.moving.description')}
-          href="#"
           imageSrc={'/illustrations/moving.webp'}
           imageAlt={t('cards.moving.image_alt')}
+          href="/services/#"
         ></ActionCard>
         <ActionCard
           title={t('cards.waste_removal.title')}
           description={t('cards.waste_removal.description')}
           imageSrc={'/illustrations/waste_removal.webp'}
           imageAlt={t('cards.waste_removal.image_alt')}
+          href="/services/#"
         ></ActionCard>
         <ActionCard
           title={t('cards.heavy_transport.title')}
           description={t('cards.heavy_transport.description')}
           imageSrc={'/illustrations/volvo_and_trailer_with_tractors.webp'}
           imageAlt={t('cards.heavy_transport.image_alt')}
+          href="/services/#"
         ></ActionCard>
         <ActionCard
           title={t('cards.adr_dangerous_goods.title')}
           description={t('cards.adr_dangerous_goods.description')}
           imageSrc={'/illustrations/adr_goods.webp'}
           imageAlt={t('cards.adr_dangerous_goods.image_alt')}
+          href="/services/#"
         ></ActionCard>
         <ActionCard
           title={t('cards.crane_loading_work.title')}
           description={t('cards.crane_loading_work.description')}
           imageSrc={'/illustrations/unloading_with_crane.webp'}
           imageAlt={t('cards.crane_loading_work.image_alt')}
+          href="/services/#"
         ></ActionCard>
         <ActionCard
           title={t('cards.towing.title')}
           description={t('cards.towing.description')}
           imageSrc="/illustrations/towing.webp"
           imageAlt={t('cards.towing.image_alt')}
+          href="/services/#"
         ></ActionCard>
       </SimpleGrid>
     </SectionWrapper>

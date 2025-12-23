@@ -18,22 +18,22 @@ export function FleetEquipmentSection({ ...sectionProps }: SectionProps) {
         <ActionCard
           title={t('fleet_list.van.title')}
           description={t('fleet_list.van.description')}
-          href="#"
+          href="/vehicles/#"
           imageSrc="/illustrations/red_van.webp"
           imageAlt={t('fleet_list.van.image_alt')}
         />
         <ActionCard
           title={t('fleet_list.medium_truck.title')}
           description={t('fleet_list.medium_truck.description')}
-          href="#"
+          href="/vehicles/#"
           imageSrc="/illustrations/medium_truck_with_pallets.webp"
           imageAlt={t('fleet_list.medium_truck.image_alt')}
         />
         <ActionCard
           title={t('fleet_list.truck_with_crane.title')}
           description={t('fleet_list.truck_with_crane.description')}
-          href="#"
-          imageSrc="/illustrations/truck_with_tracked_vehicle.png"
+          href="/vehicles/#"
+          imageSrc="/illustrations/truck_with_tracked_vehicle.webp"
           imageAlt={t('fleet_list.truck_with_crane.image_alt')}
         />
       </SimpleGrid>
