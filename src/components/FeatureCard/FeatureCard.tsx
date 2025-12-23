@@ -6,14 +6,14 @@ import { CardWrapper } from '../CardWrapper/CardWrapper';
 type FeatureCardProps = {
   title: string;
   description: string;
-  icon_component?: ComponentType<IconBaseProps>;
+  iconComponent?: ComponentType<IconBaseProps>;
   icon_props?: Omit<ThemeIconProps, 'children'>;
 };
 
 export function FeatureCard({
   title,
   description,
-  icon_component: Icon,
+  iconComponent: Icon,
   icon_props,
 }: FeatureCardProps) {
   return (

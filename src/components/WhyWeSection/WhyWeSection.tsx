@@ -13,29 +13,29 @@ export function WhyWeSection({ background = 'white' }: SectionProps) {
   const t = useTranslations('components.why_we_section');
 
   return (
-    <SectionWrapper background={background} >
+    <SectionWrapper background={background}>
       <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
       <SectionDescription>{t('description')}</SectionDescription>
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
         <FeatureCard
           title={t('cards.free_site_estimate.title')}
           description={t('cards.free_site_estimate.description')}
-          icon_component={FiMapPin}
+          iconComponent={FiMapPin}
         ></FeatureCard>
         <FeatureCard
           title={t('cards.fixed_quote.title')}
           description={t('cards.fixed_quote.description')}
-          icon_component={FaEuroSign}
+          iconComponent={FaEuroSign}
         ></FeatureCard>
         <FeatureCard
           title={t('cards.careful_handling.title')}
           description={t('cards.careful_handling.description')}
-          icon_component={GoShieldCheck}
+          iconComponent={GoShieldCheck}
         ></FeatureCard>
         <FeatureCard
           title={t('cards.right_equipment.title')}
           description={t('cards.right_equipment.description')}
-          icon_component={FiTool}
+          iconComponent={FiTool}
         ></FeatureCard>
       </SimpleGrid>
     </SectionWrapper>

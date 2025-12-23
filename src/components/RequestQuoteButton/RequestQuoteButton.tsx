@@ -17,7 +17,7 @@ export function RequestQuoteButton({ ...button_props }: RequestQuoteButtonProps)
       onClick={() => router.push('/contact')}
       {...button_props}
     >
-      {t('request_free_quote')}
+      {t('label')}
     </Button>
   );
 }

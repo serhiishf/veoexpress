@@ -14,7 +14,7 @@ export default function SuccessPage() {
         <Stack align="center" gap="md">
           <Image
             src="/illustrations/truck_with_envelope.webp"
-            alt="envelope on truck"
+            alt={t('image_alt')}
             width={440}
             height={320}
             style={{ objectFit: 'contain' }}

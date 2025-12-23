@@ -6,13 +6,14 @@ import { SameDayOptions } from '../SameDayOptions/SameDayOptions';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
+import { ViewServicesButton } from '../ViewServicesButton/ViewServicesButton';
 import classes from './HomeHero.module.css';
 
-export function HomeHero({ background = 'white' }: SectionProps) {
+export function HomeHero({ ...sectionProps }: SectionProps) {
   const t = useTranslations('components.home_hero');
 
   return (
-    <SectionWrapper background={background}>
+    <SectionWrapper {...sectionProps}>
       <SimpleGrid
         className={classes.home_hero}
         cols={{ base: 1, md: 2 }}
@@ -26,9 +27,7 @@ export function HomeHero({ background = 'white' }: SectionProps) {
           <SameDayOptions></SameDayOptions>
           <Group>
             <RequestQuoteButton size="lg"></RequestQuoteButton>
-            <Button size="lg" variant="outline">
-              {t('view_services')}
-            </Button>
+            <ViewServicesButton size="lg"></ViewServicesButton>
           </Group>
         </Stack>
         <Stack className={classes.right_side} justify="center">

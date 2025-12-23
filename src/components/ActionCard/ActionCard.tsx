@@ -1,35 +1,35 @@
 import clsx from 'clsx';
 import { Box, Image, Paper, Text, Title, type ImageProps, type PaperProps } from '@mantine/core';
-import classes from './ServiceCard.module.css';
+import classes from './ActionCard.module.css';
 
-type ServiceCardProps = {
+type ActionCardProps = {
   title: string;
   description?: string;
   href?: string;
 
-  background_src?: string;
-  background_overlay_opacity?: number;
+  backgroundSrc?: string;
+  backgroundOverlayOpacity?: number;
 
-  image_src?: ImageProps['src'];
-  image_alt?: string;
+  imageSrc?: ImageProps['src'];
+  imageAlt?: string;
   image_props?: Omit<ImageProps, 'src' | 'alt'>;
 
   content_padding?: PaperProps['p'];
 } & Omit<PaperProps, 'component' | 'href' | 'p'>;
 
-export function ServiceCard({
+export function ActionCard({
   title,
   description,
   href,
-  background_src,
-  background_overlay_opacity = 0.45,
-  image_src,
-  image_alt,
+  backgroundSrc,
+  backgroundOverlayOpacity = 0.45,
+  imageSrc,
+  imageAlt,
   image_props,
   content_padding = 20,
   className,
   ...paper_props
-}: ServiceCardProps) {
+}: ActionCardProps) {
   return (
     <Paper
       component={href ? 'a' : 'div'}
@@ -48,11 +48,11 @@ export function ServiceCard({
             {description}
           </Text>
         )}
-        {image_src ? (
+        {imageSrc ? (
           <Image
             className={classes.card_image}
-            src={image_src}
-            alt={image_alt ?? ''}
+            src={imageSrc}
+            alt={imageAlt ?? ''}
             radius="md"
             {...image_props}
             mah={250}

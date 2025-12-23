@@ -47,7 +47,9 @@ export function Alert({
         <Container size="xl" py={10}>
           <Flex align="center" justify="space-between" gap={16} wrap="wrap">
             <Group gap={10} wrap="nowrap" style={{ flex: '1 1 420px', minWidth: 0 }}>
-              <RiAlertFill size={48} />
+              <Box flex="0 0 auto">
+                <RiAlertFill size={48} color="red" />
+              </Box>
               <Box style={{ minWidth: 0 }}>
                 <Text fw={800} size="md" style={{ lineHeight: 1.2 }}>
                   {t('title')}

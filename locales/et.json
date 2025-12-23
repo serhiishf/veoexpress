@@ -1,7 +1,7 @@
 {
   "components": {
     "call_now_button": {
-      "call_now": "Helista Kohe"
+      "label": "Helista Kohe"
     },
     "header": {
       "home": "Avaleht",
@@ -12,13 +12,12 @@
       "contact": "Kontakt"
     },
     "request_quote_button": {
-      "request_free_quote": "Küsi Tasuta Hinnapakkumist"
+      "label": "Küsi Tasuta Hinnapakkumist"
     },
     "home_hero": {
       "title": "Kolimine ja logistika tugeva meeskonnaga",
       "subtitle": "KIIRE TRANSPORT",
       "section_description": "Teostame korterite, kontorite ja objektide teenindust: hoolikas kolimine, jäätmete äravedu, raskeveod, ADR ohtlikud kaubad ning kraanaga laadimistööd.",
-      "view_services": "Vaata teenuseid",
       "image_alt": "Väike kaubik, keskmine kaubik ja kraanaga veok"
     },
     "pricing_section": {
@@ -134,7 +133,7 @@
     "alert": {
       "aria_label": "Veebilehe uuenduse teade",
       "title": "Veebilehte uuendatakse",
-      "description": "Mõned funktsioonid ei pruugi praegu töötada. Palun võtke meiega ühendust telefoni või e-posti teel.",
+      "description": "Mõned funktsioonid ei pruugi praegu töötada. Palun võtke meiega ühendust telefoni või e-posti teel. Leheküljed Teenused ja Sõidukid ei tööta.",
       "call_now": "Helista Nüüd"
     },
     "contact_form": {
@@ -178,6 +177,63 @@
         "title": "Töö tehtud",
         "description": "Hoolikas käsitsemine, puhas laadimine ja lihtne suhtlus."
       }
+    },
+    "view_services_button": {
+      "label": "Vaata teenuseid"
+    },
+    "about_company_section": {
+      "title": "Kolimis- ja transporditeenused alates 2015. aastast",
+      "subtitle": "VEOEXPRESSIST",
+      "description": "Usaldusväärsed transporditeenused kogenud meeskonnaga. Teostame kolimisi, raskeveoseid, kraanatöid ning puksiiri — selge suhtluse ja täpse ajagraafikuga algusest lõpuni.",
+      "bullet_points": {
+        "free_on_site_estimate": "Tasuta kohapealne hinnang",
+        "careful_handling": "Hoolikas käsitlus"
+      }
+    },
+    "our_story_section": {
+      "title": "Usaldusväärne teenus, mis põhineb päris tööl",
+      "subtitle": "MEIE LUGU",
+      "description": "Pärast tuhandeid töid oleme õppinud, mis loeb: jõuda õigeks ajaks kohale, kaitsta vara, hoida asi lihtsana ja lõpetada puhtalt.",
+      "features": {
+        "years": {
+          "title": "Aastad",
+          "description": "Tegutseme alates 2015. aastast"
+        },
+        "flexible": {
+          "title": "Paindlik",
+          "description": "Kui ajaga on kiire — töö 24/7 kokkuleppel"
+        },
+        "own_trucks": {
+          "title": "Oma autod",
+          "description": "Väikebussist kuni kraanaautoni"
+        },
+        "repeat": {
+          "title": "Püsikliendid",
+          "description": "Paljud pöörduvad meie poole uuesti"
+        }
+      }
+    },
+    "fleet_equipment_section": {
+      "title": "Õige sõiduk igaks tööks",
+      "subtitle": "SÕIDUPARK & VARUSTUS",
+      "description": "Meie enda sõidukipark võimaldab valida parima lahenduse — alates kiiretest linnavedudest kuni suurte ehitusmaterjalide ja kraanaga teostatava transpordini.",
+      "fleet_list": {
+        "van": {
+          "title": "Linnavedu",
+          "description": "Korterid • Väikesed/keskmised koormad",
+          "image_alt": "punane kaubik"
+        },
+        "medium_truck": {
+          "title": "Mööbel & kaubaalused",
+          "description": "Kontorid • Pakitud ja kaitstud",
+          "image_alt": "keskmise suurusega veok kaubaalustega"
+        },
+        "truck_with_crane": {
+          "title": "Rasked koormad & tõstetööd",
+          "description": "Rasked koormad • Kraanatööd",
+          "image_alt": "kraanaveok pardal roomiksõidukiga"
+        }
+      }
     }
   },
   "pages": {
@@ -189,12 +245,14 @@
     "not_found": {
       "title": "Lehte ei leitud",
       "description": "Otsitud lehte ei ole olemas või see on teise kohta liigutatud.",
-      "button": "Tagasi avalehele"
+      "button": "Tagasi avalehele",
+      "image_alt": "hiiglaslik 404 silt veoki peal"
     },
     "success": {
       "title": "Päring saadetud",
       "description": "Aitäh! Vastame peagi selge hinna ja sobiva ajaga.",
-      "button": "Tagasi avalehele"
+      "button": "Tagasi avalehele",
+      "image_alt": "hiiglaslik ümbrik veoautol"
     }
   }
 }

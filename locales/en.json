@@ -1,7 +1,7 @@
 {
   "components": {
     "call_now_button": {
-      "call_now": "Call Now"
+      "label": "Call Now"
     },
     "header": {
       "home": "Home",
@@ -12,13 +12,12 @@
       "contact": "Contact"
     },
     "request_quote_button": {
-      "request_free_quote": "Request Free Quote"
+      "label": "Request Free Quote"
     },
     "home_hero": {
       "title": "Moving and logistics with a strong crew",
       "subtitle": "FAST TRANSPORT",
       "section_description": "We handle apartments, offices and sites: careful moving, waste removal, heavy cargo, ADR dangerous goods, and crane-assisted loading.",
-      "view_services": "View Services",
       "image_alt": "Small van, middle van and truck with crane"
     },
     "pricing_section": {
@@ -134,7 +133,7 @@
     "alert": {
       "aria_label": "Website update notice",
       "title": "Website is being updated",
-      "description": "Some functions may not work right now. Please contact us by phone or email.",
+      "description": "Some functions may not work right now. Please contact us by phone or email. The Services and Vehicles pages are not working.",
       "call_now": "Call Now"
     },
     "contact_form": {
@@ -178,6 +177,63 @@
         "title": "Job done",
         "description": "Careful handling, clean loading, simple communication."
       }
+    },
+    "view_services_button": {
+      "label": "View Services"
+    },
+    "about_company_section": {
+      "title": "Moving & transportation services since 2015",
+      "subtitle": "ABOUT VEOEXPRESS",
+      "description": "Reliable transport services with an experienced crew. We handle moving, heavy cargo, crane-assisted loading, and towing — with clear communication and on-time work from start to finish.",
+      "bullet_points": {
+        "free_on_site_estimate": "Free on-site estimate",
+        "careful_handling": "Careful handling"
+      }
+    },
+    "our_story_section": {
+      "title": "Reliable service, built on real work",
+      "subtitle": "OUR STORY",
+      "description": "After thousands of jobs, we’ve learned what matters: show up on time, protect property, keep it simple, and finish clean.",
+      "features": {
+        "years": {
+          "title": "Years",
+          "description": "Operating since 2015"
+        },
+        "flexible": {
+          "title": "Flexible",
+          "description": "When timing is tight — available 24/7 by arrangement"
+        },
+        "own_trucks": {
+          "title": "Own trucks",
+          "description": "From small van to crane truck"
+        },
+        "repeat": {
+          "title": "Repeat",
+          "description": "Many become regulars"
+        }
+      }
+    },
+    "fleet_equipment_section": {
+      "title": "The right vehicle for every job",
+      "subtitle": "FLEET & EQUIPMENT",
+      "description": "Our own car fleet lets us choose the best option — from quick city moves to large construction materials and crane-assisted transport.",
+      "fleet_list": {
+        "van": {
+          "title": "City delivery",
+          "description": "Apartments • Small/medium loads",
+          "image_alt": "red van vechicle"
+        },
+        "medium_truck": {
+          "title": "Furniture & Pallets",
+          "description": "Offices • Wrapped & Protected",
+          "image_alt": "medium size truck with pallets inside"
+        },
+        "truck_with_crane": {
+          "title": "Heavy & Lifting",
+          "description": "Heavy loads • Crane work",
+          "image_alt": "truck with tracked vehicle on board"
+        }
+      }
     }
   },
   "pages": {
@@ -189,12 +245,14 @@
     "not_found": {
       "title": "Page not found",
       "description": "The page you’re looking for doesn’t exist or was moved.",
-      "button": "Back to home"
+      "button": "Back to home",
+      "image_alt": "404 giant sign on truck"
     },
     "success": {
       "title": "Request sent",
       "description": "Thanks! We’ll reply soon with a clear price and pickup time.",
-      "button": "Back to home"
+      "button": "Back to home",
+      "image_alt": "giant envelope on a truck"
     }
   }
 }

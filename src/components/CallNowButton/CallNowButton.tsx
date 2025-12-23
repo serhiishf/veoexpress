@@ -14,7 +14,7 @@ export function CallNowButton() {
       variant="outline"
       leftSection={<LiaPhoneSolid size="24" />}
     >
-      {t('call_now')}
+      {t('label')}
     </Button>
   );
 }

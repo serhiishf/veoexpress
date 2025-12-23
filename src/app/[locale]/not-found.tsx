@@ -14,7 +14,7 @@ export default function NotFoundPage() {
       <Stack align="center" gap="md">
         <Image
           src="/illustrations/404_truck.webp"
-          alt="404 goods on truck"
+          alt={t('image_alt')}
           width={440}
           height={320}
           style={{ objectFit: 'contain' }}
