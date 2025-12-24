@@ -5,6 +5,7 @@ import { CardWrapper } from '@/components/CardWrapper/CardWrapper';
 import { CompanyEmail } from '@/components/CompanyEmail/CompanyEmail';
 import { CompanyPhone } from '@/components/CompanyPhone/CompanyPhone';
 import { CompanyWorkArea } from '@/components/CompanyWorkArea/CompanyWorkArea';
+import { ContactCard } from '@/components/ContactCard/ContactCard';
 import { ContactForm } from '@/components/ContactForm/ContactForm';
 import { HowItWorksSteps } from '@/components/HowItWorksSteps/HowItWorksSteps';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
@@ -33,14 +34,7 @@ export default function ContactPage() {
               <Box w={{ base: '100%', md: 'fit-content' }} maw="100%">
                 <Stack justify="center" w="100%">
                   <Box w="100%">
-                    <CardWrapper>
-                      <Stack>
-                        <CompanyPhone />
-                        <CompanyEmail />
-                        <CompanyWorkArea />
-                        <CallNowButton />
-                      </Stack>
-                    </CardWrapper>
+                    <ContactCard variant="short" />
                   </Box>
 
                   <Box w="100%" maw="100%">
