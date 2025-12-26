@@ -172,16 +172,41 @@
       "title": "Kuidas see töötab",
       "subtitle": "Selged sammud, ilma üllatusteta.",
       "step_1": {
-        "title": "Saada info",
-        "description": "Aadressid, esemed, sobiv aeg ja lisainfo. Soovi korral saad tellida ka tasuta kohapealse hinnangu."
+        "title": "Saada detailsed andmed",
+        "description": "Aadressid, esemed, sobiv aeg ja lisamärkused. Soovi korral saab tellida ka tasuta kohapealse hinnangu."
       },
       "step_2": {
-        "title": "Kinnitame info ja hinna",
-        "description": "Vastame kiiresti selge hinnapakkumise ja ajavahemikuga, millal tuleme järele."
+        "title": "Kinnitame detailid ja hinna",
+        "description": "Vastame kiiresti selge hinnapakkumise, eritingimuste ja pealevõtu ajavahemikuga."
       },
       "step_3": {
+        "title": "Teeme töö ära",
+        "description": "Hoolikas käsitsemine, puhas laadimine, lihtne suhtlus."
+      },
+      "step_4": {
         "title": "Töö tehtud",
-        "description": "Hoolikas käsitsemine, puhas laadimine ja lihtne suhtlus."
+        "description": "Jäätmete puhul: korrektne utiliseerimine ja vajadusel dokumentatsioon."
+      }
+    },
+    "how_it_works_steps_section": {
+      "title": "Kuidas see töötab",
+      "subtitle": "PROTSESS",
+      "description": "Selged sammud, ilma üllatusteta.",
+      "step_1": {
+        "title": "Saada detailsed andmed",
+        "description": "Aadressid, esemed, sobiv aeg ja lisamärkused. Soovi korral saab tellida ka tasuta kohapealse hinnangu."
+      },
+      "step_2": {
+        "title": "Kinnitame detailid ja hinna",
+        "description": "Vastame kiiresti selge hinnapakkumise, eritingimuste ja pealevõtu ajavahemikuga."
+      },
+      "step_3": {
+        "title": "Teeme töö ära",
+        "description": "Hoolikas käsitsemine, puhas laadimine, lihtne suhtlus."
+      },
+      "step_4": {
+        "title": "Töö tehtud",
+        "description": "Jäätmete puhul: korrektne utiliseerimine ja vajadusel dokumentatsioon."
       }
     },
     "view_services_button": {

@@ -23,6 +23,10 @@ export function HowItWorksSteps({ size = 'md' }: HowItWorksStepsProps) {
       title: t('step_3.title'),
       description: t('step_3.description'),
     },
+    {
+      title: t('step_4.title'),
+      description: t('step_4.description'),
+    },
   ];
 
   return (

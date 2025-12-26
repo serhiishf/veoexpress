@@ -177,11 +177,36 @@
       },
       "step_2": {
         "title": "We confirm details & price",
-        "description": "We reply fast with a clear quote and a pickup time window."
+        "description": "We reply fast with a clear quote, special conditions and a pickup time window."
       },
       "step_3": {
-        "title": "Job done",
+        "title": "We do the job",
         "description": "Careful handling, clean loading, simple communication."
+      },
+      "step_4": {
+        "title": "Job done",
+        "description": "For waste: proper disposal with documentation if needed."
+      }
+    },
+    "how_it_works_steps_section": {
+      "title": "How it works",
+      "subtitle": "PROCESS",
+      "description": "Clear steps, no surprises.",
+      "step_1": {
+        "title": "Send details",
+        "description": "Addresses, items, preferred time, and any extra notes. You can also request a free on-site estimate."
+      },
+      "step_2": {
+        "title": "We confirm details & price",
+        "description": "We reply fast with a clear quote, special conditions and a pickup time window."
+      },
+      "step_3": {
+        "title": "We do the job",
+        "description": "Careful handling, clean loading, simple communication."
+      },
+      "step_4": {
+        "title": "Job done",
+        "description": "For waste: proper disposal with documentation if needed."
       }
     },
     "view_services_button": {
