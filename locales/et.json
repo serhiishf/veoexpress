@@ -165,7 +165,7 @@
         "description": "Saame tulla pealevõtmise asukohta, hinnata töö mahtu ja kinnitada lõpliku hinna."
       },
       "confirmation_button": {
-        "label": "Saada päring"
+        "label": "Saada Päring"
       }
     },
     "how_it_works_steps": {
@@ -252,9 +252,9 @@
       "description": "Hoolikas kolimine tugeva meeskonnaga. Kaitseme põrandaid ja esemeid, laadime tõhusalt ning toimetame kohale kokkulepitud ajaks. Sobib korterite, kontorite ja lao kolimisteks.",
       "image_alt": "kaks töötajat laadivad diivanit kaubikusse",
       "bullet_points": {
-        "fast_scheduling": "Kiire ajastamine",
-        "good_teamwork": "Hea koostöö, ilma kaoseta",
-        "simple_process": "Lihtne, stressivaba protsess"
+        "bp_1": "Kiire ajastamine",
+        "bp_2": "Hea koostöö, ilma kaoseta",
+        "bp_3": "Lihtne, stressivaba protsess"
       }
     },
     "contact_form_anchor": {
@@ -319,6 +319,13 @@
         "bp_2": "Turvaline evakuatsioon",
         "bp_3": "Keerulise ligipääsuga kohad"
       }
+    },
+    "what_included_section": {
+      "title": "Sisaldub selles teenuses",
+      "subtitle": "MIS SISALDUB",
+      "description": "Hoidume töömahu lihtsana. Kui on vaja midagi eraldi, lisame selle hinnapakkumisele selgelt.",
+      "included": "Sisaldub",
+      "optional_addons": "Valikulised lisad"
     }
   },
   "pages": {
@@ -338,6 +345,91 @@
       "description": "Aitäh! Vastame peagi selge hinna ja sobiva ajaga.",
       "button": "Tagasi avalehele",
       "image_alt": "hiiglaslik ümbrik veoautol"
+    },
+    "moving": {
+      "included_list": {
+        "item_1": "Meeskond + sobiv sõiduk tööks",
+        "item_2": "Kaitsetekid ja kinnitusrihmad",
+        "item_3": "Peale- ja mahalaadimine",
+        "item_4": "Lihtne lahtivõtmine/kokkupanek"
+      },
+      "addons_list": {
+        "item_1": "Pakkimisteenus (kastid, kile)",
+        "item_2": "Pikk kandmine / keeruline ligipääs",
+        "item_3": "Nädalavahetus / hilised tunnid",
+        "item_4": "Lisameeskond raskete esemete jaoks",
+        "item_5": "Jäätmete äravedu"
+      }
+    },
+    "waste_removal": {
+      "included_list": {
+        "item_1": "Laadimistöö (käsitsi)",
+        "item_2": "Transport jäätmejaama",
+        "item_3": "Abi sorteerimisjuhistega",
+        "item_4": "Lihtne lahtivõtmine"
+      },
+      "addons_list": {
+        "item_1": "Äraveoala koristus",
+        "item_2": "Ehitus big-bag koti tarne",
+        "item_3": "Konteineri korraldamine",
+        "item_4": "Mitu reisi suure mahu korral",
+        "item_5": "Abi lahtivõtmisel/lammutamisel"
+      }
+    },
+    "heavy_transport": {
+      "included_list": {
+        "item_1": "Marsruudi ja ligipääsu planeerimine",
+        "item_2": "Koorma kinnitamine (rihmad, kaitsed)",
+        "item_3": "Peale-/mahalaadimise koordineerimine",
+        "item_4": "Tarnete ajastamine"
+      },
+      "addons_list": {
+        "item_1": "Tõstuki/kraana koordineerimine",
+        "item_2": "Ülegabariidilise veose planeerimine",
+        "item_3": "Ooteaeg objektil",
+        "item_4": "Mitme peatusega marsruudid"
+      }
+    },
+    "adr_transport": {
+      "included_list": {
+        "item_1": "ADR-nõuetele vastav veose planeerimine",
+        "item_2": "ADR-koolitusega juht",
+        "item_3": "Ohutusvarustus sõidukis",
+        "item_4": "Dokumentide kontroll"
+      },
+      "addons_list": {
+        "item_1": "Erilised marsruudipiirangud",
+        "item_2": "Objekti ohutusinstruktaaži aeg",
+        "item_3": "Lisamärgistused/sildid",
+        "item_4": "Nädalavahetus / hilised tunnid"
+      }
+    },
+    "crane_service": {
+      "included_list": {
+        "item_1": "Kraanaga peale-/mahalaadimine",
+        "item_2": "Meeskond rigimiseks ja juhendamiseks",
+        "item_3": "Ohutu tööala seadistamine",
+        "item_4": "Transport vajadusel"
+      },
+      "addons_list": {
+        "item_1": "Erirakised/tõsterihmad",
+        "item_2": "Keerulised tõsted (objekti ülevaatus)",
+        "item_3": "Nädalavahetus / hilised tunnid"
+      }
+    },
+    "towing": {
+      "included_list": {
+        "item_1": "Väljasõit + puksiirsõiduk",
+        "item_2": "Sõiduki ohutu kinnitamine",
+        "item_3": "Abi rikke/intsidendi korral",
+        "item_4": "Viimine soovitud sihtkohta"
+      },
+      "addons_list": {
+        "item_1": "Pikamaa puksiir",
+        "item_2": "Keeruline ligipääs",
+        "item_3": "Vintsitamine / maastikult väljatõmme",
+        "item_4": "Nädalavahetus / hilised tunnid"
+      }
     }
   }
 }

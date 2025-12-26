@@ -39,7 +39,7 @@ export function HeroSectionContainer({
           {bulletPoints && (
             <Stack>
               {bulletPoints.map((bulletPoint) => (
-                <BulletPointContainer>{bulletPoint}</BulletPointContainer>
+                <BulletPointContainer key={bulletPoint}>{bulletPoint}</BulletPointContainer>
               ))}
             </Stack>
           )}

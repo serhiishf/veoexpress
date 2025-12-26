@@ -165,7 +165,7 @@
         "description": "We can come to the pickup location, assess the job, and confirm the final price."
       },
       "confirmation_button": {
-        "label": "Send request"
+        "label": "Send Request"
       }
     },
     "how_it_works_steps": {
@@ -319,6 +319,13 @@
         "bp_2": "Safe recovery",
         "bp_3": "Hard-to-reach locations"
       }
+    },
+    "what_included_section": {
+      "title": "Included in this service",
+      "subtitle": "WHAT’S INCLUDED",
+      "description": "We keep the scope simple. If something special is needed, we add it clearly to the quote.",
+      "included": "Included",
+      "optional_addons": "Optional add-ons"
     }
   },
   "pages": {
@@ -338,6 +345,91 @@
       "description": "Thanks! We’ll reply soon with a clear price and pickup time.",
       "button": "Back to home",
       "image_alt": "giant envelope on a truck"
+    },
+    "moving": {
+      "included_list": {
+        "item_1": "Crew + vehicle for the job",
+        "item_2": "Protective blankets and straps",
+        "item_3": "Loading and unloading",
+        "item_4": "Basic disassembly/assembly"
+      },
+      "addons_list": {
+        "item_1": "Packing service (boxes, wrap)",
+        "item_2": "Long carry / difficult access",
+        "item_3": "Weekend / late hours",
+        "item_4": "Extra crew for heavy items",
+        "item_5": "Waste removal"
+      }
+    },
+    "waste_removal": {
+      "included_list": {
+        "item_1": "Loading work (manual)",
+        "item_2": "Transport to disposal facility",
+        "item_3": "Help with sorting guidance",
+        "item_4": "Basic disassembly"
+      },
+      "addons_list": {
+        "item_1": "Cleanup of the pickup area",
+        "item_2": "Construction big-bag supply",
+        "item_3": "Container coordination",
+        "item_4": "Multiple trips for large volume",
+        "item_5": "Disassembly/demolition help"
+      }
+    },
+    "heavy_transport": {
+      "included_list": {
+        "item_1": "Route and access planning",
+        "item_2": "Cargo securing (straps, guards)",
+        "item_3": "Loading/unloading coordination",
+        "item_4": "Delivery scheduling"
+      },
+      "addons_list": {
+        "item_1": "Forklift/crane coordination",
+        "item_2": "Oversize handling planning",
+        "item_3": "Waiting time at site",
+        "item_4": "Multi-stop routes"
+      }
+    },
+    "adr_transport": {
+      "included_list": {
+        "item_1": "ADR-compliant transport planning",
+        "item_2": "Driver with ADR training",
+        "item_3": "Safety equipment on vehicle",
+        "item_4": "Documentation check"
+      },
+      "addons_list": {
+        "item_1": "Special routing restrictions",
+        "item_2": "Site safety induction time",
+        "item_3": "Additional signage/labels",
+        "item_4": "Weekend / late hours"
+      }
+    },
+    "crane_service": {
+      "included_list": {
+        "item_1": "Crane-assisted loading/unloading",
+        "item_2": "Crew for rigging and guiding",
+        "item_3": "Safe work zone setup",
+        "item_4": "Transport if needed"
+      },
+      "addons_list": {
+        "item_1": "Special rigging/slings",
+        "item_2": "Complex lifts (site survey)",
+        "item_3": "Weekend / late hours"
+      }
+    },
+    "towing": {
+      "included_list": {
+        "item_1": "Dispatch + towing vehicle",
+        "item_2": "Safe vehicle securing",
+        "item_3": "Recovery from breakdown/incident",
+        "item_4": "Drop-off to requested location"
+      },
+      "addons_list": {
+        "item_1": "Long distance towing",
+        "item_2": "Hard to access locations",
+        "item_3": "Winching / off-road recovery",
+        "item_4": "Weekend / late hours"
+      }
     }
   }
 }
