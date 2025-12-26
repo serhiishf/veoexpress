@@ -1,12 +1,12 @@
-import { ContactSection } from '@/components/ContactSection/ContactSection';
-import { InDevelopingSection } from '@/components/InDevelopingSection/InDevelopingSection';
+import { ContactFormSection } from '@/components/ContactFormSection/ContactFormSection';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
+import { WasteRemovalHeroSection } from '@/components/WasteRemovalHeroSection/WasteRemovalHeroSection';
 
 export default function WasteRemovalPage() {
   return (
     <PageContainer>
-      <InDevelopingSection></InDevelopingSection>
-      <ContactSection></ContactSection>
+      <WasteRemovalHeroSection background="grey"></WasteRemovalHeroSection>
+      <ContactFormSection></ContactFormSection>
     </PageContainer>
   );
 }

@@ -139,7 +139,7 @@
     "alert": {
       "aria_label": "Veebilehe uuenduse teade",
       "title": "Veebilehte uuendatakse",
-      "description": "Mõned funktsioonid ei pruugi praegu töötada. Palun võtke meiega ühendust telefoni või e-posti teel. Leheküljed Teenused ja Sõidukid ei tööta.",
+      "description": "Mõned funktsioonid ei pruugi praegu töötada. Palun võtke meiega ühendust telefoni või e-posti teel.",
       "call_now": "Helista Nüüd"
     },
     "contact_form": {
@@ -264,6 +264,61 @@
       "title": "Saada päring",
       "subtitle": "KIRJUTA MEILE",
       "description": "Jäta oma kontakt ja lühike sõnum — kinnitame võimalused, hinna ja aja."
+    },
+    "waste_removal_hero_section": {
+      "title": "Jäätmete äravedu ja käitlemine",
+      "subtitle": "TEENUS",
+      "description": "Viime ära jäätmed ja prügi korteritest, majadest ja ehitusobjektidelt — laadime, transpordime ja viime need nõuetekohastesse käitluskohtadesse.",
+      "image_alt": "töötaja laadib jäätmeid veokisse",
+      "bullet_points": {
+        "bp_1": "Nõuetekohane käitlemine",
+        "bp_2": "Kiire äravedu",
+        "bp_3": "Segajäätmete käitlemine"
+      }
+    },
+    "heavy_transport_hero_section": {
+      "title": "Raskete veoste transport",
+      "subtitle": "TEENUS",
+      "description": "Raskete seadmete ja veoste transport. Planeerime marsruudi, laadimisviisi ja kinnituse — ning toimetame kohale turvaliselt.",
+      "image_alt": "volvo ja haagis traktoritega pardal",
+      "bullet_points": {
+        "bp_1": "Turvaline transport",
+        "bp_2": "Marsruudi planeerimine",
+        "bp_3": "Hoolikas mahalaadimine"
+      }
+    },
+    "adr_transport_hero_section": {
+      "title": "ADR ohtlike kaupade vedu",
+      "subtitle": "TEENUS",
+      "description": "Meil on ADR-luba ohtlike kaupade veoks. Jaga UN-numbrt / klassi ja dokumente — kinnitame nõuetele vastavuse ning veotingimused.",
+      "image_alt": "veok ADR-konteineriga",
+      "bullet_points": {
+        "bp_1": "ADR-litsents",
+        "bp_2": "Nõuded esikohal",
+        "bp_3": "Dokumenteeritud"
+      }
+    },
+    "crane_service_hero_section": {
+      "title": "Kraana- ja laadimistööd",
+      "subtitle": "TEENUS",
+      "description": "Laadimis-/mahalaadimistööd ja montaaž väikesekraanaga sõidukil. Sobib raskete esemete, keerulise ligipääsu ja kiirete tööde jaoks objektil.",
+      "image_alt": "kraanaga veok laadib kaubaalust maha",
+      "bullet_points": {
+        "bp_1": "Vähem käsitsi tõstmist",
+        "bp_2": "Ohutum laadimine",
+        "bp_3": "Kiire töö alustamine objektil"
+      }
+    },
+    "towing_hero_section": {
+      "title": "Puksiir- ja evakuatsiooniteenus",
+      "subtitle": "TEENUS",
+      "description": "Sõidukite pukseerimine ja evakuatsioon rikke või õnnetuse korral. Anna asukoht ja sõiduki info — kinnitame pealevõtu viisi ja viime turvalisse sihtkohta.",
+      "image_alt": "puksiirauto laadib kaubiku peale",
+      "bullet_points": {
+        "bp_1": "Kiire väljasõit",
+        "bp_2": "Turvaline evakuatsioon",
+        "bp_3": "Keerulise ligipääsuga kohad"
+      }
     }
   },
   "pages": {

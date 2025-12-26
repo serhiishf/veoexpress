@@ -1,12 +1,12 @@
-import { ContactSection } from '@/components/ContactSection/ContactSection';
-import { InDevelopingSection } from '@/components/InDevelopingSection/InDevelopingSection';
+import { AdrTransportHeroSection } from '@/components/AdrTransportHeroSection/AdrTransportHeroSection';
+import { ContactFormSection } from '@/components/ContactFormSection/ContactFormSection';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
 
 export default function AdrTransportPage() {
   return (
     <PageContainer>
-      <InDevelopingSection></InDevelopingSection>
-      <ContactSection></ContactSection>
+      <AdrTransportHeroSection background="grey"></AdrTransportHeroSection>
+      <ContactFormSection></ContactFormSection>
     </PageContainer>
   );
 }

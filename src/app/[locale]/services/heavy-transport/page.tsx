@@ -1,12 +1,12 @@
-import { ContactSection } from '@/components/ContactSection/ContactSection';
-import { InDevelopingSection } from '@/components/InDevelopingSection/InDevelopingSection';
+import { ContactFormSection } from '@/components/ContactFormSection/ContactFormSection';
+import { HeavyTransportHeroSection } from '@/components/HeavyTransportHeroSection/HeavyTransportHeroSection';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
 
 export default function HeavyTransportPage() {
   return (
     <PageContainer>
-      <InDevelopingSection></InDevelopingSection>
-      <ContactSection></ContactSection>
+      <HeavyTransportHeroSection background="grey"></HeavyTransportHeroSection>
+      <ContactFormSection></ContactFormSection>
     </PageContainer>
   );
 }

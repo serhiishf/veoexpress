@@ -139,7 +139,7 @@
     "alert": {
       "aria_label": "Website update notice",
       "title": "Website is being updated",
-      "description": "Some functions may not work right now. Please contact us by phone or email. The Services and Vehicles pages are not working.",
+      "description": "Some functions may not work right now. Please contact us by phone or email.",
       "call_now": "Call Now"
     },
     "contact_form": {
@@ -252,9 +252,9 @@
       "description": "Careful moving with a strong crew. We protect floors and items, load efficiently, and deliver on schedule. Suitable for apartments, offices, and storage moves",
       "image_alt": "two workers load sofa in van",
       "bullet_points": {
-        "fast_scheduling": "Fast scheduling",
-        "good_teamwork": "Good teamwork, no chaos",
-        "simple_process": "Simple, stress-free process"
+        "bp_1": "Fast scheduling",
+        "bp_2": "Good teamwork, no chaos",
+        "bp_3": "Simple, stress-free process"
       }
     },
     "contact_form_anchor": {
@@ -264,6 +264,61 @@
       "title": "Send a request",
       "subtitle": "MESSAGE US",
       "description": "Leave your contact and a short message — we’ll confirm options, price, and timing."
+    },
+    "waste_removal_hero_section": {
+      "title": "Removal & disposal of waste",
+      "subtitle": "SERVICE",
+      "description": "We remove waste/garbage from apartments, houses and construction sites — load it, transport it, and deliver it to proper disposal facilities.",
+      "image_alt": "worker load waste to truck",
+      "bullet_points": {
+        "bp_1": "Proper disposal",
+        "bp_2": "Fast pickup",
+        "bp_3": "Mixed waste handling"
+      }
+    },
+    "heavy_transport_hero_section": {
+      "title": "Transportation of heavy cargo",
+      "subtitle": "SERVICE",
+      "description": "Transport of heavy equipment and cargo. We plan the route, loading method, and securing — and deliver safely.",
+      "image_alt": "volvo and trailer with tractors on board",
+      "bullet_points": {
+        "bp_1": "Secure transport",
+        "bp_2": "Route planning",
+        "bp_3": "Careful unloading"
+      }
+    },
+    "adr_transport_hero_section": {
+      "title": "ADR dangerous goods transport",
+      "subtitle": "SERVICE",
+      "description": "We have ADR license for transporting dangerous goods. Share the UN number / class and documentation — we’ll confirm compliance and conditions.",
+      "image_alt": "truck with adr container",
+      "bullet_points": {
+        "bp_1": "ADR licensed",
+        "bp_2": "Compliance first",
+        "bp_3": "Documented"
+      }
+    },
+    "crane_service_hero_section": {
+      "title": "Crane & loading work",
+      "subtitle": "SERVICE",
+      "description": "Loading/unloading and montage work with a small crane on the vehicle. Ideal for heavy items, tight access, and quick site operations.",
+      "image_alt": "truck with crane unload pallet with goods",
+      "bullet_points": {
+        "bp_1": "Reduced manual lifting",
+        "bp_2": "Safer loading",
+        "bp_3": "Quick on-site setup"
+      }
+    },
+    "towing_hero_section": {
+      "title": "Towing & recovery service",
+      "subtitle": "SERVICE",
+      "description": "Vehicle towing and recovery for breakdowns and incidents. Tell us your location and vehicle details — we’ll confirm the pickup method and get you to a safe destination.",
+      "image_alt": "tow truck loading a van",
+      "bullet_points": {
+        "bp_1": "Fast dispatch",
+        "bp_2": "Safe recovery",
+        "bp_3": "Hard-to-reach locations"
+      }
     }
   },
   "pages": {

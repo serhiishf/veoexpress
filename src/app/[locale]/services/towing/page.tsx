@@ -1,12 +1,12 @@
-import { ContactSection } from '@/components/ContactSection/ContactSection';
-import { InDevelopingSection } from '@/components/InDevelopingSection/InDevelopingSection';
+import { ContactFormSection } from '@/components/ContactFormSection/ContactFormSection';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
+import { TowingHeroSection } from '@/components/TowingHeroSection/TowingHeroSection';
 
 export default function TowingPage() {
   return (
     <PageContainer>
-      <InDevelopingSection></InDevelopingSection>
-      <ContactSection></ContactSection>
+      <TowingHeroSection background="grey"></TowingHeroSection>
+      <ContactFormSection></ContactFormSection>
     </PageContainer>
   );
 }

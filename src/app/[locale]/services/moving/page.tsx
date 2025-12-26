@@ -5,7 +5,7 @@ import { PageContainer } from '@/components/PageContainer/PageContainer';
 export default function MovingPage() {
   return (
     <PageContainer>
-      <MovingHeroSection></MovingHeroSection>
+      <MovingHeroSection background="grey"></MovingHeroSection>
       <ContactFormSection></ContactFormSection>
     </PageContainer>
   );

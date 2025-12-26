@@ -1,10 +1,10 @@
 export const routes = {
   services: {
     moving: '/services/moving',
-    waste_removal: '/services/waste-removal',
-    heavy_transport: '/services/heavy-transport',
-    adr_transport: '/services/adr-transport',
-    crane_service: '/services/crane-service',
+    wasteRemoval: '/services/waste-removal',
+    heavyTransport: '/services/heavy-transport',
+    adrTransport: '/services/adr-transport',
+    craneService: '/services/crane-service',
     towing: '/services/towing',
   },
 } as const;
