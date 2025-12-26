@@ -7,30 +7,24 @@ import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
 import { ViewServicesButton } from '../ViewServicesButton/ViewServicesButton';
-import classes from './HomeHero.module.css';
+import classes from './HomeHeroSection.module.css';
 
-export function HomeHero({ ...sectionProps }: SectionProps) {
+export function HomeHeroSection({ ...sectionProps }: SectionProps) {
   const t = useTranslations('components.home_hero');
 
   return (
     <SectionWrapper {...sectionProps}>
-      <SimpleGrid
-        className={classes.home_hero}
-        cols={{ base: 1, md: 2 }}
-        spacing={{ base: 'xl', md: 48 }}
-        verticalSpacing="sm"
-      >
-        <Stack className={classes.left_side} gap="xl">
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing={{ base: 'xl', md: 48 }} verticalSpacing="sm">
+        <Stack gap="xl">
           <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
           <SectionDescription>{t('section_description')}</SectionDescription>
-          <Text className={classes.description}></Text>
           <SameDayOptions></SameDayOptions>
           <Group>
             <RequestQuoteButton size="lg"></RequestQuoteButton>
             <ViewServicesButton size="lg"></ViewServicesButton>
           </Group>
         </Stack>
-        <Stack className={classes.right_side} justify="center">
+        <Stack justify="center">
           <Image src="/illustrations/three_vehicles.webp" alt={t('image_alt')}></Image>
         </Stack>
       </SimpleGrid>

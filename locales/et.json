@@ -9,7 +9,13 @@
       "vehicles": "Sõidukid",
       "pricing": "Hinnakiri",
       "about": "Meist",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "moving": "Kolimine",
+      "waste_removal": "Jäätmete äravedu",
+      "heavy_transport": "Rasketransport",
+      "adr_transport": "ADR-vedu",
+      "crane_loading_work": "Kraana- ja laadimistööd",
+      "towing": "Pukseerimine"
     },
     "request_quote_button": {
       "label": "Küsi Tasuta Hinnapakkumist"
@@ -239,6 +245,25 @@
       "title": "See leht on veel arenduses",
       "description": "Töötame selle kallal. Osa sisust või funktsioone võib veel puududa — palun vaata varsti uuesti.",
       "home_button": "Avalehele"
+    },
+    "moving_hero_section": {
+      "title": "Kolimine",
+      "subtitle": "TEENUS",
+      "description": "Hoolikas kolimine tugeva meeskonnaga. Kaitseme põrandaid ja esemeid, laadime tõhusalt ning toimetame kohale kokkulepitud ajaks. Sobib korterite, kontorite ja lao kolimisteks.",
+      "image_alt": "kaks töötajat laadivad diivanit kaubikusse",
+      "bullet_points": {
+        "fast_scheduling": "Kiire ajastamine",
+        "good_teamwork": "Hea koostöö, ilma kaoseta",
+        "simple_process": "Lihtne, stressivaba protsess"
+      }
+    },
+    "contact_form_anchor": {
+      "label": "Saada sõnum"
+    },
+    "contact_form_section": {
+      "title": "Saada päring",
+      "subtitle": "KIRJUTA MEILE",
+      "description": "Jäta oma kontakt ja lühike sõnum — kinnitame võimalused, hinna ja aja."
     }
   },
   "pages": {

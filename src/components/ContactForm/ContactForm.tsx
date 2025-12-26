@@ -27,7 +27,11 @@ function form_data_to_url_encoded(form_data: FormData): string {
   return params.toString();
 }
 
-export function ContactForm() {
+type ContactFormProps = {
+  id?: string;
+};
+
+export function ContactForm({ id }: ContactFormProps) {
   const t = useTranslations('components.contact_form');
   const locale = useLocale();
   const router = useRouter();
@@ -86,10 +90,17 @@ export function ContactForm() {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handle_submit}
+        id={id}
       >
         {/* Required for Netlify JS forms */}
         <input type="hidden" name="form-name" value={NETLIFY_FORM_NAME} />
-        <input type="text" name="bot-field" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
+        <input
+          type="text"
+          name="bot-field"
+          tabIndex={-1}
+          autoComplete="off"
+          style={{ display: 'none' }}
+        />
 
         <Stack>
           <TextInput

@@ -2,6 +2,7 @@
 
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { Button, type ButtonProps } from '@mantine/core';
 import { CONTACT_FROM_SECTION_ID } from '@/constants/anchors';
 
@@ -10,13 +11,15 @@ type ContactFormAnchorProps = Omit<ButtonProps, 'onClick'> & {
   label?: string;
 };
 
-//TODO: implement translations here
 export function ContactFormAnchor({
   contact_page_href = '/contact',
-  label = 'Send a message',
+  label,
   ...button_props
 }: ContactFormAnchorProps) {
   const router = useRouter();
+  const t = useTranslations('components.contact_form_anchor');
+
+  const ensuredLabel = label ? label : t('label');
 
   const handle_click = useCallback(() => {
     const contact_form_element = document.getElementById(CONTACT_FROM_SECTION_ID);
@@ -30,8 +33,8 @@ export function ContactFormAnchor({
   }, [router, contact_page_href]);
 
   return (
-    <Button onClick={handle_click} {...button_props}>
-      {label}
+    <Button onClick={handle_click} size="lg" {...button_props}>
+      {ensuredLabel}
     </Button>
   );
 }

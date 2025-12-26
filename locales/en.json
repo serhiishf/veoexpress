@@ -9,7 +9,13 @@
       "vehicles": "Vehicles",
       "pricing": "Pricing",
       "about": "About",
-      "contact": "Contact"
+      "contact": "Contact",
+      "moving": "Moving",
+      "waste_removal": "Waste Removal",
+      "heavy_transport": "Heavy Transport",
+      "adr_transport": "ADR Transport",
+      "crane_loading_work": "Crane & Loading Work",
+      "towing": "Towing"
     },
     "request_quote_button": {
       "label": "Request Free Quote"
@@ -239,6 +245,25 @@
       "title": "This page is still under development",
       "description": "We’re working on it right now. Some content or features may be missing — please check back soon.",
       "home_button": "Go Home"
+    },
+    "moving_hero_section": {
+      "title": "Moving",
+      "subtitle": "SERVICE",
+      "description": "Careful moving with a strong crew. We protect floors and items, load efficiently, and deliver on schedule. Suitable for apartments, offices, and storage moves",
+      "image_alt": "two workers load sofa in van",
+      "bullet_points": {
+        "fast_scheduling": "Fast scheduling",
+        "good_teamwork": "Good teamwork, no chaos",
+        "simple_process": "Simple, stress-free process"
+      }
+    },
+    "contact_form_anchor": {
+      "label": "Send a Message"
+    },
+    "contact_form_section": {
+      "title": "Send a request",
+      "subtitle": "MESSAGE US",
+      "description": "Leave your contact and a short message — we’ll confirm options, price, and timing."
     }
   },
   "pages": {

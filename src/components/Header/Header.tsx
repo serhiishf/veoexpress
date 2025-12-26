@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { IconChevronDown } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import {
   Anchor,
@@ -12,6 +13,7 @@ import {
   Drawer,
   Flex,
   Group,
+  Menu,
   ScrollArea,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
@@ -58,9 +60,38 @@ export function Header() {
   const pathname = usePathname();
   const current_path = strip_locale_prefix(pathname);
 
-  const main_links = [
+  const links = [
     { link: '/', label: t('home') },
-    { link: '/services', label: t('services') },
+    {
+      link: '/services',
+      label: t('services'),
+      links: [
+        {
+          link: '/moving',
+          label: t('moving'),
+        },
+        {
+          link: '/waste-removal',
+          label: t('waste_removal'),
+        },
+        {
+          link: '/heavy-transport',
+          label: t('heavy_transport'),
+        },
+        {
+          link: '/adr-transport',
+          label: t('adr_transport'),
+        },
+        {
+          link: '/crane-service',
+          label: t('crane_loading_work'),
+        },
+        {
+          link: '/towing',
+          label: t('towing'),
+        },
+      ],
+    },
     { link: '/vehicles', label: t('vehicles') },
     { link: '/about', label: t('about') },
     { link: '/contact', label: t('contact') },
@@ -68,21 +99,21 @@ export function Header() {
 
   const [opened, { toggle, close }] = useDisclosure(false);
 
-  const main_items = main_links.map((item) => {
-    const active = item.link.startsWith('/') ? is_active_link(current_path, item.link) : false; // for "#" items you probably want scroll-spy, not pathname
+  const items = links.map((link) => {
+    const active = link.link.startsWith('/') ? is_active_link(current_path, link.link) : false; // for "#" items you probably want scroll-spy, not pathname
 
     return (
       <Anchor
-        key={item.label}
+        key={link.label}
         component={Link}
-        href={item.link}
+        href={link.link}
         className={classes.main_link}
         data-active={active || undefined}
         onClick={() => {
           close();
         }}
       >
-        {item.label}
+        {link.label}
       </Anchor>
     );
   });
@@ -104,7 +135,7 @@ export function Header() {
             >
               <Box className={classes.links} visibleFrom="md">
                 <Group gap={0} className={classes.main_links} wrap="wrap">
-                  {main_items}
+                  {items}
                 </Group>
               </Box>
 
@@ -151,7 +182,7 @@ export function Header() {
         <ScrollArea mih={`calc(100dvh - ${HEADER_HEIGHT_PX}px)`}>
           <Box className={classes.mobile_menu}>
             <Group gap="xs" className={classes.mobile_links}>
-              {main_items}
+              {items}
             </Group>
 
             <div className={classes.mobile_cta}>

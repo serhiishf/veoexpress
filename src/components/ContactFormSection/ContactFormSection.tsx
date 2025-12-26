@@ -1,4 +1,5 @@
-import { Box, Button, Grid, GridCol, Stack } from '@mantine/core';
+import { useTranslations } from 'next-intl';
+import { Box, Grid, GridCol, Stack } from '@mantine/core';
 import { CONTACT_FROM_SECTION_ID } from '@/constants/anchors';
 import { SectionProps } from '../../../types/shared';
 import { ContactCard } from '../ContactCard/ContactCard';
@@ -10,18 +11,16 @@ import { SectionWrapper } from '../SectionWrapper/SectionWrapper';
 
 type ContactFormSectionProps = SectionProps & {};
 
-//TODO: finished this section, add translations, etc pass contact form section id
-
 export function ContactFormSection({ ...sectionProps }: ContactFormSectionProps) {
+  const t = useTranslations('components.contact_form_section');
+
   return (
     <SectionWrapper {...sectionProps}>
-      <SectionHeader title="Send a request" subtitle="MESSAGE US"></SectionHeader>
-      <SectionDescription>
-        Leave your contact and a short message — we’ll confirm options, price, and timing.
-      </SectionDescription>
+      <SectionHeader title={t('title')} subtitle={t('subtitle')}></SectionHeader>
+      <SectionDescription>{t('description')}</SectionDescription>
       <Grid gutter="lg">
         <GridCol span={{ base: 12, md: 8 }}>
-          <ContactForm />
+          <ContactForm id={CONTACT_FROM_SECTION_ID} />
         </GridCol>
 
         <GridCol span={{ base: 12, md: 4 }}>

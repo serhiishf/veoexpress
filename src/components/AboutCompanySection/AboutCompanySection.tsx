@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Box, Center, Flex, Grid, Group, Space, Stack } from '@mantine/core';
 import { SectionProps } from '../../../types/shared';
-import { BulletPointWrapper } from '../BulletPointWrapper/BulletPointWrapper';
+import { BulletPointContainer } from '../BulletPointContainer/BulletPointContainer';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
@@ -31,7 +31,7 @@ export function AboutCompanySection({ ...sectionProps }: SectionProps) {
         <Box>
           <Stack gap="lg">
             {bulletPoints.map((item, index) => {
-              return <BulletPointWrapper key={index}>{item}</BulletPointWrapper>;
+              return <BulletPointContainer key={index}>{item}</BulletPointContainer>;
             })}
           </Stack>
         </Box>

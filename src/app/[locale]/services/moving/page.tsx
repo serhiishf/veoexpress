@@ -1,13 +1,11 @@
-import { ContactForm } from '@/components/ContactForm/ContactForm';
 import { ContactFormSection } from '@/components/ContactFormSection/ContactFormSection';
-import { ContactSection } from '@/components/ContactSection/ContactSection';
-import { InDevelopingSection } from '@/components/InDevelopingSection/InDevelopingSection';
+import { MovingHeroSection } from '@/components/MovingHeroSection/MovingHeroSection';
 import { PageContainer } from '@/components/PageContainer/PageContainer';
 
 export default function MovingPage() {
   return (
     <PageContainer>
-      <InDevelopingSection></InDevelopingSection>
+      <MovingHeroSection></MovingHeroSection>
       <ContactFormSection></ContactFormSection>
     </PageContainer>
   );
