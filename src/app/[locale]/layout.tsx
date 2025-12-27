@@ -88,7 +88,7 @@ export default async function RootLayout({
       <body className={`${open_sans.variable} ${roboto.variable} ${geistMono.variable}`}>
         <MantineProvider theme={theme} forceColorScheme="light" defaultColorScheme="light">
           <NextIntlClientProvider>
-            <Alert></Alert>
+            {/* <Alert></Alert> */}
             <Header />
             <main>{children}</main>
             <Footer />
