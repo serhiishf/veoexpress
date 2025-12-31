@@ -1,5 +1,5 @@
 import { Group, Image, SimpleGrid, Stack, Text } from '@mantine/core';
-import { SectionProps } from '../../../types/shared';
+import { SectionProps } from '../../types/shared';
 import { BulletPointContainer } from '../BulletPointContainer/BulletPointContainer';
 import { CallNowButton } from '../CallNowButton/CallNowButton';
 import { ContactFormAnchor } from '../ContactFormAnchor/ContactFormAnchor';

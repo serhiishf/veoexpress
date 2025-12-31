@@ -1,15 +1,11 @@
 import { useTranslations } from 'next-intl';
-import { SectionProps } from '../../../types/shared';
+import { SectionProps } from '../../types/shared';
 import { HeroSectionContainer } from '../HeroSectionContainer/HeroSectionWrapper';
 
 export function MovingHeroSection({ ...sectionProps }: SectionProps) {
   const t = useTranslations('components.moving_hero_section');
 
-  const bulletPoints = [
-    t('bullet_points.bp_1'),
-    t('bullet_points.bp_2'),
-    t('bullet_points.bp_3'),
-  ];
+  const bulletPoints = [t('bullet_points.bp_1'), t('bullet_points.bp_2'), t('bullet_points.bp_3')];
 
   return (
     <HeroSectionContainer

@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "src/libs/tracking/types.tracking.d.ts"
   ],
   "exclude": ["node_modules", "types/validator.ts"]
 }

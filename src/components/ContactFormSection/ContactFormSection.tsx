@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Box, Grid, GridCol, Stack } from '@mantine/core';
 import { CONTACT_FROM_SECTION_ID } from '@/constants/anchors';
-import { SectionProps } from '../../../types/shared';
+import { SectionProps } from '../../types/shared';
 import { ContactCard } from '../ContactCard/ContactCard';
 import { ContactForm } from '../ContactForm/ContactForm';
 import { SameDayOptions } from '../SameDayOptions/SameDayOptions';

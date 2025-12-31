@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { SimpleGrid, Space } from '@mantine/core';
-import { SectionProps } from '@/../types/shared';
 import { routes } from '@/constants/routes';
+import { SectionProps } from '@/types/shared';
 import { ActionCard } from '../ActionCard/ActionCard';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';

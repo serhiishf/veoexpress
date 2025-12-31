@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Center, Group, Image, SimpleGrid, Space } from '@mantine/core';
-import { SectionProps } from '@/../types/shared';
+import { SectionProps } from '@/types/shared';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 import { SectionWrapper } from '../SectionWrapper/SectionWrapper';

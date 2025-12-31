@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { SimpleGrid } from '@mantine/core';
-import { SectionProps } from '../../../types/shared';
+import { SectionProps } from '../../types/shared';
 import { ActionCard } from '../ActionCard/ActionCard';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';

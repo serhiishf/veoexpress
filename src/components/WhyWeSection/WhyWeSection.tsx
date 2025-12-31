@@ -3,7 +3,7 @@ import { FaEuroSign } from 'react-icons/fa';
 import { FiMapPin, FiTool } from 'react-icons/fi';
 import { GoShieldCheck } from 'react-icons/go';
 import { SimpleGrid, Space } from '@mantine/core';
-import { SectionProps } from '@/../types/shared';
+import { SectionProps } from '@/types/shared';
 import { FeatureCard } from '../FeatureCard/FeatureCard';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';

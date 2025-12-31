@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Button, Group, Image, SimpleGrid, Stack, Text } from '@mantine/core';
-import { SectionProps } from '@/../types/shared';
+import { SectionProps } from '@/types/shared';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
 import { SameDayOptions } from '../SameDayOptions/SameDayOptions';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';

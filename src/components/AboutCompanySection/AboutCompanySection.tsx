@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Box, Center, Flex, Grid, Group, Space, Stack } from '@mantine/core';
-import { SectionProps } from '../../../types/shared';
+import { SectionProps } from '../../types/shared';
 import { BulletPointContainer } from '../BulletPointContainer/BulletPointContainer';
 import { RequestQuoteButton } from '../RequestQuoteButton/RequestQuoteButton';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';

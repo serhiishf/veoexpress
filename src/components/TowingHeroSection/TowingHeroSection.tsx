@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { SectionProps } from '../../../types/shared';
+import { SectionProps } from '../../types/shared';
 import { HeroSectionContainer } from '../HeroSectionContainer/HeroSectionWrapper';
 
 export function TowingHeroSection({ ...sectionProps }: SectionProps) {

@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { SectionProps } from '@/../types/shared';
+import { SectionProps } from '@/types/shared';
 import { RequestDetailsCard } from '../RequestDetailsCard/RequestDetailsCard';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
 import { SectionHeader } from '../SectionHeader/SectionHeader';

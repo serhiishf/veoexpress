@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { LuCirclePlus } from 'react-icons/lu';
 import { SimpleGrid, Stack, Text } from '@mantine/core';
-import { SectionProps } from '../../../types/shared';
+import { SectionProps } from '../../types/shared';
 import { BulletPointContainer } from '../BulletPointContainer/BulletPointContainer';
 import { CardWrapper } from '../CardWrapper/CardWrapper';
 import { SectionDescription } from '../SectionDesctiption/SectionDescription';
