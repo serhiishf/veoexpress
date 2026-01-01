@@ -34,7 +34,11 @@
     "footer": {
       "account_number": "Arveldusarve number / IBAN",
       "reg_code": "Registrikood",
-      "vat": "KMKR"
+      "vat": "KMKR",
+      "links": {
+        "privacy_policy": "Privaatsuspoliitika",
+        "cookie_policy": "Küpsiste poliitika"
+      }
     },
     "request_details_card": {
       "title": "Tüüpilised päringu andmed",
@@ -351,6 +355,11 @@
       "description": "Hoidume töömahu lihtsana. Kui on vaja midagi eraldi, lisame selle hinnapakkumisele selgelt.",
       "included": "Sisaldub",
       "optional_addons": "Valikulised lisad"
+    },
+    "cookie_banner": {
+      "description": "See veebisait kasutab küpsiseid kasutajakogemuse parandamiseks.",
+      "accept_button": "Nõustun",
+      "read_more": "Loe lähemalt"
     }
   },
   "pages": {
@@ -454,6 +463,193 @@
         "item_2": "Keeruline ligipääs",
         "item_3": "Vintsitamine / maastikult väljatõmme",
         "item_4": "Nädalavahetus / hilised tunnid"
+      }
+    },
+    "cookie_policy": {
+      "title": "Küpsiste poliitika",
+      "description": "Sellel lehel selgitame, mis on küpsised, kuidas me neid kasutame ja kuidas saad oma eelistusi hallata.",
+      "image_alt": "kaubiku illustratsioon küpsisekastiga",
+      "last_updated_label": "Viimati uuendatud",
+      "last_updated_value": "1. jaanuar 2026",
+      "back_home_button": "Tagasi avalehele",
+      "contact_button": "Võta ühendust",
+      "privacy_policy_link_label": "Privaatsuspoliitika",
+      "manage_note": "Isikuandmete töötlemise kohta loe lähemalt meie",
+      "sections": {
+        "what_is_cookie": {
+          "title": "Mis on küpsised?",
+          "paragraphs": {
+            "p1": "Küpsised on väikesed tekstifailid, mis salvestatakse sinu seadmesse, kui külastad veebilehte.",
+            "p2": "Need aitavad veebilehel korrektselt toimida, meeles pidada sinu valikuid (näiteks keelt) ning sinu loal võimaldavad teha analüütikat ja turundusmõõtmist."
+          },
+          "bullets": {}
+        },
+        "how_we_use": {
+          "title": "Kuidas me küpsiseid kasutame",
+          "paragraphs": {
+            "p1": "Kasutame küpsiseid, et hoida veebileht töökindlana, parandada jõudlust ja mõista, kuidas külastajad lehte kasutavad.",
+            "p2": "Mõned küpsised on vajalikud põhifunktsioonide jaoks. Teised on valikulised ja neid kasutatakse ainult sinu nõusolekul."
+          },
+          "bullets": {
+            "b1": "Jätta meelde sinu seaded (näiteks keel ja küpsiste eelistused).",
+            "b2": "Mõõta kasutust, et parandada sisu ja kasutajakogemust.",
+            "b3": "Toetada reklaami/turunduse mõõtmist, kui see on lubatud."
+          }
+        },
+        "types_of_cookies": {
+          "title": "Milliseid küpsiseid kasutame",
+          "paragraphs": {
+            "p1": "Erinevad küpsised täidavad erinevaid eesmärke. Täpne küpsiste nimekiri võib ajas muutuda, kui veebilehte arendame."
+          },
+          "bullets": {
+            "b1": "Vajalikud küpsised: vajalikud veebilehe põhifunktsioonide ja turvalisuse jaoks.",
+            "b2": "Eelistuste küpsised: jätavad meelde sinu valikud ja seaded.",
+            "b3": "Analüütika küpsised: aitavad mõista liiklust ja parandada veebilehte (ainult nõusolekul).",
+            "b4": "Turundus küpsised: aitavad mõõta reklaami tulemuslikkust ja näidata asjakohasemaid reklaame (ainult nõusolekul)."
+          }
+        },
+        "third_party": {
+          "title": "Kolmandate osapoolte teenused",
+          "paragraphs": {
+            "p1": "Võime kasutada kolmandate osapoolte tööriistu analüütika ja turunduse jaoks (näiteks Google’i teenused). Need pakkujad võivad seada oma küpsiseid.",
+            "p2": "Valikulised tööriistad aktiveerime ainult pärast sinu nõusolekut (kui see on asjakohane)."
+          },
+          "bullets": {}
+        },
+        "manage_cookies": {
+          "title": "Kuidas küpsiseid hallata",
+          "paragraphs": {
+            "p1": "Küpsiseid saad hallata oma brauseri seadetes. Tavaliselt saad salvestatud küpsiseid kustutada ja uute küpsiste kasutamist piirata.",
+            "p2": "Mõnede küpsiste blokeerimine võib mõjutada veebilehe toimimist."
+          },
+          "bullets": {
+            "b1": "Brauseri seaded: küpsiste blokeerimine, kustutamine või piiramine.",
+            "b2": "Seadme seaded: jälgimisõiguste haldus, kui see on saadaval.",
+            "b3": "Nõusoleku valikud: muuda küpsiste eelistusi, kui näed meie küpsiste teadet."
+          }
+        },
+        "contact": {
+          "title": "Kontakt",
+          "paragraphs": {
+            "p1": "Kui sul on küsimusi küpsiste või privaatsuse kohta, võta meiega ühendust Kontakt-lehe kaudu."
+          },
+          "bullets": {}
+        }
+      }
+    },
+    "privacy_policy": {
+      "title": "Privaatsuspoliitika",
+      "description": "Sellel lehel selgitame, milliseid isikuandmeid me kogume, miks me neid kogume, kuidas me neid kasutame ja millised õigused sul on.",
+      "image_alt": "veoki illustratsioon kilbiga",
+      "last_updated_label": "Viimati uuendatud",
+      "last_updated_value": "1. jaanuar 2026",
+      "back_home_button": "Tagasi avalehele",
+      "contact_button": "Võta ühendust",
+      "cookie_policy_link_label": "Küpsiste poliitika",
+      "cookies_note": "Küpsiste ja nõusoleku seadete kohta loe lähemalt meie",
+      "sections": {
+        "overview": {
+          "title": "Ülevaade",
+          "paragraphs": {
+            "p1": "Austame sinu privaatsust ja töötleme isikuandmeid ainult siis, kui see on vajalik teenuse osutamiseks ja veebilehe toimimiseks.",
+            "p2": "See poliitika kirjeldab, mida me töötleme, kui kaua me seda säilitame, kellega me seda jagame ja kuidas saad oma õigusi kasutada."
+          },
+          "bullets": {}
+        },
+        "what_data_we_collect": {
+          "title": "Milliseid andmeid me kogume",
+          "paragraphs": {
+            "p1": "Võime koguda andmeid, mille sa edastad meile otse, ning andmeid, mis tekivad veebilehe kasutamisel või meiega ühendust võttes.",
+            "p2": "Me ei kogu teadlikult isikuandmete eriliike (tundlikke andmeid)."
+          },
+          "bullets": {
+            "b1": "Kontaktandmed: nimi, telefon, e-post (kui võtad ühendust või küsid hinnapakkumist).",
+            "b2": "Teenuse andmed: asukoht/aadress, soovitud ajavahemik, töö märkused, esemete/sõiduki andmed (vajadusel).",
+            "b3": "Suhtluse ajalugu: sõnumid vormi, e-posti, telefoni või sõnumirakenduste kaudu.",
+            "b4": "Tehnilised andmed: IP-aadress, seadme/brauseri info ja põhiline kasutusinfo (ainult lubatud ja seadistatud juhtudel)."
+          }
+        },
+        "how_we_use_data": {
+          "title": "Kuidas me isikuandmeid kasutame",
+          "paragraphs": {
+            "p1": "Kasutame isikuandmeid päringutele vastamiseks, teenuse osutamiseks ning veebilehe töökindluse ja turvalisuse parandamiseks.",
+            "p2": "Valikulist analüütikat/turundust kasutame ainult sinu nõusolekul (kui see on asjakohane)."
+          },
+          "bullets": {
+            "b1": "Vastata päringutele ja pakkuda kliendituge.",
+            "b2": "Koostada ja kinnitada hinnapakkumised, tingimused ja ajavahemikud.",
+            "b3": "Osutada tellitud teenus ja koordineerida logistikat.",
+            "b4": "Kaitsta väärkasutuse, pettuste ja turvaintsidentide eest."
+          }
+        },
+        "legal_basis": {
+          "title": "Töötlemise õiguslik alus",
+          "paragraphs": {
+            "p1": "Töötleme isikuandmeid järgmiste õiguslike aluste alusel (GDPR):"
+          },
+          "bullets": {
+            "b1": "Leping: võtta sinu palvel samme ja osutada teenust.",
+            "b2": "Õigustatud huvi: teenuse ja veebilehe toimimine, turvalisus ja parendamine.",
+            "b3": "Nõusolek: valikulised küpsised/analüütika/turundus, kui see on nõutav.",
+            "b4": "Juriidiline kohustus: kui seadus (nt raamatupidamine) nõuab teatud andmete säilitamist."
+          }
+        },
+        "data_sharing": {
+          "title": "Andmete jagamine",
+          "paragraphs": {
+            "p1": "Me ei müü isikuandmeid.",
+            "p2": "Võime jagada andmeid ainult siis, kui see on vajalik teenuse osutamiseks, seaduse täitmiseks või veebilehe toimimiseks."
+          },
+          "bullets": {
+            "b1": "Teenusepakkujad: majutus, e-post, analüütika või sõnumiteenused (ainult vajadusel).",
+            "b2": "Ametiasutused: kui seadus seda nõuab või õiguste kaitseks.",
+            "b3": "Äritegevus: ligipääs on piiratud ainult neile, kellel on seda töö tegemiseks vaja."
+          }
+        },
+        "data_retention": {
+          "title": "Andmete säilitamine",
+          "paragraphs": {
+            "p1": "Säilitame isikuandmeid ainult nii kaua, kui see on käesolevas poliitikas kirjeldatud eesmärkide saavutamiseks vajalik.",
+            "p2": "Mõningaid kirjeid võidakse säilitada kauem, kui seadus seda nõuab (nt raamatupidamine) või vaidluste lahendamiseks."
+          },
+          "bullets": {}
+        },
+        "your_rights": {
+          "title": "Sinu õigused",
+          "paragraphs": {
+            "p1": "Sõltuvalt olukorrast ja kohaldatavast õigusest võivad sul olla järgmised õigused:"
+          },
+          "bullets": {
+            "b1": "Juurdepääs: taotleda koopiat oma isikuandmetest.",
+            "b2": "Parandamine: parandada ebatäpseid või puudulikke andmeid.",
+            "b3": "Kustutamine: taotleda kustutamist teatud juhtudel.",
+            "b4": "Piiramine: piirata töötlemist teatud juhtudel.",
+            "b5": "Vastuväide: esitada vastuväide õigustatud huvi alusel töötlemisele.",
+            "b6": "Kaebus: esitada kaebus järelevalveasutusele."
+          }
+        },
+        "security": {
+          "title": "Turvalisus",
+          "paragraphs": {
+            "p1": "Rakendame mõistlikke tehnilisi ja korralduslikke meetmeid isikuandmete kaitseks.",
+            "p2": "Ükski edastus- või salvestusviis ei ole 100% turvaline, kuid vähendame riske ja reageerime intsidentidele."
+          },
+          "bullets": {}
+        },
+        "cookies": {
+          "title": "Küpsised",
+          "paragraphs": {
+            "p1": "Kasutame küpsiseid ja sarnaseid tehnoloogiaid, et veebileht toimiks ning (valikuliselt) mõõta jõudlust ja turunduse tulemuslikkust."
+          },
+          "bullets": {}
+        },
+        "contact": {
+          "title": "Kontakt",
+          "paragraphs": {
+            "p1": "Kui sul on küsimusi või soovid oma õigusi kasutada, võta meiega ühendust Kontakt-lehe kaudu."
+          },
+          "bullets": {}
+        }
       }
     }
   }

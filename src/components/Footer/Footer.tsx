@@ -14,36 +14,48 @@ export function Footer() {
       <Container size="xl" p="xl">
         <Divider></Divider>
         <Space h="xl"></Space>
-        <Flex
-          justify="space-between"
-          direction={{ base: 'column', lg: 'row' }}
-          gap={28}
-          align={{ base: 'stretch', lg: 'center' }}
-        >
-          <Stack align="center">
-            <VeoexpressLogo />
-            <Text>{company.workArea}</Text>
-          </Stack>
-          <Stack gap="xs">
-            <CompanyPhone />
-            <CompanyEmail />
-          </Stack>
-          <Box>
-            <Text>{t('account_number')}</Text>
-            <Text>{company.bankAccount}</Text>
-            <Text>{company.address.full}</Text>
-          </Box>
-          <Box>
-            <Text>{company.legalName}</Text>
-            <Text>
-              {t('reg_code')}: {company.registryCode}
-            </Text>
-            <Text>
-              {t('vat')}: {company.vatNumber}
-            </Text>
-          </Box>
-          <LanguageSelector></LanguageSelector>
-        </Flex>
+        <Stack>
+          <Flex
+            justify="space-between"
+            direction={{ base: 'column', lg: 'row' }}
+            gap={28}
+            align={{ base: 'stretch', lg: 'center' }}
+          >
+            <Stack align="center">
+              <VeoexpressLogo />
+              <Text>{company.workArea}</Text>
+            </Stack>
+            <Stack gap="xs">
+              <CompanyPhone />
+              <CompanyEmail />
+            </Stack>
+            <Box>
+              <Text>{t('account_number')}</Text>
+              <Text>{company.bankAccount}</Text>
+              <Text>{company.address.full}</Text>
+            </Box>
+            <Box>
+              <Text>{company.legalName}</Text>
+              <Text>
+                {t('reg_code')}: {company.registryCode}
+              </Text>
+              <Text>
+                {t('vat')}: {company.vatNumber}
+              </Text>
+            </Box>
+            <LanguageSelector></LanguageSelector>
+          </Flex>
+          <Space h="xl"></Space>
+          <Flex
+            justify="center"
+            direction={{ base: 'column', lg: 'row' }}
+            gap={28}
+            align={{ base: 'stretch', lg: 'center' }}
+          >
+            <Anchor href="/privacy-policy">{t('links.privacy_policy')}</Anchor>
+            <Anchor href="/cookie-policy">{t('links.cookie_policy')}</Anchor>
+          </Flex>
+        </Stack>
       </Container>
       <Space h="xl"></Space>
     </footer>

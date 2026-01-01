@@ -34,7 +34,11 @@
     "footer": {
       "account_number": "Account number / IBAN",
       "reg_code": "Reg.code",
-      "vat": "VAT"
+      "vat": "VAT",
+      "links": {
+        "privacy_policy": "Privacy policy",
+        "cookie_policy": "Cookie policy"
+      }
     },
     "request_details_card": {
       "title": "Typical request details",
@@ -351,6 +355,11 @@
       "description": "We keep the scope simple. If something special is needed, we add it clearly to the quote.",
       "included": "Included",
       "optional_addons": "Optional add-ons"
+    },
+    "cookie_banner": {
+      "description": "This website uses cookies to enhance the user experience.",
+      "accept_button": "Acknowledge",
+      "read_more": "Read more"
     }
   },
   "pages": {
@@ -454,6 +463,193 @@
         "item_2": "Hard to access locations",
         "item_3": "Winching / off-road recovery",
         "item_4": "Weekend / late hours"
+      }
+    },
+    "cookie_policy": {
+      "title": "Cookie Policy",
+      "description": "This page explains what cookies are, how we use them, and how you can manage your preferences.",
+      "image_alt": "van carrying a cookie box illustration",
+      "last_updated_label": "Last updated",
+      "last_updated_value": "January 1, 2026",
+      "back_home_button": "Back to home",
+      "contact_button": "Contact us",
+      "privacy_policy_link_label": "Privacy Policy",
+      "manage_note": "For more details about personal data processing, see our",
+      "sections": {
+        "what_is_cookie": {
+          "title": "What are cookies?",
+          "paragraphs": {
+            "p1": "Cookies are small text files stored on your device when you visit a website.",
+            "p2": "They help the website work correctly, remember your choices (for example language), and can be used for analytics and marketing if you allow it."
+          },
+          "bullets": {}
+        },
+        "how_we_use": {
+          "title": "How we use cookies",
+          "paragraphs": {
+            "p1": "We use cookies to keep the website reliable, improve performance, and understand how visitors use the site.",
+            "p2": "Some cookies are required for core features. Others are optional and are used only if you give consent."
+          },
+          "bullets": {
+            "b1": "Remember your settings (for example language and cookie preferences).",
+            "b2": "Measure site usage to improve content and user experience.",
+            "b3": "Support advertising/marketing measurement when enabled."
+          }
+        },
+        "types_of_cookies": {
+          "title": "Types of cookies we use",
+          "paragraphs": {
+            "p1": "Different cookies serve different purposes. The exact set may change over time as we improve the website."
+          },
+          "bullets": {
+            "b1": "Necessary cookies: required for basic website functionality and security.",
+            "b2": "Preference cookies: remember your choices and settings.",
+            "b3": "Analytics cookies: help us understand traffic and improve the website (only with consent).",
+            "b4": "Marketing cookies: used to measure advertising effectiveness and show relevant ads (only with consent)."
+          }
+        },
+        "third_party": {
+          "title": "Third-party services",
+          "paragraphs": {
+            "p1": "We may use third-party tools for analytics and marketing (for example Google services). These providers may set their own cookies.",
+            "p2": "We enable optional tools only after you give consent (when applicable)."
+          },
+          "bullets": {}
+        },
+        "manage_cookies": {
+          "title": "How to manage cookies",
+          "paragraphs": {
+            "p1": "You can control cookies through your browser settings. You can usually delete stored cookies and block new ones.",
+            "p2": "Blocking some cookies may affect website functionality."
+          },
+          "bullets": {
+            "b1": "Browser settings: block, delete, or limit cookies.",
+            "b2": "Device settings: control tracking permissions where available.",
+            "b3": "Consent choices: change your cookie preferences when you see our cookie notice."
+          }
+        },
+        "contact": {
+          "title": "Contact",
+          "paragraphs": {
+            "p1": "If you have questions about cookies or your privacy, contact us using the Contact page."
+          },
+          "bullets": {}
+        }
+      }
+    },
+    "privacy_policy": {
+      "title": "Privacy Policy",
+      "description": "This page explains what personal data we collect, why we collect it, how we use it, and what rights you have.",
+      "image_alt": "truck with a shield illustration",
+      "last_updated_label": "Last updated",
+      "last_updated_value": "January 1, 2026",
+      "back_home_button": "Back to home",
+      "contact_button": "Contact us",
+      "cookie_policy_link_label": "Cookie Policy",
+      "cookies_note": "For details about cookies and consent settings, see our",
+      "sections": {
+        "overview": {
+          "title": "Overview",
+          "paragraphs": {
+            "p1": "We respect your privacy and process personal data only when it is necessary to provide our services and operate this website.",
+            "p2": "This policy describes what we process, how long we keep it, who we share it with, and how you can exercise your rights."
+          },
+          "bullets": {}
+        },
+        "what_data_we_collect": {
+          "title": "What data we collect",
+          "paragraphs": {
+            "p1": "We may collect data you provide directly and data generated when you use our website or contact us.",
+            "p2": "We do not intentionally collect sensitive categories of personal data."
+          },
+          "bullets": {
+            "b1": "Contact details: name, phone number, email (when you contact us or request a quote).",
+            "b2": "Service details: pickup/location address, requested time window, job notes, items/vehicle details (when relevant).",
+            "b3": "Communication history: messages sent via forms, email, phone, or messaging apps.",
+            "b4": "Technical data: IP address, device/browser info, and basic usage data (only where permitted and configured)."
+          }
+        },
+        "how_we_use_data": {
+          "title": "How we use personal data",
+          "paragraphs": {
+            "p1": "We use personal data to respond to requests, provide services, and improve the reliability and security of our website.",
+            "p2": "We use optional analytics/marketing tools only if you provide consent (when applicable)."
+          },
+          "bullets": {
+            "b1": "Respond to inquiries and provide customer support.",
+            "b2": "Prepare and confirm quotes, service terms, and time windows.",
+            "b3": "Deliver the requested service and coordinate logistics.",
+            "b4": "Protect against abuse, fraud, and security incidents."
+          }
+        },
+        "legal_basis": {
+          "title": "Legal basis for processing",
+          "paragraphs": {
+            "p1": "We process personal data under the following legal bases (GDPR):"
+          },
+          "bullets": {
+            "b1": "Contract: to take steps at your request and provide services.",
+            "b2": "Legitimate interests: to operate, secure, and improve our website and service processes.",
+            "b3": "Consent: for optional cookies/analytics/marketing where required.",
+            "b4": "Legal obligation: when accounting or other laws require retention of certain records."
+          }
+        },
+        "data_sharing": {
+          "title": "Data sharing",
+          "paragraphs": {
+            "p1": "We do not sell personal data.",
+            "p2": "We may share data only when it is needed to provide services, comply with law, or run the website."
+          },
+          "bullets": {
+            "b1": "Service providers: hosting, email, analytics, or messaging providers (only as needed).",
+            "b2": "Authorities: when required by law or to protect legal rights.",
+            "b3": "Business operations: internal access limited to people who need it to perform their duties."
+          }
+        },
+        "data_retention": {
+          "title": "Data retention",
+          "paragraphs": {
+            "p1": "We keep personal data only as long as necessary for the purposes described in this policy.",
+            "p2": "Some records may be retained longer when required by law (for example accounting) or to resolve disputes."
+          },
+          "bullets": {}
+        },
+        "your_rights": {
+          "title": "Your rights",
+          "paragraphs": {
+            "p1": "Depending on your situation and applicable law, you may have the following rights:"
+          },
+          "bullets": {
+            "b1": "Access: request a copy of your personal data.",
+            "b2": "Rectification: correct inaccurate or incomplete data.",
+            "b3": "Erasure: request deletion in certain cases.",
+            "b4": "Restriction: limit processing in certain cases.",
+            "b5": "Objection: object to processing based on legitimate interests.",
+            "b6": "Complaint: lodge a complaint with a supervisory authority."
+          }
+        },
+        "security": {
+          "title": "Security",
+          "paragraphs": {
+            "p1": "We apply reasonable technical and organizational measures to protect personal data.",
+            "p2": "No method of transmission or storage is 100% secure, but we work to reduce risk and respond to incidents."
+          },
+          "bullets": {}
+        },
+        "cookies": {
+          "title": "Cookies",
+          "paragraphs": {
+            "p1": "We use cookies and similar technologies to make the website work and (optionally) to measure performance and marketing effectiveness."
+          },
+          "bullets": {}
+        },
+        "contact": {
+          "title": "Contact",
+          "paragraphs": {
+            "p1": "If you have questions about this policy or want to exercise your rights, contact us via the Contact page."
+          },
+          "bullets": {}
+        }
       }
     }
   }

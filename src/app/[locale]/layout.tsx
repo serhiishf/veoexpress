@@ -1,15 +1,17 @@
 import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Open_Sans, Roboto } from 'next/font/google';
+import { Geist_Mono, Open_Sans, Roboto } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { ColorSchemeScript, createTheme, MantineProvider } from '@mantine/core';
-import { Alert } from '@/components/Alert/Alert';
+import { CookieBanner } from '@/components/CookieBanner/CookieBanner';
 import { Footer } from '@/components/Footer/Footer';
+import { GoogleTagManager } from '@/components/GoogleTagManager/GoogleTagManager';
 import { Header } from '@/components/Header/Header';
 import { routing } from '@/i18n/routing';
+import { isGtmEnabled } from '@/libs/tracking/config.tracking';
 
 import './globals.css';
 
@@ -27,11 +29,6 @@ const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
   style: ['normal', 'italic'],
   display: 'swap',
-});
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
@@ -81,17 +78,18 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang="en" data-mantine-color-scheme="light">
+    <html lang={locale} data-mantine-color-scheme="light" suppressHydrationWarning>
       <head>
         <ColorSchemeScript />
       </head>
       <body className={`${open_sans.variable} ${roboto.variable} ${geistMono.variable}`}>
         <MantineProvider theme={theme} forceColorScheme="light" defaultColorScheme="light">
           <NextIntlClientProvider>
-            {/* <Alert></Alert> */}
+            {isGtmEnabled && <GoogleTagManager />}
             <Header />
             <main>{children}</main>
             <Footer />
+            <CookieBanner />
           </NextIntlClientProvider>
         </MantineProvider>
       </body>

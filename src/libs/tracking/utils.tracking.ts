@@ -1,7 +1,7 @@
 // src/libs/tracking/utils.tracking.ts
 'use client';
 
-import { IS_GTM_ENABLED, trackingConfig } from './config.tracking';
+import { isGtmEnabled, trackingConfig } from './config.tracking';
 import type { Gtag, GtagEvent } from './types.tracking';
 
 const logGAWarning = (message: string) => {
@@ -9,7 +9,7 @@ const logGAWarning = (message: string) => {
 };
 
 const getGtag = () => {
-  if (!IS_GTM_ENABLED) {
+  if (!isGtmEnabled) {
     logGAWarning('Google Analytics is not enabled');
     return null;
   }

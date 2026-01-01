@@ -1,0 +1,2 @@
+const vehicles = {};
+const trailers = {};
