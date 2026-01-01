@@ -7,7 +7,7 @@ import { Affix, Button, Container, Group, Paper, Text, Transition } from '@manti
 import { trackingConfig } from '@/libs/tracking/config.tracking';
 import { grantConsentForEverything } from '@/libs/tracking/utils.tracking';
 
-const consentCookieValue = 'accepted';
+const consentCookieValue = trackingConfig.acceptedValue;
 const cookieMaxAgeDays = 365;
 
 function readCookie(cookieName: string): string | null {
