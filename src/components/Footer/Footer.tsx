@@ -52,8 +52,24 @@ export function Footer() {
             gap={28}
             align={{ base: 'stretch', lg: 'center' }}
           >
-            <Anchor href="/privacy-policy">{t('links.privacy_policy')}</Anchor>
-            <Anchor href="/cookie-policy">{t('links.cookie_policy')}</Anchor>
+            <Anchor
+              href="/privacy-policy"
+              style={{
+                display: 'inline-flex',
+                width: 'fit-content',
+              }}
+            >
+              {t('links.privacy_policy')}
+            </Anchor>
+            <Anchor
+              href="/cookie-policy"
+              style={{
+                display: 'inline-flex',
+                width: 'fit-content',
+              }}
+            >
+              {t('links.cookie_policy')}
+            </Anchor>
           </Flex>
         </Stack>
       </Container>

@@ -10,6 +10,7 @@ import { CookieBanner } from '@/components/CookieBanner/CookieBanner';
 import { Footer } from '@/components/Footer/Footer';
 import { GoogleTagManager } from '@/components/GoogleTagManager/GoogleTagManager';
 import { Header } from '@/components/Header/Header';
+import { MessengersMenu } from '@/components/MessengersMenu/MessengersMenu';
 import { routing } from '@/i18n/routing';
 import { isGtmEnabled } from '@/libs/tracking/config.tracking';
 
@@ -89,6 +90,7 @@ export default async function RootLayout({
             <Header />
             <main>{children}</main>
             <Footer />
+            {/* <MessengersMenu /> */}
             <CookieBanner />
           </NextIntlClientProvider>
         </MantineProvider>
