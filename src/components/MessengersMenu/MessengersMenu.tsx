@@ -1,15 +1,7 @@
-import {
-  IconArrowsLeftRight,
-  IconMessageCircle,
-  IconPhoto,
-  IconSearch,
-  IconSettings,
-  IconTrash,
-} from '@tabler/icons-react';
+import { IconMessageCircle, IconPhoto, IconSearch, IconSettings } from '@tabler/icons-react';
 import {
   ActionIcon,
   Affix,
-  Button,
   Menu,
   MenuDropdown,
   MenuItem,
@@ -17,17 +9,22 @@ import {
   MenuTarget,
   Text,
 } from '@mantine/core';
+import { RotatingActionIcon } from '../RotatingActionIcon/RotatingActionIcon';
 
 export function MessengersMenu() {
   return (
-    <Affix position={{ bottom: 50, right: 50 }}>
+    <Affix position={{ bottom: 120, right: 50 }}>
       <Menu shadow="md" width={200}>
         <MenuTarget>
-          <ActionIcon
+          {/* <ActionIcon
             size="xl"
-            variant="white"
+            // variant="white"
+            variant="outline"
             radius={50}
-          ></ActionIcon>
+          >
+            AI
+          </ActionIcon> */}
+          <RotatingActionIcon items={[{key: "23", ariaLabel: 'something', content: '23'}, {key: "35", ariaLabel: 'something', content: '35'}]}></RotatingActionIcon>
         </MenuTarget>
 
         <MenuDropdown>

@@ -90,7 +90,7 @@ export default async function RootLayout({
             <Header />
             <main>{children}</main>
             <Footer />
-            {/* <MessengersMenu /> */}
+            <MessengersMenu />
             <CookieBanner />
           </NextIntlClientProvider>
         </MantineProvider>
