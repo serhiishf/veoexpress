@@ -360,6 +360,26 @@
       "description": "Этот сайт использует файлы cookie для улучшения пользовательского опыта.",
       "accept_button": "Принять",
       "read_more": "Подробнее"
+    },
+    "messengers_menu": {
+      "items": {
+        "phone": {
+          "aria_label": "Телефон",
+          "label": "Позвонить по телефону"
+        },
+        "viber": {
+          "aria_label": "Viber",
+          "label": "Чат в Viber"
+        },
+        "whatsapp": {
+          "aria_label": "WhatsApp",
+          "label": "Чат в WhatsApp"
+        },
+        "telegram": {
+          "aria_label": "Telegram",
+          "label": "Чат в Telegram"
+        }
+      }
     }
   },
   "pages": {

@@ -7,6 +7,8 @@ export const company = {
   contact: {
     phoneLabel: '+372 53 06 9999',
     phoneTel: '+37253069999',
+    phoneE164Digits: '37253069999',
+    telegramUsername: 'veoexpress',
     email: 'info@veoexpress.ee',
   },
   address: {
