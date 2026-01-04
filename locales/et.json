@@ -360,6 +360,26 @@
       "description": "See veebisait kasutab küpsiseid kasutajakogemuse parandamiseks.",
       "accept_button": "Nõustun",
       "read_more": "Loe lähemalt"
+    },
+    "messengers_menu": {
+      "items": {
+        "phone": {
+          "aria_label": "Telefon",
+          "label": "Helista telefonile"
+        },
+        "viber": {
+          "aria_label": "Viber",
+          "label": "Viberi vestlus"
+        },
+        "whatsapp": {
+          "aria_label": "WhatsApp",
+          "label": "WhatsAppi vestlus"
+        },
+        "telegram": {
+          "aria_label": "Telegram",
+          "label": "Telegrami vestlus"
+        }
+      }
     }
   },
   "pages": {

@@ -20,7 +20,7 @@ type RotatingActionIconProps = Omit<ActionIconProps, 'children' | 'aria-label'> 
 export function RotatingActionIcon({
   items,
   intervalMs = 3000,
-  iconSizePx = 22,
+  iconSizePx = 40,
   ...actionIconProps
 }: RotatingActionIconProps) {
   const prefersReducedMotion = useReducedMotion();

@@ -7,11 +7,11 @@ import {
   Group,
   Image,
   List,
+  ListItem,
   Paper,
   Stack,
   Text,
   Title,
-  ListItem
 } from '@mantine/core';
 
 type PrivacyPolicySectionKey =
@@ -34,7 +34,11 @@ type PrivacyPolicySectionDefinition = {
 
 const sectionDefinitions: readonly PrivacyPolicySectionDefinition[] = [
   { key: 'overview', paragraphKeys: ['p1', 'p2'], bulletKeys: [] },
-  { key: 'what_data_we_collect', paragraphKeys: ['p1', 'p2'], bulletKeys: ['b1', 'b2', 'b3', 'b4'] },
+  {
+    key: 'what_data_we_collect',
+    paragraphKeys: ['p1', 'p2'],
+    bulletKeys: ['b1', 'b2', 'b3', 'b4'],
+  },
   { key: 'how_we_use_data', paragraphKeys: ['p1', 'p2'], bulletKeys: ['b1', 'b2', 'b3', 'b4'] },
   { key: 'legal_basis', paragraphKeys: ['p1'], bulletKeys: ['b1', 'b2', 'b3', 'b4'] },
   { key: 'data_sharing', paragraphKeys: ['p1', 'p2'], bulletKeys: ['b1', 'b2', 'b3'] },
@@ -61,7 +65,15 @@ export default function PrivacyPolicyPage() {
               style={{ objectFit: 'contain' }}
             />
 
-            <Title order={1} ta="center">
+            <Title
+              order={1}
+              ta="center"
+              style={{
+                overflowWrap: 'anywhere',
+                wordBreak: 'break-word',
+                hyphens: 'auto',
+              }}
+            >
               {t('title')}
             </Title>
 

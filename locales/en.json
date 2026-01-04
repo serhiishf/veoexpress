@@ -360,6 +360,26 @@
       "description": "This website uses cookies to enhance the user experience.",
       "accept_button": "Acknowledge",
       "read_more": "Read more"
+    },
+    "messengers_menu": {
+      "items": {
+        "phone": {
+          "aria_label": "Phone",
+          "label": "Call by phone"
+        },
+        "viber": {
+          "aria_label": "Viber",
+          "label": "Viber chat"
+        },
+        "whatsapp": {
+          "aria_label": "WhatsApp",
+          "label": "WhatsApp chat"
+        },
+        "telegram": {
+          "aria_label": "Telegram",
+          "label": "Telegram chat"
+        }
+      }
     }
   },
   "pages": {
