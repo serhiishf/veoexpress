@@ -32,6 +32,9 @@ type ContactFormProps = {
 };
 
 export function ContactForm({ id }: ContactFormProps) {
+
+  //IMPORTANT! For correct hadling data - all fileds should be also included in to static HTML file netlify-forms.htlm
+  
   const t = useTranslations('components.contact_form');
   const locale = useLocale();
   const router = useRouter();

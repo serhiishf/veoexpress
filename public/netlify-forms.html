@@ -1,13 +1,29 @@
 <!doctype html>
 <html>
   <body>
-    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <!-- This file exists only so Netlify can detect the form + fields at build time -->
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
       <input type="hidden" name="form-name" value="contact" />
-      <input name="bot-field" />
-      <input name="email" />
-      <input name="phone" />
+
+      <input type="text" name="bot-field" />
+
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
       <textarea name="message"></textarea>
-      <input type="checkbox" name="on_site_estimate" />
+
+      <input type="hidden" name="on_site_estimate" value="false" />
+      <input type="checkbox" name="on_site_estimate" value="true" />
+
+      <input type="hidden" name="page_locale" />
+      <input type="hidden" name="page_path" />
+      <input type="hidden" name="page_url" />
+      <input type="hidden" name="page_referrer" />
     </form>
   </body>
 </html>
