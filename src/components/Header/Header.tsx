@@ -105,7 +105,7 @@ export function Header() {
         { link: routes.services.towing, label: t('towing'), icon: GiTowTruck },
       ],
     },
-    // { link: '/vehicles', label: t('vehicles') },
+    { link: '/vehicles', label: t('vehicles') },
     { link: '/about', label: t('about') },
     { link: '/contact', label: t('contact') },
   ];
