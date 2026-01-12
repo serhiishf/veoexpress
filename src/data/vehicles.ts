@@ -28,8 +28,8 @@ export type TailLiftEquipmentType = EquipmentBaseType & {
 };
 
 export type CargoSpaceType = {
-  volumeM3: number;
-  heightMm: number;
+  volumeM3?: number;
+  heightMm?: number;
   widthMm: number;
   lengthMm: number;
 };
@@ -54,23 +54,15 @@ export type CargoBodyKindType =
   | 'container'
   | 'other';
 
-export type CargoBodyMaterialType =
-  | 'steel'
-  | 'aluminium'
-  | 'wood'
-  | 'composite'
-  | 'tarpaulin' // тент
-  | 'other';
-
 export type CargoBodyType = {
   kind: CargoBodyKindType;
-  material?: CargoBodyMaterialType;
   loadingAccess?: {
     rear?: boolean;
     left?: boolean;
     right?: boolean;
     top?: boolean;
   };
+  loadingHeightMm?: number;
   notes?: string; // free text for odd cases
 };
 
@@ -119,14 +111,14 @@ const vehicles: VehicleType[] = [
         right: true,
         top: true,
       },
+      loadingHeightMm: 1000,
     },
     cargoSpace: {
-      volumeM3: 18.615,
-      heightMm: 1000,
       widthMm: 2550,
       lengthMm: 7300,
     },
     trailers: [],
+    equipment: [],
   },
   {
     id: 'ford_van_red',
@@ -143,6 +135,16 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 5500,
       },
     },
+    cargoBody: {
+      kind: 'van',
+      loadingAccess: {
+        rear: true,
+        left: false,
+        right: true,
+        top: false,
+      },
+      loadingHeightMm: undefined,
+    },
     cargoSpace: {
       volumeM3: 11.286,
       heightMm: 1800,
@@ -153,24 +155,154 @@ const vehicles: VehicleType[] = [
   },
   {
     id: 'ford_van_grey',
-    name: 'Ford Transit',
+    name: 'Ford Transit 300L',
     passengers: 2,
     driverLicenseCategory: 'B',
-    licensePlate: '',
+    licensePlate: '396TKZ',
     mass: {
-      emptyMassKg: 2104,
-      maxGrossMassKg: 3500,
+      emptyMassKg: 1850,
+      maxGrossMassKg: 3000,
       trailer: {
-        maxWeightWithBrakesKg: 2800,
+        maxWeightWithBrakesKg: 2000,
         maxWeightWithoutBrakesKg: 750,
-        maxRoadTrainMassKg: 5500,
+        maxRoadTrainMassKg: 4500,
+      },
+    },
+    cargoBody: {
+      kind: 'van',
+      loadingAccess: {
+        rear: true,
+        left: false,
+        right: true,
+        top: false,
+      },
+      loadingHeightMm: undefined,
+    },
+    cargoSpace: {
+      volumeM3: 12.54,
+      heightMm: 2000,
+      widthMm: 1900,
+      lengthMm: 3300,
+    },
+    trailers: [],
+  },
+  {
+    id: 'ford_van_grey',
+    name: 'Ford Transit 300L',
+    passengers: 2,
+    driverLicenseCategory: 'B',
+    licensePlate: '396TKZ',
+    mass: {
+      emptyMassKg: 1850,
+      maxGrossMassKg: 3000,
+      trailer: {
+        maxWeightWithBrakesKg: 2000,
+        maxWeightWithoutBrakesKg: 750,
+        maxRoadTrainMassKg: 4500,
       },
     },
     cargoSpace: {
-      volumeM3: 11.286,
-      heightMm: 1800,
+      volumeM3: 12.54,
+      heightMm: 2000,
       widthMm: 1900,
       lengthMm: 3300,
+    },
+    trailers: [],
+  },
+  {
+    id: 'renault_mascott_box',
+    name: 'RENAULT MASCOTT',
+    passengers: 2,
+    driverLicenseCategory: 'B',
+    licensePlate: '588BPM',
+    mass: {
+      emptyMassKg: 3140,
+      maxGrossMassKg: 5420,
+      trailer: {
+        maxWeightWithBrakesKg: 3500,
+        maxWeightWithoutBrakesKg: 750,
+        maxRoadTrainMassKg: 7000,
+      },
+    },
+    cargoBody: {
+      kind: 'box',
+      loadingAccess: {
+        rear: true,
+        left: false,
+        right: false,
+        top: false,
+      },
+      loadingHeightMm: undefined,
+    },
+    cargoSpace: {
+      volumeM3: 20.812,
+      heightMm: 2200,
+      widthMm: 2200,
+      lengthMm: 4300,
+    },
+    trailers: [],
+  },
+  {
+    id: 'renault_mascott_flatbed',
+    name: 'RENAULT MASCOTT',
+    passengers: 2,
+    driverLicenseCategory: 'C',
+    licensePlate: '320MEF',
+    mass: {
+      emptyMassKg: 3287,
+      maxGrossMassKg: 6500,
+      trailer: {
+        maxWeightWithBrakesKg: 3000,
+        maxWeightWithoutBrakesKg: 750,
+        maxRoadTrainMassKg: 9000,
+      },
+    },
+    cargoBody: {
+      kind: 'flatbed',
+      loadingAccess: {
+        rear: true,
+        left: true,
+        right: true,
+        top: true,
+      },
+      loadingHeightMm: 700,
+    },
+    cargoSpace: {
+      widthMm: 2500,
+      lengthMm: 4700,
+    },
+    trailers: [],
+  },
+  {
+    id: 'renault_mascott_flatbed',
+    name: 'RENAULT MASCOTT',
+    passengers: 2,
+    driverLicenseCategory: 'C',
+    licensePlate: '320MEF',
+    mass: {
+      emptyMassKg: 3287,
+      maxGrossMassKg: 6500,
+      trailer: {
+        maxWeightWithBrakesKg: 3000,
+        maxWeightWithoutBrakesKg: 750,
+        maxRoadTrainMassKg: 9000,
+      },
+    },
+    cargoBody: {
+      kind: 'curtainsider',
+      loadingAccess: {
+        rear: true,
+        left: true,
+        right: false,
+        top: false,
+      },
+      loadingHeightMm: 700,
+    },
+    cargoSpace: {
+      volumeM3: 25.85,
+      heightMm: 2500,
+      widthMm: 2200,
+      lengthMm: 4700,
     },
     trailers: [],
   },
