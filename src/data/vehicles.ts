@@ -1,4 +1,4 @@
-export type DriverLicenseCategoryType = 'A' | 'B' | 'C' | 'D';
+export type DriverLicenseCategoryType = 'A' | 'B' | 'C' | 'D' | 'BE' | 'CE';
 
 type EquipmentBaseType = {
   id: string; // unique within vehicle
@@ -27,6 +27,19 @@ export type TailLiftEquipmentType = EquipmentBaseType & {
   liftType?: 'tuckaway' | 'column' | 'slider';
 };
 
+export type RampEquipmentType = EquipmentBaseType & {
+  kind: 'ramp';
+  maxLoadKg: number;
+  size: {
+    widthCm: number;
+    lengthCm: number;
+  };
+  maxAngle?: number;
+  rampType?: 'folding' | 'fixed' | 'removable' | 'telescopic';
+};
+
+export type VehicleEquipmentType = CraneEquipmentType | TailLiftEquipmentType | RampEquipmentType;
+
 export type CargoSpaceType = {
   volumeM3?: number;
   heightMm?: number;
@@ -34,9 +47,12 @@ export type CargoSpaceType = {
   lengthMm: number;
 };
 
-export type MassSpecType = {
+export type MassSpecTypeBase = {
   emptyMassKg: number; // tare / curb
   maxGrossMassKg: number; // GVWR (vehicle) / trailer max authorized mass
+};
+
+export type MassSpecTypeVehicle = MassSpecTypeBase & {
   trailer?: {
     maxWeightWithBrakesKg: number;
     maxWeightWithoutBrakesKg: number;
@@ -48,6 +64,7 @@ export type CargoBodyKindType =
   | 'van' // фургон / van (Transit, Sprinter…)
   | 'box' // будка / box body
   | 'flatbed' // платформа
+  | 'car_transporter' // платформа для перевозки авто / car transporter (автовоз)
   | 'curtainsider' // штора
   | 'dropside' // бортова / dropside
   | 'tipper' // самоскид
@@ -69,8 +86,14 @@ export type CargoBodyType = {
 export type TrailerType = {
   id: string;
   name: string;
-  mass: MassSpecType;
+  licensePlate: string;
+  mass: MassSpecTypeBase;
   cargoSpace: CargoSpaceType;
+  cargoBody?: CargoBodyType;
+  connectionType?: string;
+  category: 'o1' | 'o2' | 'o3' | 'o4';
+  equipment?: readonly VehicleEquipmentType[];
+  notes?: string;
 };
 
 export type CraneToolType = {};
@@ -80,11 +103,13 @@ export type VehicleType = {
   name: string;
   passengers: number;
   driverLicenseCategory: DriverLicenseCategoryType;
-  mass: MassSpecType;
+  mass: MassSpecTypeVehicle;
   cargoBody?: CargoBodyType;
   cargoSpace?: CargoSpaceType;
   trailers?: readonly TrailerType[];
   licensePlate: string;
+  equipment?: readonly VehicleEquipmentType[];
+  notes?: string;
 };
 
 const vehicles: VehicleType[] = [
@@ -152,39 +177,7 @@ const vehicles: VehicleType[] = [
       lengthMm: 3300,
     },
     trailers: [],
-  },
-  {
-    id: 'ford_van_grey',
-    name: 'Ford Transit 300L',
-    passengers: 2,
-    driverLicenseCategory: 'B',
-    licensePlate: '396TKZ',
-    mass: {
-      emptyMassKg: 1850,
-      maxGrossMassKg: 3000,
-      trailer: {
-        maxWeightWithBrakesKg: 2000,
-        maxWeightWithoutBrakesKg: 750,
-        maxRoadTrainMassKg: 4500,
-      },
-    },
-    cargoBody: {
-      kind: 'van',
-      loadingAccess: {
-        rear: true,
-        left: false,
-        right: true,
-        top: false,
-      },
-      loadingHeightMm: undefined,
-    },
-    cargoSpace: {
-      volumeM3: 12.54,
-      heightMm: 2000,
-      widthMm: 1900,
-      lengthMm: 3300,
-    },
-    trailers: [],
+    equipment: [],
   },
   {
     id: 'ford_van_grey',
@@ -208,6 +201,7 @@ const vehicles: VehicleType[] = [
       lengthMm: 3300,
     },
     trailers: [],
+    equipment: [],
   },
   {
     id: 'renault_mascott_box',
@@ -241,6 +235,7 @@ const vehicles: VehicleType[] = [
       lengthMm: 4300,
     },
     trailers: [],
+    equipment: [],
   },
   {
     id: 'renault_mascott_flatbed',
@@ -272,15 +267,16 @@ const vehicles: VehicleType[] = [
       lengthMm: 4700,
     },
     trailers: [],
+    equipment: [],
   },
   {
-    id: 'renault_mascott_flatbed',
+    id: 'renault_mascott_curtainsider',
     name: 'RENAULT MASCOTT',
     passengers: 2,
     driverLicenseCategory: 'C',
     licensePlate: '320MEF',
     mass: {
-      emptyMassKg: 3287,
+      emptyMassKg: 3300,
       maxGrossMassKg: 6500,
       trailer: {
         maxWeightWithBrakesKg: 3000,
@@ -305,6 +301,104 @@ const vehicles: VehicleType[] = [
       lengthMm: 4700,
     },
     trailers: [],
+    equipment: [],
+  },
+  {
+    id: 'range_rover',
+    name: 'LAND ROVER, RANGE ROVER',
+    passengers: 2,
+    driverLicenseCategory: 'B',
+    licensePlate: '422SHG',
+    mass: {
+      emptyMassKg: 2715,
+      maxGrossMassKg: 3200,
+      trailer: {
+        maxWeightWithBrakesKg: 3500,
+        maxWeightWithoutBrakesKg: 750,
+        maxRoadTrainMassKg: 6700,
+      },
+    },
+    cargoBody: undefined,
+    cargoSpace: undefined,
+    trailers: [],
+    equipment: [],
   },
 ];
-const trailers = {};
+
+const trailers: TrailerType[] = [
+  {
+    id: 'RESPO_750M331L150 ',
+    name: 'RESPO 750',
+    licensePlate: '727YLB',
+    category: 'o1',
+    cargoBody: {
+      kind: 'curtainsider',
+      loadingAccess: {
+        rear: true,
+        left: false,
+        right: false,
+        top: false,
+      },
+    },
+    mass: {
+      emptyMassKg: 315,
+      maxGrossMassKg: 750,
+    },
+    cargoSpace: {
+      volumeM3: 8.91,
+      heightMm: 1800,
+      widthMm: 1500,
+      lengthMm: 3300,
+    },
+    notes: 'number 8',
+  },
+  {
+    id: 'RESPO_452',
+    name: 'RESPO 452',
+    licensePlate: '438BM',
+    category: 'o2',
+    cargoBody: {
+      kind: 'car_transporter',
+      loadingAccess: {
+        rear: true,
+        left: false,
+        right: false,
+        top: true,
+      },
+    },
+    mass: {
+      emptyMassKg: 670,
+      maxGrossMassKg: 3500,
+    },
+    cargoSpace: {
+      widthMm: 2500,
+      lengthMm: 4500,
+    },
+    notes: 'number 15',
+  },
+  {
+    id: 'UNSINN_3500',
+    name: 'UNSINN 3500',
+    licensePlate: '77HPF',
+    category: 'o2',
+    cargoBody: {
+      kind: 'curtainsider',
+      loadingAccess: {
+        rear: true,
+        left: false,
+        right: false,
+        top: false,
+      },
+    },
+    mass: {
+      emptyMassKg: 670,
+      maxGrossMassKg: 3500,
+    },
+    cargoSpace: {
+      widthMm: 2500,
+      lengthMm: 4500,
+    },
+    equipment: [],
+    notes: 'number 7, add equipment for this trailer - tail lift',
+  },
+];
