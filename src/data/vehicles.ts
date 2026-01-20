@@ -17,6 +17,25 @@ export type CraneEquipmentType = EquipmentBaseType & {
   };
 };
 
+export type CargoSetupType = {
+  id: string; // unique within vehicle/trailer
+  nameKey: string; // label for UI, e.g. "Flatbed", "20ft ISO container", "Skip container 10 m³"
+  cargoBody: CargoBodyType;
+  cargoSpace?: CargoSpaceType;
+
+  // optional if body changes tare (like Mascott flatbed vs curtainsider)
+  emptyMassKg?: number;
+
+  // optional: extra equipment only for this setup
+  equipment?: readonly VehicleEquipmentType[];
+  images?: {
+    leftSideView: string;
+    rearSideView: string;
+  };
+
+  notes?: string;
+};
+
 export type TailLiftEquipmentType = EquipmentBaseType & {
   kind: 'tail_lift'; // “lift in car” / “liftgate”
   maxLiftKg: number;
@@ -61,14 +80,15 @@ export type MassSpecTypeVehicle = MassSpecTypeBase & {
 };
 
 export type CargoBodyKindType =
-  | 'van' // фургон / van (Transit, Sprinter…)
+  | 'rigid_box'
   | 'box' // будка / box body
   | 'flatbed' // платформа
   | 'car_transporter' // платформа для перевозки авто / car transporter (автовоз)
   | 'curtainsider' // штора
   | 'dropside' // бортова / dropside
   | 'tipper' // самоскид
-  | 'container'
+  | 'iso_container_20ft'
+  | 'skip_container'
   | 'other';
 
 export type CargoBodyType = {
@@ -88,8 +108,7 @@ export type TrailerType = {
   name: string;
   licensePlate: string;
   mass: MassSpecTypeBase;
-  cargoSpace: CargoSpaceType;
-  cargoBody?: CargoBodyType;
+  cargoSetups: readonly CargoSetupType[];
   connectionType?: string;
   category: 'o1' | 'o2' | 'o3' | 'o4';
   equipment?: readonly VehicleEquipmentType[];
@@ -104,12 +123,13 @@ export type VehicleType = {
   passengers: number;
   driverLicenseCategory: DriverLicenseCategoryType;
   mass: MassSpecTypeVehicle;
-  cargoBody?: CargoBodyType;
-  cargoSpace?: CargoSpaceType;
-  trailers?: readonly TrailerType[];
+
   licensePlate: string;
   equipment?: readonly VehicleEquipmentType[];
+  trailers?: readonly TrailerType[];
   notes?: string;
+
+  cargoSetups: readonly CargoSetupType[]; // ✅ variants live here
 };
 
 const vehicles: VehicleType[] = [
@@ -128,20 +148,69 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 44000,
       },
     },
-    cargoBody: {
-      kind: 'flatbed',
-      loadingAccess: {
-        rear: true,
-        left: true,
-        right: true,
-        top: true,
+    cargoSetups: [
+      {
+        id: 'flatbed',
+        nameKey: 'flatbed',
+        cargoBody: {
+          kind: 'flatbed',
+          loadingAccess: {
+            rear: true,
+            left: true,
+            right: true,
+            top: true,
+          },
+          loadingHeightMm: 1000,
+        },
+        cargoSpace: {
+          widthMm: 2550,
+          lengthMm: 7300,
+        },
       },
-      loadingHeightMm: 1000,
-    },
-    cargoSpace: {
-      widthMm: 2550,
-      lengthMm: 7300,
-    },
+      {
+        id: 'iso_container_20ft',
+        nameKey: 'iso_container_20ft',
+        cargoBody: {
+          kind: 'iso_container_20ft',
+          loadingAccess: {
+            rear: true,
+            left: true,
+            right: false,
+            top: false,
+          },
+          loadingHeightMm: 1000,
+        },
+        cargoSpace: {
+          volumeM3: 37.5,
+          heightMm: 2500,
+          widthMm: 2500,
+          lengthMm: 6000,
+        },
+        emptyMassKg: 2000,
+      },
+      {
+        id: 'skip_container',
+        nameKey: 'skip_container',
+        cargoBody: {
+          kind: 'skip_container',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: false,
+            top: true,
+          },
+          loadingHeightMm: 1000,
+        },
+        cargoSpace: {
+          volumeM3: 15,
+          heightMm: 1000,
+          widthMm: 2500,
+          lengthMm: 6000,
+        },
+        emptyMassKg: 2000,
+      },
+    ],
+
     trailers: [],
     equipment: [],
   },
@@ -160,22 +229,29 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 5500,
       },
     },
-    cargoBody: {
-      kind: 'van',
-      loadingAccess: {
-        rear: true,
-        left: false,
-        right: true,
-        top: false,
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'rigid_box',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: true,
+            top: false,
+          },
+          loadingHeightMm: undefined,
+        },
+        cargoSpace: {
+          volumeM3: 11.286,
+          heightMm: 1800,
+          widthMm: 1900,
+          lengthMm: 3300,
+        },
       },
-      loadingHeightMm: undefined,
-    },
-    cargoSpace: {
-      volumeM3: 11.286,
-      heightMm: 1800,
-      widthMm: 1900,
-      lengthMm: 3300,
-    },
+    ],
+
     trailers: [],
     equipment: [],
   },
@@ -194,12 +270,29 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 4500,
       },
     },
-    cargoSpace: {
-      volumeM3: 12.54,
-      heightMm: 2000,
-      widthMm: 1900,
-      lengthMm: 3300,
-    },
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'rigid_box',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: true,
+            top: false,
+          },
+          loadingHeightMm: undefined,
+        },
+        cargoSpace: {
+          volumeM3: 12.54,
+          heightMm: 2000,
+          widthMm: 1900,
+          lengthMm: 3300,
+        },
+      },
+    ],
+
     trailers: [],
     equipment: [],
   },
@@ -218,22 +311,29 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 7000,
       },
     },
-    cargoBody: {
-      kind: 'box',
-      loadingAccess: {
-        rear: true,
-        left: false,
-        right: false,
-        top: false,
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'box',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: false,
+            top: false,
+          },
+          loadingHeightMm: undefined,
+        },
+        cargoSpace: {
+          volumeM3: 20.812,
+          heightMm: 2200,
+          widthMm: 2200,
+          lengthMm: 4300,
+        },
       },
-      loadingHeightMm: undefined,
-    },
-    cargoSpace: {
-      volumeM3: 20.812,
-      heightMm: 2200,
-      widthMm: 2200,
-      lengthMm: 4300,
-    },
+    ],
+
     trailers: [],
     equipment: [],
   },
@@ -252,20 +352,27 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 9000,
       },
     },
-    cargoBody: {
-      kind: 'flatbed',
-      loadingAccess: {
-        rear: true,
-        left: true,
-        right: true,
-        top: true,
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'flatbed',
+          loadingAccess: {
+            rear: true,
+            left: true,
+            right: true,
+            top: true,
+          },
+          loadingHeightMm: 700,
+        },
+        cargoSpace: {
+          widthMm: 2500,
+          lengthMm: 4700,
+        },
       },
-      loadingHeightMm: 700,
-    },
-    cargoSpace: {
-      widthMm: 2500,
-      lengthMm: 4700,
-    },
+    ],
+
     trailers: [],
     equipment: [],
   },
@@ -284,29 +391,36 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 9000,
       },
     },
-    cargoBody: {
-      kind: 'curtainsider',
-      loadingAccess: {
-        rear: true,
-        left: true,
-        right: false,
-        top: false,
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'curtainsider',
+          loadingAccess: {
+            rear: true,
+            left: true,
+            right: false,
+            top: false,
+          },
+          loadingHeightMm: 700,
+        },
+        cargoSpace: {
+          volumeM3: 25.85,
+          heightMm: 2500,
+          widthMm: 2200,
+          lengthMm: 4700,
+        },
       },
-      loadingHeightMm: 700,
-    },
-    cargoSpace: {
-      volumeM3: 25.85,
-      heightMm: 2500,
-      widthMm: 2200,
-      lengthMm: 4700,
-    },
+    ],
+
     trailers: [],
     equipment: [],
   },
   {
     id: 'range_rover',
     name: 'LAND ROVER, RANGE ROVER',
-    passengers: 2,
+    passengers: 4,
     driverLicenseCategory: 'B',
     licensePlate: '422SHG',
     mass: {
@@ -318,8 +432,63 @@ const vehicles: VehicleType[] = [
         maxRoadTrainMassKg: 6700,
       },
     },
-    cargoBody: undefined,
-    cargoSpace: undefined,
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'rigid_box',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: false,
+            top: false,
+          },
+          loadingHeightMm: undefined,
+        },
+        cargoSpace: undefined,
+      },
+    ],
+
+    trailers: [],
+    equipment: [],
+  },
+  {
+    id: 'towntruck',
+    name: 'Ford Transit',
+    passengers: 2,
+    driverLicenseCategory: 'C',
+    licensePlate: '',
+    mass: {
+      emptyMassKg: 2104,
+      maxGrossMassKg: 5404,
+      trailer: {
+        maxWeightWithBrakesKg: 2096,
+        maxWeightWithoutBrakesKg: 750,
+        maxRoadTrainMassKg: 7500,
+      },
+    },
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'car_transporter',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: false,
+            top: true,
+          },
+          loadingHeightMm: undefined,
+        },
+        cargoSpace: {
+          widthMm: 2020,
+          lengthMm: 5500,
+        },
+      },
+    ],
+
     trailers: [],
     equipment: [],
   },
@@ -331,25 +500,33 @@ const trailers: TrailerType[] = [
     name: 'RESPO 750',
     licensePlate: '727YLB',
     category: 'o1',
-    cargoBody: {
-      kind: 'curtainsider',
-      loadingAccess: {
-        rear: true,
-        left: false,
-        right: false,
-        top: false,
-      },
-    },
+
     mass: {
       emptyMassKg: 315,
       maxGrossMassKg: 750,
     },
-    cargoSpace: {
-      volumeM3: 8.91,
-      heightMm: 1800,
-      widthMm: 1500,
-      lengthMm: 3300,
-    },
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'curtainsider',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: false,
+            top: false,
+          },
+        },
+        cargoSpace: {
+          volumeM3: 8.91,
+          heightMm: 1800,
+          widthMm: 1500,
+          lengthMm: 3300,
+        },
+      },
+    ],
+
     notes: 'number 8',
   },
   {
@@ -357,23 +534,31 @@ const trailers: TrailerType[] = [
     name: 'RESPO 452',
     licensePlate: '438BM',
     category: 'o2',
-    cargoBody: {
-      kind: 'car_transporter',
-      loadingAccess: {
-        rear: true,
-        left: false,
-        right: false,
-        top: true,
-      },
-    },
+
     mass: {
       emptyMassKg: 670,
       maxGrossMassKg: 3500,
     },
-    cargoSpace: {
-      widthMm: 2500,
-      lengthMm: 4500,
-    },
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'car_transporter',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: false,
+            top: true,
+          },
+        },
+        cargoSpace: {
+          widthMm: 2500,
+          lengthMm: 4500,
+        },
+      },
+    ],
+
     notes: 'number 15',
   },
   {
@@ -381,24 +566,66 @@ const trailers: TrailerType[] = [
     name: 'UNSINN 3500',
     licensePlate: '77HPF',
     category: 'o2',
-    cargoBody: {
-      kind: 'curtainsider',
-      loadingAccess: {
-        rear: true,
-        left: false,
-        right: false,
-        top: false,
-      },
-    },
+
     mass: {
       emptyMassKg: 670,
       maxGrossMassKg: 3500,
     },
-    cargoSpace: {
-      widthMm: 2500,
-      lengthMm: 4500,
-    },
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'curtainsider',
+          loadingAccess: {
+            rear: true,
+            left: false,
+            right: false,
+            top: false,
+          },
+        },
+        cargoSpace: {
+          widthMm: 2500,
+          lengthMm: 4500,
+        },
+      },
+    ],
+
     equipment: [],
     notes: 'number 7, add equipment for this trailer - tail lift',
+  },
+  {
+    id: 'krone_zzw_18',
+    name: 'KRONE ZZW 18',
+    licensePlate: '539GK',
+    category: 'o4',
+
+    mass: {
+      emptyMassKg: 3600,
+      maxGrossMassKg: 18000,
+    },
+    cargoSetups: [
+      {
+        id: 'base',
+        nameKey: 'base',
+        cargoBody: {
+          kind: 'flatbed',
+          loadingAccess: {
+            rear: true,
+            left: true,
+            right: true,
+            top: true,
+          },
+          loadingHeightMm: 700,
+        },
+        cargoSpace: {
+          widthMm: 2550,
+          lengthMm: 8000,
+        },
+      },
+    ],
+
+    equipment: [],
+    notes: 'number 2',
   },
 ];
