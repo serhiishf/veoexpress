@@ -1,26 +1,23 @@
-import { Container, Divider, Text } from '@mantine/core';
+import { Divider, Group, Stack, Text } from '@mantine/core';
+import { vehicles, VehicleType } from '@/data/vehicles';
 import { CardWrapper } from '../CardWrapper/CardWrapper';
 
-type VehicleProps = {
-
-};
-
-type TrailerProps = {
-  name: string;
-  maxLoadKg: number;
-  volumeM3: number;
-};
-
 type VehicleConfiguratorProps = {
-  vehicle: string;
-  trailers: string;
+  vehicle: VehicleType;
 };
 
-export function VehicleConfigurator() {
+export function VehicleConfigurator({ vehicle }: VehicleConfiguratorProps) {
+  // const maxCargoWeightKg = Math.max(...vehicle.cargoSetups.map(setup => setup.maxWeightKg));
+  const cargoSetups = vehicle.cargoSetups;
+
   return (
     <CardWrapper>
-      <Text>VEHICLE</Text>
-      <Divider variant="dashed"></Divider>
+      <Stack gap="md">
+        <Group>
+          <Text>{vehicle.name}</Text>
+        </Group>
+        <Divider variant="dashed"></Divider>
+      </Stack>
     </CardWrapper>
   );
 }

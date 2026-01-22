@@ -81,12 +81,12 @@ export type MassSpecTypeVehicle = MassSpecTypeBase & {
 
 export type CargoBodyKindType =
   | 'rigid_box'
-  | 'box' // будка / box body
-  | 'flatbed' // платформа
-  | 'car_transporter' // платформа для перевозки авто / car transporter (автовоз)
-  | 'curtainsider' // штора
-  | 'dropside' // бортова / dropside
-  | 'tipper' // самоскид
+  | 'box'
+  | 'flatbed'
+  | 'car_transporter'
+  | 'curtainsider'
+  | 'dropside'
+  | 'tipper'
   | 'iso_container_20ft'
   | 'skip_container'
   | 'other';
@@ -129,10 +129,10 @@ export type VehicleType = {
   trailers?: readonly TrailerType[];
   notes?: string;
 
-  cargoSetups: readonly CargoSetupType[]; // ✅ variants live here
+  cargoSetups: readonly CargoSetupType[];
 };
 
-const vehicles: VehicleType[] = [
+export const vehicles: VehicleType[] = [
   {
     id: 'volvo_truck_red_with_crane',
     name: 'Volvo FM7',
